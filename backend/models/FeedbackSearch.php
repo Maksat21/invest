@@ -1,16 +1,15 @@
 <?php
 
-namespace common\models\search;
+namespace backend\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\News;
+use common\models\Feedback;
 
 /**
- * NewsSearch represents the model behind the search form of `common\models\News`.
+ * FeedbackSearch represents the model behind the search form of `common\models\Feedback`.
  */
-class NewsSearch extends News
+class FeedbackSearch extends Feedback
 {
     /**
      * {@inheritdoc}
@@ -18,8 +17,8 @@ class NewsSearch extends News
     public function rules()
     {
         return [
-            [['id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'content', 'img', 'slug', 'meta_description', 'meta_keywords'], 'safe'],
+            [['id', 'product_id', 'quantity'], 'integer'],
+            [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -41,7 +40,7 @@ class NewsSearch extends News
      */
     public function search($params)
     {
-        $query = News::find();
+        $query = Feedback::find();
 
         // add conditions that should always apply here
 
@@ -60,17 +59,18 @@ class NewsSearch extends News
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'status' => $this->status,
+            'product_id' => $this->product_id,
+            'quantity' => $this->quantity,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'img', $this->img])
-            ->andFilterWhere(['like', 'slug', $this->slug])
-            ->andFilterWhere(['like', 'meta_description', $this->meta_description])
-            ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords]);
+        $query->andFilterWhere(['like', 'company_name', $this->company_name])
+            ->andFilterWhere(['like', 'barrel', $this->barrel])
+            ->andFilterWhere(['like', 'delivery', $this->delivery])
+            ->andFilterWhere(['like', 'full_name', $this->full_name])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'phone_number', $this->phone_number]);
 
         return $dataProvider;
     }
