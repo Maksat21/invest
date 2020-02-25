@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\News;
-use common\models\search\NewsSearch;
+use backend\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -122,6 +122,6 @@ class NewsController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException(Yii::t('news', 'The requested page does not exist.'));
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
