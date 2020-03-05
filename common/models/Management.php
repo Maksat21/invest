@@ -41,12 +41,14 @@ class Management extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'full_name' => 'Full Name',
-            'content' => 'Content',
-            'post' => 'Post',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'id' => Yii::t('backend', 'ID'),
+            'full_name' => Yii::t('backend', 'Full Name'),
+            'content' => Yii::t('backend', 'Content'),
+            'post' => Yii::t('backend', 'Post'),
+            'created_at' => Yii::t('backend', 'Created At'),
+            'updated_at' => Yii::t('backend', 'Updated At'),
         ];
     }
+
+
 }

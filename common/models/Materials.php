@@ -3,6 +3,9 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\helpers\FileHelper;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "materials".
@@ -45,13 +48,53 @@ class Materials extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'type' => 'Type',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'id'            => Yii::t('backend', 'ID'),
+            'title'         => Yii::t('backend', 'Title'),
+            'description'   => Yii::t('backend', 'Description'),
+            'type'          => Yii::t('backend', 'Type'),
+            'status'        => Yii::t('backend', 'Status'),
+            'created_at'    => Yii::t('backend', 'Created At'),
+            'updated_at'    => Yii::t('backend', 'Updated At'),
         ];
+    }
+
+    /**
+     * @return boolean
+     */
+    public function upload()
+    {
+        if ($this->validate()) {
+            $dir = Yii::getAlias('@static').'/web';
+            FileHelper::createDirectory($dir, '0775', true);
+            foreach ($this->imageFiles as $file) {
+                $path = $file->baseName . '.' . $file->extension;
+
+                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'model_type' => $this->type])->one();
+                if (!$image) {
+                    $attachment = new Attachments();
+                    $attachment->model_id = $this->id;
+                    $attachment->user_id = Yii::$app->user->id;
+                    $attachment->path = $path;
+                    $attachment->model_type = $this->type;
+                    $attachment->save();
+                    $file->saveAs($dir . '/'. $path);
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return ArrayHelper::getValue(self::getTypes(), $this->type);
+    }
+
+    public function getPath()
+    {
+        return Yii::$app->params['staticDomain'] .'/';
     }
 }

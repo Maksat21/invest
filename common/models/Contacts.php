@@ -46,16 +46,16 @@ class Contacts extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'address' => 'Address',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'link' => 'Link',
-            'work_day' => 'Work Day',
-            'latitude' => 'Latitude',
-            'longitude' => 'Longitude',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'id'            => Yii::t('backend', 'ID'),
+            'address'       => Yii::t('backend', 'Address'),
+            'email'         => Yii::t('backend', 'Email'),
+            'phone'         => Yii::t('backend', 'Phone'),
+            'link'          => Yii::t('backend', 'Link'),
+            'work_day'      => Yii::t('backend', 'Work Day'),
+            'latitude'      => Yii::t('backend', 'Latitude'),
+            'longitude'     => Yii::t('backend', 'Longitude'),
+            'created_at'    => Yii::t('backend', 'Created At'),
+            'updated_at'    => Yii::t('backend', 'Updated At'),
         ];
     }
 }

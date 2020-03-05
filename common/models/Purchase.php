@@ -47,17 +47,17 @@ class Purchase extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'content' => 'Content',
-            'quantity' => 'Quantity',
-            'delivery_time' => 'Delivery Time',
-            'status' => 'Status',
-            'meta_title' => 'Meta Title',
-            'meta_description' => 'Meta Description',
-            'meta_keywords' => 'Meta Keywords',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'id' => Yii::t('backend', 'ID'),
+            'name' => Yii::t('backend', 'Name'),
+            'content' => Yii::t('backend', 'Content'),
+            'quantity' => Yii::t('backend', 'Quantity'),
+            'delivery_time' => Yii::t('backend', 'Delivery Time'),
+            'status' => Yii::t('backend', 'Status'),
+            'meta_title' => Yii::t('backend', 'Meta Title'),
+            'meta_description' => Yii::t('backend', 'Meta Description'),
+            'meta_keywords' => Yii::t('backend', 'Meta Keywords'),
+            'created_at' => Yii::t('backend', 'Created At'),
+            'updated_at' => Yii::t('backend', 'Updated At'),
         ];
     }
 }

@@ -16,9 +16,39 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList($model->getStatuses())->label('Статус')?>
 
-    <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
+    <?php if (!$model->isNewRecord): ?>
+
+        <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+
+        <?php if ($model->attachments): ?>
+            <table class="table table-bordered">
+                <?php foreach ($model->attachments as $attachment): ?>
+                    <tr>
+                        <td>
+                            <img src="<?= Yii::$app->params['staticDomain'].'/'.$attachment->path ?>" width="120">
+                        </td>
+                        <td>
+                            <?= $attachment->path ?>
+                        </td>
+                        <td>
+                            <?php if ($attachment->is_main): ?>
+                                <span class="btn btn-success">Главное</span>
+                            <?php else: ?>
+                                <span class="btn btn-danger set-main-image-admin" data-model_id="<?= $model->id ?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <i class="fa fa-trash delete-image-moderator" data-image_id="<?= $attachment->id ?>"></i>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
+
+    <?php endif; ?>
+
 
     <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
 
@@ -26,9 +56,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'meta_keywords')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
