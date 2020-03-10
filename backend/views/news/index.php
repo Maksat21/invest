@@ -1,44 +1,42 @@
 <?php
 
+use yii\helpers\Html;
 use yii\grid\GridView;
-use common\widgets\Panel;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\search\NewsSearch */
+/* @var $searchModel backend\models\NewsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('news', 'News');
+$this->title = Yii::t('backend','News');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="news-index">
 
-    <?php Panel::begin([
-        'title' => $this->title,
-        'buttonsTemplate' => '{create}'
-    ])?>
-    <div class="box-body table-responsive no-padding">
-        <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
-            'columns' => [
-                ['class' => '\common\components\grid\SerialColumn'],
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-                'id',
-                'title',
-                'content:ntext',
-                'img',
-                'status',
-                //'slug',
-                //'meta_description',
-                //'meta_keywords',
-                //'created_at',
-                //'updated_at',
+    <p>
+        <?= Html::a('Create News', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
-                ['class' => '\common\components\grid\ActionColumn',
-                  'template' => '{update}{view}{delete}'],
-            ],
-        ]); ?>
-    </div>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
-    <?php Panel::end() ?>
+            'id',
+            'title',
+            'description:ntext',
+            'status',
+            'slug',
+            //'meta_title',
+            //'meta_description',
+            //'meta_keywords',
+            //'created_at',
+            //'updated_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 </div>

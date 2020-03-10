@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\widgets\Panel;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\News */
@@ -10,33 +9,58 @@ use common\widgets\Panel;
 ?>
 
 <div class="news-form">
-    <?php Panel::begin([
-        'title' => $this->title,
-        'buttonsTemplate' => '{cancel}'
-    ])?>
-    <div class="nav-tabs-custom">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#content" data-toggle="tab">Контент</a></li>
-            <li><a href="#seo" data-toggle="tab">SEO</a></li>
-        </ul>
-        <?php $form = ActiveForm::begin(); ?>
-        <div class="tab-content">
-            <div class="tab-pane active" id="content">
-                <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-                <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
-                <?= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
-                <?= $form->field($model, 'status')->textInput() ?>
-                <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
-            </div>
-            <div class="tab-pane" id="seo">
-                <?= $form->field($model, 'meta_description')->textInput(['maxlength' => true]) ?>
-                <?= $form->field($model, 'meta_keywords')->textInput(['maxlength' => true]) ?>
-            </div>
-        </div>
-    </div>
+
+    <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'status')->dropDownList($model->getStatuses())->label('Статус')?>
+
+    <?php if (!$model->isNewRecord): ?>
+
+        <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+
+        <?php if ($model->attachments): ?>
+            <table class="table table-bordered">
+                <?php foreach ($model->attachments as $attachment): ?>
+                    <tr>
+                        <td>
+                            <img src="<?= Yii::$app->params['staticDomain'].'/'.$attachment->path ?>" width="120">
+                        </td>
+                        <td>
+                            <?= $attachment->path ?>
+                        </td>
+                        <td>
+                            <?php if ($attachment->is_main): ?>
+                                <span class="btn btn-success">Главное</span>
+                            <?php else: ?>
+                                <span class="btn btn-danger set-main-image-admin" data-model_id="<?= $model->id ?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <i class="fa fa-trash delete-image-moderator" data-image_id="<?= $attachment->id ?>"></i>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
+
+    <?php endif; ?>
+
+
+    <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'meta_description')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'meta_keywords')->textInput(['maxlength' => true]) ?>
+
+
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
+
     <?php ActiveForm::end(); ?>
-    <?php Panel::end() ?>
+
 </div>
