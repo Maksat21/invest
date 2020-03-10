@@ -66,13 +66,13 @@ class Attachments extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('backend', 'ID'),
-            'model_id' => Yii::t('backend', 'Model ID'),
-            'type' => Yii::t('backend', 'Type'),
-            'path' => Yii::t('backend', 'Path'),
-            'is_main' => Yii::t('backend', 'Is Main'),
-            'created_at' => Yii::t('backend', 'Created At'),
-            'updated_at' => Yii::t('backend', 'Updated At'),
+            'id'            => Yii::t('backend', 'ID'),
+            'model_id'      => Yii::t('backend', 'Model ID'),
+            'type'          => Yii::t('backend', 'Type'),
+            'path'          => Yii::t('backend', 'Path'),
+            'is_main'       => Yii::t('backend', 'Is Main'),
+            'created_at'    => Yii::t('backend', 'Created At'),
+            'updated_at'    => Yii::t('backend', 'Updated At'),
         ];
     }
 

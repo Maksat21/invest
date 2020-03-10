@@ -47,17 +47,17 @@ class Feedback extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('backend', 'ID'),
-            'company_name' => Yii::t('backend', 'Company Name'),
-            'product_id' => Yii::t('backend', 'Product ID'),
-            'quantity' => Yii::t('backend', 'Quantity'),
-            'barrel' => Yii::t('backend', 'Barrel'),
-            'delivery' => Yii::t('backend', 'Delivery'),
-            'full_name' => Yii::t('backend', 'Full Name'),
-            'email' => Yii::t('backend', 'Email'),
-            'phone_number' => Yii::t('backend', 'Phone Number'),
-            'created_at' => Yii::t('backend', 'Created At'),
-            'updated_at' => Yii::t('backend', 'Updated At'),
+            'id'            => Yii::t('backend', 'ID'),
+            'company_name'  => Yii::t('backend', 'Company Name'),
+            'product_id'    => Yii::t('backend', 'Product ID'),
+            'quantity'      => Yii::t('backend', 'Quantity'),
+            'barrel'        => Yii::t('backend', 'Barrel'),
+            'delivery'      => Yii::t('backend', 'Delivery'),
+            'full_name'     => Yii::t('backend', 'Full Name'),
+            'email'         => Yii::t('backend', 'Email'),
+            'phone_number'  => Yii::t('backend', 'Phone Number'),
+            'created_at'    => Yii::t('backend', 'Created At'),
+            'updated_at'    => Yii::t('backend', 'Updated At'),
         ];
     }
 }
