@@ -26,17 +26,54 @@ use common\widgets\Sidebar;
                         'void' => true,
                     ],
                     [
-                        'label' => 'Ошибка',
-                        'url' => ['/site/error'],
-                        'icon' => 'fa-link',
-                        'void' => true,
-                    ],
-                    [
                         'label' => 'Новости',
                         'url' => ['/news/index'],
                         'icon' => 'fa-link',
                         'void' => true,
                     ],
+                    [
+                        'label' => 'Заявки',
+                        'url' => ['/feedback/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Статьи',
+                        'url' => ['/materials/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Контакты',
+                        'url' => ['/contacts/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Руководство компании',
+                        'url' => ['/management/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Продукция',
+                        'url' => ['/product/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Закупки',
+                        'url' => ['/purchase/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
+                        'label' => 'Вакансии',
+                        'url' => ['/vacancies/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+
                     /*[
                         'label' => Yii::t('app', 'Matching'),
                         'icon' => 'fa-compress aria-hidden="true"',
