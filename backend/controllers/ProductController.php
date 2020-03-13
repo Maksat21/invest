@@ -7,7 +7,12 @@ use common\models\Product;
 use backend\models\ProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use vova07\fileapi\actions\UploadAction as FileAPIUpload;
+use backend\models\forms\ImageForm;
+use common\models\Attachments;
+use yii\web\Response;
+use yii\web\ConflictHttpException;
 
 /**
  * ProductController implements the CRUD actions for Product model.
@@ -17,14 +22,12 @@ class ProductController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function behaviors()
+    public function actions()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
+            'img-upload' => [
+                'class' => FileAPIUpload::className(),
+                'path' => '@static/temp/'
             ],
         ];
     }
@@ -86,8 +89,11 @@ class ProductController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) ) {
+            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+            if ($model->upload() && $model->save(false)) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
@@ -123,5 +129,34 @@ class ProductController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionDeleteImage()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $image = new ImageForm();
+        $image->scenario = ImageForm::SCENARIO_DELETE_IMAGE;
+        if ($image->load(Yii::$app->request->post(), '') && $image->validate()) {
+            $attachment = Attachments::findOne($image->image_id);
+            if (!empty($attachment) && $attachment->delete()) {
+                return ['status' => '200'];
+            } else {
+                throw new ConflictHttpException('Error responsive server');
+            }
+        } else {
+            throw new NotFoundHttpException('This is page not found');
+        }
+    }
+
+    public function actionSetMainImage()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $image = new ImageForm();
+        $image->scenario = ImageForm::SCENARIO_SET_MAIN_IMAGE;
+        if ($image->load(Yii::$app->request->post(), '') && $image->setMainImage()) {
+            return ['status' => '200'];
+        } else {
+            throw new NotFoundHttpException('This is page not found');
+        }
     }
 }

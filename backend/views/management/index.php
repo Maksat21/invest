@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\ManagementSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Managements';
+$this->title = Yii::t('backend','Managements');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="management-index">
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'full_name',
             'content',
             'post',
-            'created_at',
+//            'created_at',
             //'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],

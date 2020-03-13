@@ -20,6 +20,9 @@ use yii\helpers\ArrayHelper;
  */
 class Materials extends \yii\db\ActiveRecord
 {
+    const STATUS_PUBLISHED     = 1;
+    const STATUS_NOT_PUBLISHED = 2;
+
     /**
      * {@inheritdoc}
      */
@@ -59,42 +62,21 @@ class Materials extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return boolean
+     * @return mixed
      */
-    public function upload()
+    public function getStatusLabel()
     {
-        if ($this->validate()) {
-            $dir = Yii::getAlias('@static').'/web';
-            FileHelper::createDirectory($dir, '0775', true);
-            foreach ($this->imageFiles as $file) {
-                $path = $file->baseName . '.' . $file->extension;
-
-                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'model_type' => $this->type])->one();
-                if (!$image) {
-                    $attachment = new Attachments();
-                    $attachment->model_id = $this->id;
-                    $attachment->user_id = Yii::$app->user->id;
-                    $attachment->path = $path;
-                    $attachment->model_type = $this->type;
-                    $attachment->save();
-                    $file->saveAs($dir . '/'. $path);
-                }
-            }
-            return true;
-        }
-        return false;
+        return ArrayHelper::getValue(static::getStatuses(), $this->status);
     }
 
     /**
-     * @return string
+     * @return array
      */
-    public function getType()
+    public static function getStatuses()
     {
-        return ArrayHelper::getValue(self::getTypes(), $this->type);
-    }
-
-    public function getPath()
-    {
-        return Yii::$app->params['staticDomain'] .'/';
+        return [
+            self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
+            self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
+        ];
     }
 }

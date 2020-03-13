@@ -93,6 +93,14 @@ class Product extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAttachments()
+    {
+        return $this->hasMany(Attachments::className(), ['model_id' => 'id'])->where(['type' => Attachments::TYPE_PRODUCT]);
+    }
+
+    /**
      * @return boolean
      */
     public function upload()
@@ -103,12 +111,12 @@ class Product extends \yii\db\ActiveRecord
             foreach ($this->imageFiles as $file) {
                 $path = $file->baseName . '.' . $file->extension;
 
-                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'type' => Attachments::TYPE_NEWS])->one();
+                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'type' => Attachments::TYPE_PRODUCT])->one();
                 if (!$image) {
                     $attachment = new Attachments();
                     $attachment->model_id = $this->id;
                     $attachment->path = $path;
-                    $attachment->type = Attachments::TYPE_NEWS;
+                    $attachment->type = Attachments::TYPE_PRODUCT;
                     $attachment->save();
                     $file->saveAs($dir . '/'. $path);
                 }
