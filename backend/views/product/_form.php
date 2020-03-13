@@ -16,9 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
-
-    <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'status')->dropDownList($model->getStatuses())->label('Статус')?>
 
     <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
 

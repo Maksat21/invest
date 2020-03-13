@@ -99,7 +99,7 @@ class News extends \yii\db\ActiveRecord
      */
     public function getAttachments()
     {
-        return $this->hasMany(Attachments::className(), ['model_id' => 'id']);
+        return $this->hasMany(Attachments::className(), ['model_id' => 'id'])->where(['type' => Attachments::TYPE_NEWS]);
     }
 
     /**
