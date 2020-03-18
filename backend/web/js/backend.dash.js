@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.delete-image-admin').on('click', function () {
+    $('.delete-image').on('click', function () {
         var parent_tr = $(this).closest('tr');
         var image_id = $(this).attr('data-image_id');
         var param = $('meta[name=csrf-param]').attr("content");
@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
 
-    $('.set-main-image-admin').on('click', function () {
+    $('.set-main-image').on('click', function () {
         var parent_tr = $(this).closest('tr');
         var main_image_id = $(this).attr('data-main_image_id');
         var model_id = $(this).attr('data-model_id');

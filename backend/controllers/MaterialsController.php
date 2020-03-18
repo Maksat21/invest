@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Materials;
 use backend\models\MaterialsSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * MaterialsController implements the CRUD actions for Materials model.
  */
-class MaterialsController extends Controller
+class MaterialsController extends BaseController
 {
     /**
      * {@inheritdoc}

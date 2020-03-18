@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use common\widgets\Panel;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Management */
+/* @var $model common\models\Images */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -13,18 +13,18 @@ use common\widgets\Panel;
     'title' => $this->title,
     'buttonsTemplate' => '{cancel}'
 ])?>
-<div class="management-form">
+<div class="images-form">
 
     <?php $form = ActiveForm::begin(); ?>
     <div class="row">
         <div class="col-md-4">
-            <?= $form->field($model, 'full_name')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'content')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'model_type')->dropDownList($model->getType()) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'post')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
         </div>
     </div>
 

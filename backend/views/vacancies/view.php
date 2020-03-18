@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\widgets\Panel;
+use common\models\Vacancies;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Vacancies */
@@ -13,18 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vacancies-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
+    <?php Panel::begin([
+        'title' => $this->title,
+        'buttonsTemplate' => '{delete}{cancel}'
+    ])?>
 
     <?= DetailView::widget([
         'model' => $model,
@@ -33,10 +27,25 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'description',
             'wage',
-            'status',
+            [
+                'attribute' => 'status',
+                'label' => 'Статус',
+                'format' => 'html',
+                'value' => function (Vacancies $model) {
+                    $class = null;
+                    if ($model->status === $model::STATUS_PUBLISHED) {
+                        $class = 'label-success';
+                    } else if ($model->status === $model::STATUS_NOT_PUBLISHED) {
+                        $class = 'label-warning';
+                    }
+                    return Html::tag('span', $model->getStatusLabel(), ['class' => 'label ' . $class]);
+                },
+            ],
             'created_at',
             'updated_at',
         ],
     ]) ?>
+
+    <?php Panel::end() ?>
 
 </div>

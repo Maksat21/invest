@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Materials;
+use common\models\Images;
 
 /**
- * MaterialsSearch represents the model behind the search form of `common\models\Materials`.
+ * ImagesSearch represents the model behind the search form of `common\models\Images`.
  */
-class MaterialsSearch extends Materials
+class ImagesSearch extends Images
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class MaterialsSearch extends Materials
     public function rules()
     {
         return [
-            [['id', 'type', 'status'], 'integer'],
-            [['title', 'description', 'meta_title', 'meta_description', 'meta_keywords', 'created_at', 'updated_at'], 'safe'],
+            [['id', 'model_type', 'status'], 'integer'],
+            [['name'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class MaterialsSearch extends Materials
      */
     public function search($params)
     {
-        $query = Materials::find()->orderBy(['id' => SORT_DESC]);
+        $query = Images::find();
 
         // add conditions that should always apply here
 
@@ -59,17 +59,11 @@ class MaterialsSearch extends Materials
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'type' => $this->type,
+            'model_type' => $this->model_type,
             'status' => $this->status,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'meta_title', $this->meta_title])
-            ->andFilterWhere(['like', 'meta_description', $this->meta_description])
-            ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

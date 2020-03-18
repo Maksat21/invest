@@ -17,7 +17,7 @@ class ManagementSearch extends Management
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id','status'], 'integer'],
             [['full_name', 'content', 'post', 'created_at', 'updated_at'], 'safe'],
         ];
     }
@@ -40,7 +40,7 @@ class ManagementSearch extends Management
      */
     public function search($params)
     {
-        $query = Management::find();
+        $query = Management::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
@@ -59,6 +59,7 @@ class ManagementSearch extends Management
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

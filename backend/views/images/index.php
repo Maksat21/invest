@@ -2,17 +2,17 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use common\models\Product;
 use common\widgets\Panel;
+use common\models\Images;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\ProductSearch */
+/* @var $searchModel backend\models\ImagesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('backend', 'Products');
+$this->title = Yii::t('backend', 'Images');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="product-index">
+<div class="images-index">
 
     <?php Panel::begin([
         'title' => $this->title,
@@ -27,11 +27,23 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'content:ntext',
+            [
+                'attribute' => 'model_type',
+                'format' => 'html',
+                'value' => function (Images $model) {
+                    if ($model->model_type === $model::TYPE_GALLERY) {
+                        $class = 'label-primary';
+                    } else if ($model->model_type === $model::TYPE_CERTIFICATE) {
+                        $class = 'label-info';
+                    }
+                    return Html::tag('span', $model->getTypeLabel(), ['class' => 'label ' . $class]);
+                },
+                'filter' => Images::getType()
+            ],
             [
                 'attribute' => 'status',
                 'format' => 'html',
-                'value' => function (Product $model) {
+                'value' => function (Images $model) {
                     if ($model->status === $model::STATUS_PUBLISHED) {
                         $class = 'label-success';
                     } else if ($model->status === $model::STATUS_NOT_PUBLISHED) {
@@ -39,14 +51,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                     return Html::tag('span', $model->getStatusLabel(), ['class' => 'label ' . $class]);
                 },
-                'filter' => Product::getStatuses()
+                'filter' => Images::getStatuses()
             ],
 
-
-            ['class' => '\common\components\grid\ActionColumn',
-                'template' => '{update}{delete}'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
     <?php Panel::end() ?>
 </div>

@@ -3,20 +3,21 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Product;
-use backend\models\ProductSearch;
+use common\models\Images;
+use backend\models\ImagesSearch;
+use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\web\UploadedFile;
 use vova07\fileapi\actions\UploadAction as FileAPIUpload;
+use yii\web\UploadedFile;
 use backend\models\forms\ImageForm;
 use common\models\Attachments;
 use yii\web\Response;
 use yii\web\ConflictHttpException;
 
 /**
- * ProductController implements the CRUD actions for Product model.
+ * ImagesController implements the CRUD actions for Images model.
  */
-class ProductController extends BaseController
+class ImagesController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -32,12 +33,12 @@ class ProductController extends BaseController
     }
 
     /**
-     * Lists all Product models.
+     * Lists all Images models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ProductSearch();
+        $searchModel = new ImagesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -47,7 +48,7 @@ class ProductController extends BaseController
     }
 
     /**
-     * Displays a single Product model.
+     * Displays a single Images model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,13 +61,13 @@ class ProductController extends BaseController
     }
 
     /**
-     * Creates a new Product model.
+     * Creates a new Images model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Product();
+        $model = new Images();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -78,7 +79,7 @@ class ProductController extends BaseController
     }
 
     /**
-     * Updates an existing Product model.
+     * Updates an existing Images model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -101,7 +102,7 @@ class ProductController extends BaseController
     }
 
     /**
-     * Deletes an existing Product model.
+     * Deletes an existing Images model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -115,15 +116,15 @@ class ProductController extends BaseController
     }
 
     /**
-     * Finds the Product model based on its primary key value.
+     * Finds the Images model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Product the loaded model
+     * @return Images the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Product::findOne($id)) !== null) {
+        if (($model = Images::findOne($id)) !== null) {
             return $model;
         }
 

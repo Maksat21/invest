@@ -40,7 +40,7 @@ class PurchaseSearch extends Purchase
      */
     public function search($params)
     {
-        $query = Purchase::find();
+        $query = Purchase::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 

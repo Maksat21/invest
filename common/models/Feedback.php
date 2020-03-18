@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "feedback".
@@ -18,15 +20,31 @@ use Yii;
  * @property string $phone_number Номер телефона
  * @property string $created_at Дата создания
  * @property string $updated_at Дата обновления
+ * @property int $status Статус
  */
 class Feedback extends \yii\db\ActiveRecord
 {
+    const STATUS_PUBLISHED     = 1;
+    const STATUS_NOT_PUBLISHED = 2;
+
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
         return 'feedback';
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'value' => function(){
+                    return date('Y-m-d H:i:s');
+                }
+            ],
+        ];
     }
 
     /**
@@ -36,6 +54,7 @@ class Feedback extends \yii\db\ActiveRecord
     {
         return [
             [['product_id', 'quantity'], 'integer'],
+            [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number'], 'string', 'max' => 255],
         ];
@@ -58,6 +77,26 @@ class Feedback extends \yii\db\ActiveRecord
             'phone_number'  => Yii::t('backend', 'Phone Number'),
             'created_at'    => Yii::t('backend', 'Created At'),
             'updated_at'    => Yii::t('backend', 'Updated At'),
+            'status'        => Yii::t('backend', 'Status'),
+        ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatusLabel()
+    {
+        return ArrayHelper::getValue(static::getStatuses(), $this->status);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
+            self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
         ];
     }
 }
