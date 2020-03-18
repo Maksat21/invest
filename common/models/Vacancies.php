@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "vacancies".
@@ -27,6 +28,18 @@ class Vacancies extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'vacancies';
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'value' => function(){
+                    return date('Y-m-d H:i:s');
+                }
+            ],
+        ];
     }
 
     /**

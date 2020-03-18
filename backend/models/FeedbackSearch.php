@@ -17,7 +17,7 @@ class FeedbackSearch extends Feedback
     public function rules()
     {
         return [
-            [['id', 'product_id', 'quantity'], 'integer'],
+            [['id', 'product_id', 'quantity', 'status'], 'integer'],
             [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number', 'created_at', 'updated_at'], 'safe'],
         ];
     }
@@ -40,7 +40,7 @@ class FeedbackSearch extends Feedback
      */
     public function search($params)
     {
-        $query = Feedback::find();
+        $query = Feedback::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
@@ -61,6 +61,7 @@ class FeedbackSearch extends Feedback
             'id' => $this->id,
             'product_id' => $this->product_id,
             'quantity' => $this->quantity,
+            'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

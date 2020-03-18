@@ -40,7 +40,7 @@ class VacanciesSearch extends Vacancies
      */
     public function search($params)
     {
-        $query = Vacancies::find();
+        $query = Vacancies::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 

@@ -17,7 +17,7 @@ class ContactsSearch extends Contacts
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'status'], 'integer'],
             [['address', 'email', 'phone', 'link', 'work_day', 'created_at', 'updated_at'], 'safe'],
             [['latitude', 'longitude'], 'number'],
         ];
@@ -41,7 +41,7 @@ class ContactsSearch extends Contacts
      */
     public function search($params)
     {
-        $query = Contacts::find();
+        $query = Contacts::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
@@ -60,6 +60,7 @@ class ContactsSearch extends Contacts
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'status' => $this->status,
             'latitude' => $this->latitude,
             'longitude' => $this->longitude,
             'created_at' => $this->created_at,

@@ -3,26 +3,25 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
-use yii\helpers\FileHelper;
 use yii\helpers\ArrayHelper;
+use yii\helpers\FileHelper;
 
 /**
- * This is the model class for table "management".
+ * This is the model class for table "images".
  *
  * @property int $id
- * @property string $full_name ФИО
- * @property string $content Описание
- * @property string $post Должность
- * @property string $created_at Дата создания
- * @property string $updated_at Дата обновления
+ * @property string $name Название
+ * @property int $model_type Тип модели
  * @property int $status Статус
  * @property  $imageFiles
  */
-class Management extends \yii\db\ActiveRecord
+class Images extends \yii\db\ActiveRecord
 {
     const STATUS_PUBLISHED     = 1;
     const STATUS_NOT_PUBLISHED = 2;
+
+    const TYPE_GALLERY = 4;
+    const TYPE_CERTIFICATE = 5;
 
     public $imageFiles;
 
@@ -31,19 +30,7 @@ class Management extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'management';
-    }
-
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'value' => function(){
-                    return date('Y-m-d H:i:s');
-                }
-            ],
-        ];
+        return 'images';
     }
 
     /**
@@ -52,10 +39,10 @@ class Management extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'updated_at'], 'safe'],
-            [['status'], 'integer'],
-            [['full_name', 'content', 'post'], 'string', 'max' => 255],
-            [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 4],
+            [['model_type'], 'required'],
+            [['model_type', 'status'], 'integer'],
+            [['name'], 'string', 'max' => 255],
+            [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 10],
         ];
     }
 
@@ -65,13 +52,10 @@ class Management extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id'            => Yii::t('backend', 'ID'),
-            'full_name'     => Yii::t('backend', 'Full Name'),
-            'content'       => Yii::t('backend', 'Content'),
-            'post'          => Yii::t('backend', 'Post'),
-            'created_at'    => Yii::t('backend', 'Created At'),
-            'updated_at'    => Yii::t('backend', 'Updated At'),
-            'status'        => Yii::t('backend', 'Status'),
+            'id'            =>  Yii::t('backend', 'ID'),
+            'name'          =>  Yii::t('backend', 'Name'),
+            'model_type'    =>  Yii::t('backend', 'Model Type'),
+            'status'        =>  Yii::t('backend', 'Status'),
         ];
     }
 
@@ -80,7 +64,7 @@ class Management extends \yii\db\ActiveRecord
      */
     public function getAttachments()
     {
-        return $this->hasMany(Attachments::className(), ['model_id' => 'id'])->where(['type' => Attachments::TYPE_MANAGEMENT]);
+        return $this->hasMany(Attachments::className(), ['model_id' => 'id'])->where(['type' => $this->model_type]);
     }
 
     /**
@@ -94,12 +78,12 @@ class Management extends \yii\db\ActiveRecord
             foreach ($this->imageFiles as $file) {
                 $path = $file->baseName . '.' . $file->extension;
 
-                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'type' => Attachments::TYPE_MANAGEMENT])->one();
+                $image = Attachments::find()->where(['model_id' => $this->id, 'path' => $path, 'type' => $this->model_type])->one();
                 if (!$image) {
                     $attachment = new Attachments();
                     $attachment->model_id = $this->id;
                     $attachment->path = $path;
-                    $attachment->type = Attachments::TYPE_MANAGEMENT;
+                    $attachment->type = $this->model_type;
                     $attachment->save();
                     $file->saveAs($dir . '/'. $path);
                 }
@@ -130,6 +114,25 @@ class Management extends \yii\db\ActiveRecord
         return [
             self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
             self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
+        ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeLabel()
+    {
+        return ArrayHelper::getValue(static::getType(), $this->model_type);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getType()
+    {
+        return [
+            self::TYPE_GALLERY     => Yii::t('backend', 'Gallery'),
+            self::TYPE_CERTIFICATE => Yii::t('backend', 'Certificate'),
         ];
     }
 

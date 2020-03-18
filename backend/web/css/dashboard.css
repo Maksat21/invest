@@ -5139,3 +5139,9 @@ div.required label:after {
 .site-greeting p {
   margin-bottom: 0;
 }
+.fa-trash {
+  padding: 10px;
+  background-color: #e3e3e3;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Purchase;
 use backend\models\PurchaseSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * PurchaseController implements the CRUD actions for Purchase model.
  */
-class PurchaseController extends Controller
+class PurchaseController extends BaseController
 {
     /**
      * {@inheritdoc}

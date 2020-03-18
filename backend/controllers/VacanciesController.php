@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Vacancies;
 use backend\models\VacanciesSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * VacanciesController implements the CRUD actions for Vacancies model.
  */
-class VacanciesController extends Controller
+class VacanciesController extends BaseController
 {
     /**
      * {@inheritdoc}
