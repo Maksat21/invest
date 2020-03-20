@@ -42415,7 +42415,8 @@ iframe.twitter-share-button {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Roboto Slab" margin-bottom: 5px
+    font-family: "Roboto Slab";
+    margin-bottom: 5px
 }
 
 .erinyen .tp-tab-desc {
@@ -43018,7 +43019,8 @@ iframe.twitter-share-button {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Roboto Slab" margin-bottom: 5px
+    font-family: "Roboto Slab";
+    margin-bottom: 5px;
 }
 
 .hebe .tp-tab-desc {
@@ -44933,7 +44935,7 @@ body.active-preloader-ovh {
 }
 
 .header.header-home-three .header-navigation .container {
-    padding-right: 255px
+    /*padding-right: 255px*/
 }
 
 .header.header-home-three .header-navigation .container .navbar-header {
@@ -62062,4 +62064,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #333
+}
+.single-blog-style-two .img-box img {
+    width: 100%;
 }
