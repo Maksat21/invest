@@ -4,8 +4,7 @@
 
 $this->title = 'My Yii Application';
 ?>
-<!doctype html>
-<html class="no-js" lang="en-US">
+
 
 <head>
 
@@ -21,26 +20,26 @@ $this->title = 'My Yii Application';
     <div class="header-top home-one clearfix">
         <div class="container">
             <div class="logo pull-left">
-                <a href="index.html"> <img src="wp-content/uploads/2018/12/logo1-1.png" alt="Awesome Image"> </a>
+                <a href="index.html"> <img src="img/talas-invest-logo.png" alt="Awesome Image"> </a>
             </div>
             <div class="header-right-info pull-right">
                 <div class="single-header-right-info">
                     <div class="icon-box"> <i class="industrio-icon-phone-call"></i></div>
                     <div class="text-box">
-                        <p>Call us 9:00am - 6:00pm</p>
-                        <h3>222-121-4562</h3></div>
+                        <p>Позвоните нам 9:00 - 18:00</p>
+                        <h3>+7 (7264) 47 91 22</h3></div>
                 </div>
                 <div class="single-header-right-info">
                     <div class="icon-box"> <i class="industrio-icon-clock"></i></div>
                     <div class="text-box">
-                        <p>Monday to Friday</p>
-                        <h3>9:00am - 6:00pm</h3></div>
+                        <p>Понедельник и Пятница</p>
+                        <h3>9:00 - 18:00</h3></div>
                 </div>
                 <div class="single-header-right-info">
                     <div class="icon-box"> <i class="industrio-icon-envelope"></i></div>
                     <div class="text-box">
-                        <p>E-mail us</p>
-                        <h3>support@gmail.com</h3></div>
+                        <p>Электронная почта</p>
+                        <h3>zavod@talasinvest.com</h3></div>
                 </div>
             </div>
         </div>
@@ -103,13 +102,13 @@ $this->title = 'My Yii Application';
         <div data-elementor-type="post" data-elementor-id="405" class="elementor elementor-405" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <section class="elementor-element elementor-element-cd12f2b elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cd12f2b" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                    <section class="elementor-element elementor-section-stretched elementor-section" data-id="cd12f2b" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-element elementor-element-0f2eee6 elementor-column elementor-col-100 elementor-top-column" data-id="0f2eee6" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                <div class="elementor-element elementor-column elementor-col-100" data-id="0f2eee6" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-780e557 elementor-align-left elementor-widget elementor-widget-bdevs-slider" data-id="780e557" data-element_type="widget" data-widget_type="bdevs-slider.default">
+                                            <div class="elementor-element elementor-align-left elementor-widget" data-id="780e557" data-element_type="widget" data-widget_type="bdevs-slider.default">
                                                 <div class="elementor-widget-container">
                                                     <section class="main-slider">
                                                         <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
@@ -117,24 +116,24 @@ $this->title = 'My Yii Application';
                                                                 <ul>
                                                                     <li class="slide-1" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="wp-content/uploads/2019/01/banner-3-1.png">
                                                                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-90','-80','-100','-80']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;text-align: center;">
-                                                                            <h2>We will provide the <br /> best <span>Industrial</span> service</h2></div>
+                                                                            <h2>НАША СТРАТЕГИЯ</h2></div>
                                                                         <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['50','40','25','15']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: center;"> <a href="index.html#" class="theme-btn btn-style-one hvr-sweep-to-right">Learn more <i class="fa fa-arrow-right"></i></a></div>
                                                                     </li>
                                                                     <li class="slide-2" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="wp-content/uploads/2019/01/banner-3-2.png">
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-100','-80','-100','-80']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                                                            <h2>We will provide the <br /> best <span>Industrial</span> service</h2></div>
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','500','500','400']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['20','40','15','15']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                                                            <div class="text white-text"> We are the best guarenteed company to serve you. We are dedicated to help you any time.</div>
+                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-90','-80','-100','-80']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;text-align: center;">
+                                                                            <h2>НАША СТРАТЕГИЯ</h2></div>
+                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','500','500','400']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['20','40','15','15']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: center;">
+                                                                            <div class="text white-text"> Развивая производство – поднимаем экономику</div>
                                                                         </div>
-                                                                        <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','480']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['115','130','100','85']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;"> <a href="index.html#" class="theme-btn btn-style-one hvr-sweep-to-right">Learn more <i class="fa fa-arrow-right"></i></a></div>
                                                                     </li>
-                                                                    <li class="slide-3" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="wp-content/uploads/2019/01/banner-3-3.png">
+                                                                    <li class="slide-3" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="img/zavod-talas-2.jpg">
                                                                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-100','-80','-100','-80']" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
-                                                                            <h2>We will provide the <br /> best <span>Industrial</span> service</h2></div>
+                                                                            <h2>НАША МИССИЯ</h2></div>
                                                                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','500','500','400']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['20','40','15','15']" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
-                                                                            <div class="text white-text"> We are the best guarenteed company to serve you. We are dedicated to help you any time.</div>
+                                                                            <div class="text white-text"> Ответственный подход – сохраняет экологию</div>
                                                                         </div>
-                                                                        <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['115','130','100','85']" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;"> <a href="index.html#" class="theme-btn btn-style-one hvr-sweep-to-right">Learn more <i class="fa fa-arrow-right"></i></a></div>
+                                                                        <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['115','130','100','85']" data-x="['left','left','left','left']" data-y="['top','top','top','top']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
+                                                                            <img src="img/talas-worker.png" alt=""></div>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -148,13 +147,13 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-f5f9f02 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f5f9f02" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="f5f9f02" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-element elementor-element-e4b44c1 elementor-column elementor-col-100 elementor-top-column" data-id="e4b44c1" data-element_type="column">
+                                <div class="elementor-element elementor-column elementor-col-100" data-id="e4b44c1" data-element_type="column">
                                     <div class="elementor-column-wrap  elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-6a6778f elementor-align-left elementor-widget elementor-widget-bdevs-service" data-id="6a6778f" data-element_type="widget" data-widget_type="bdevs-service.default">
+                                            <div class="elementor-element elementor-align-left elementor-widget" data-id="6a6778f" data-element_type="widget" data-widget_type="bdevs-service.default">
                                                 <div class="elementor-widget-container">
                                                     <section class="service-style-two">
                                                         <div class="container">
@@ -314,7 +313,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-c350ff6 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c350ff6" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="c350ff6" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-6e448c1 elementor-column elementor-col-100 elementor-top-column" data-id="6e448c1" data-element_type="column">
@@ -362,7 +361,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-fd7ba09 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fd7ba09" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="fd7ba09" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-ea279eb elementor-column elementor-col-100 elementor-top-column" data-id="ea279eb" data-element_type="column">
@@ -377,7 +376,7 @@ $this->title = 'My Yii Application';
                                                                     <div class="single-service-style-one flip-hover">
                                                                         <div class="front">
                                                                             <div class="inner-content"> <i class="industrio-icon-tower"></i>
-                                                                                <h3>Power &#038; Energy Sector</h3></div>
+                                                                                <h3>Собственное производство в Казахстане</h3></div>
                                                                         </div>
                                                                         <div class="back">
                                                                             <div class="overlay">
@@ -492,7 +491,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-fbfa03d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fbfa03d" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="fbfa03d" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-174b3d7 elementor-column elementor-col-100 elementor-top-column" data-id="174b3d7" data-element_type="column">
@@ -633,7 +632,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-73b5a0f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="73b5a0f" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="73b5a0f" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-7e4c8d8 elementor-column elementor-col-100 elementor-top-column" data-id="7e4c8d8" data-element_type="column">
@@ -753,7 +752,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-3b1618d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3b1618d" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="3b1618d" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-e6925bc elementor-column elementor-col-100 elementor-top-column" data-id="e6925bc" data-element_type="column">
@@ -802,7 +801,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-f610a4f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f610a4f" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="f610a4f" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-d305867 elementor-column elementor-col-100 elementor-top-column" data-id="d305867" data-element_type="column">
@@ -820,7 +819,7 @@ $this->title = 'My Yii Application';
                                                             <div class="row">
                                                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                                                     <div class="single-team-style-one text-center">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2018/12/team-1-1.png" alt="Awesome Image" />
+                                                                        <div class="img-box"> <img src="img/talas-invest-ruk1.jpg" alt="Awesome Image" />
                                                                             <div class="name-box">
                                                                                 <div class="inner">Margorie Hych</div>
                                                                             </div>
@@ -901,7 +900,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-f017610 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f017610" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="f017610" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-f61a351 elementor-column elementor-col-100 elementor-top-column" data-id="f61a351" data-element_type="column">
@@ -979,7 +978,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-cee29c9 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cee29c9" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="cee29c9" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-819b227 elementor-column elementor-col-100 elementor-top-column" data-id="819b227" data-element_type="column">
@@ -1021,7 +1020,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-318bdd3 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="318bdd3" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="318bdd3" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-cb99a6c elementor-column elementor-col-100 elementor-top-column" data-id="cb99a6c" data-element_type="column">
@@ -1050,7 +1049,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-element-de1863e elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="de1863e" data-element_type="section">
+                    <section class="elementor-element elementor-section" data-id="de1863e" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-413be5d elementor-column elementor-col-100 elementor-top-column" data-id="413be5d" data-element_type="column">
