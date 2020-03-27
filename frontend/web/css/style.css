@@ -51484,11 +51484,12 @@ footer.site-footer .footer-widget.subscribe-widget form input.wpcf7-submit:hover
 }
 
 .prd_list {
-    width: 43%;
+    width: 31%;
     margin-bottom: 80px !important;
     min-height: 400px;
     float: left;
-    margin-right: 50px
+    margin-right: 110px;
+    margin-left: 110px;
 }
 
 span.wdt_img.wooc-image img {
@@ -51949,7 +51950,9 @@ a.woocommerce-review-link:hover {
 }
 
 .prd_title {
-    margin-top: 15px
+    margin-top: 15px;
+    font-size: 40px;
+    margin-bottom: 35px;
 }
 
 a.title_product:hover {

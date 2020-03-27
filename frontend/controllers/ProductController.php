@@ -3,32 +3,32 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\News;
+use common\models\Product;
 use yii\web\NotFoundHttpException;
 use yii\data\Pagination;
 use common\models\Attachments;
 
 /**
- * NewsController implements the CRUD actions for News model.
+ * ProductController implements the CRUD actions for Product model.
  */
-class NewsController extends BaseController
+class ProductController extends BaseController
 {
     public $layout = '@app/views/layouts/home';
 
     /**
-     * Lists all News models.
+     * Lists all Product models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $query = News::find()->orderBy(['id'=> SORT_DESC])->where(['status' => News::STATUS_PUBLISHED]);
+        $query = Product::find()->orderBy(['id'=> SORT_DESC])->where(['status' => Product::STATUS_PUBLISHED]);
         $count = $query->count();
-        $pages = new Pagination(['totalCount' => $count, 'defaultPageSize' => Yii::$app->params['NewsPaginationLimit']]);
-        $news = $query->offset($pages->offset)
+        $pages = new Pagination(['totalCount' => $count, 'defaultPageSize' => Yii::$app->params['ProductPaginationLimit']]);
+        $product = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
 
-        if ($count > Yii::$app->params['NewsPaginationLimit'])
+        if ($count > Yii::$app->params['ProductPaginationLimit'])
         {
             $count = true;
         }
@@ -39,13 +39,13 @@ class NewsController extends BaseController
 
         return $this->render('index', [
             'pages' => $pages,
-            'news' => $news,
+            'product' => $product,
             'count' => $count,
         ]);
     }
 
     /**
-     * Displays a single News model.
+     * Displays a single Product model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -57,17 +57,16 @@ class NewsController extends BaseController
         ]);
     }
 
-
     /**
-     * Finds the News model based on its primary key value.
+     * Finds the Product model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return News the loaded model
+     * @return Product the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = News::findOne($id)) !== null) {
+        if (($model = Product::findOne($id)) !== null) {
             return $model;
         }
 

@@ -5,4 +5,5 @@ return [
     'user.passwordResetTokenExpire' => 3600,
 
     'NewsPaginationLimit' => 2,
+    'ProductPaginationLimit' => 2,
 ];
