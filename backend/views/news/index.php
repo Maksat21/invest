@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\News;
+use common\widgets\Panel;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\NewsSearch */
@@ -12,12 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="news-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create News', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php Panel::begin([
+        'title' => $this->title,
+        'buttonsTemplate' => '{create}'
+    ])?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -28,15 +28,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'description:ntext',
-            'status',
-            'slug',
-            //'meta_title',
-            //'meta_description',
-            //'meta_keywords',
-            //'created_at',
-            //'updated_at',
+            [
+                'attribute' => 'status',
+                'format' => 'html',
+                'value' => function (News $model) {
+                    if ($model->status === $model::STATUS_PUBLISHED) {
+                        $class = 'label-success';
+                    } else if ($model->status === $model::STATUS_NOT_PUBLISHED) {
+                        $class = 'label-warning';
+                    }
+                    return Html::tag('span', $model->getStatusLabel(), ['class' => 'label ' . $class]);
+                },
+                'filter' => News::getStatuses()
+            ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+
+            ['class' => '\common\components\grid\ActionColumn',
+                'template' => '{update}{delete}'],
         ],
     ]); ?>
+    <?php Panel::end() ?>
 </div>

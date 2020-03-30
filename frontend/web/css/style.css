@@ -42415,7 +42415,8 @@ iframe.twitter-share-button {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Roboto Slab" margin-bottom: 5px
+    font-family: "Roboto Slab";
+    margin-bottom: 5px
 }
 
 .erinyen .tp-tab-desc {
@@ -43018,7 +43019,8 @@ iframe.twitter-share-button {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Roboto Slab" margin-bottom: 5px
+    font-family: "Roboto Slab";
+    margin-bottom: 5px;
 }
 
 .hebe .tp-tab-desc {
@@ -44933,7 +44935,7 @@ body.active-preloader-ovh {
 }
 
 .header.header-home-three .header-navigation .container {
-    padding-right: 255px
+    /*padding-right: 255px*/
 }
 
 .header.header-home-three .header-navigation .container .navbar-header {
@@ -51482,11 +51484,12 @@ footer.site-footer .footer-widget.subscribe-widget form input.wpcf7-submit:hover
 }
 
 .prd_list {
-    width: 43%;
+    width: 31%;
     margin-bottom: 80px !important;
     min-height: 400px;
     float: left;
-    margin-right: 50px
+    margin-right: 110px;
+    margin-left: 110px;
 }
 
 span.wdt_img.wooc-image img {
@@ -51947,7 +51950,9 @@ a.woocommerce-review-link:hover {
 }
 
 .prd_title {
-    margin-top: 15px
+    margin-top: 15px;
+    font-size: 40px;
+    margin-bottom: 35px;
 }
 
 a.title_product:hover {
@@ -62062,4 +62067,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #333
+}
+.single-blog-style-two .img-box img {
+    width: 100%;
 }

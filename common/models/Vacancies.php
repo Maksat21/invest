@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "vacancies".
@@ -17,12 +19,27 @@ use Yii;
  */
 class Vacancies extends \yii\db\ActiveRecord
 {
+    const STATUS_PUBLISHED     = 1;
+    const STATUS_NOT_PUBLISHED = 2;
+
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
         return 'vacancies';
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'value' => function(){
+                    return date('Y-m-d H:i:s');
+                }
+            ],
+        ];
     }
 
     /**
@@ -50,6 +67,25 @@ class Vacancies extends \yii\db\ActiveRecord
             'status'        => Yii::t('backend', 'Status'),
             'created_at'    => Yii::t('backend', 'Created At'),
             'updated_at'    => Yii::t('backend', 'Updated At'),
+        ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatusLabel()
+    {
+        return ArrayHelper::getValue(static::getStatuses(), $this->status);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
+            self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
         ];
     }
 }

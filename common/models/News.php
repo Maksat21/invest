@@ -99,7 +99,7 @@ class News extends \yii\db\ActiveRecord
      */
     public function getAttachments()
     {
-        return $this->hasMany(Attachments::className(), ['model_id' => 'id']);
+        return $this->hasMany(Attachments::className(), ['model_id' => 'id'])->where(['type' => Attachments::TYPE_NEWS]);
     }
 
     /**
@@ -152,4 +152,11 @@ class News extends \yii\db\ActiveRecord
         ];
     }
 
+    public function getTeaser()
+    {
+
+        $result = strlen($this->description) >= 200 ? mb_substr(strip_tags($this->description),0,301).'...' : $this->description;
+
+        return $result;
+    }
 }

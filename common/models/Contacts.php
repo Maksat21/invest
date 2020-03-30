@@ -3,6 +3,9 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+use yii\behaviors\TimestampBehavior;
+
 
 /**
  * This is the model class for table "contacts".
@@ -17,15 +20,31 @@ use Yii;
  * @property string $longitude Долгота
  * @property string $created_at Дата создания
  * @property string $updated_at Дата обновления
+ * @property int $status Статус
  */
 class Contacts extends \yii\db\ActiveRecord
 {
+    const STATUS_PUBLISHED     = 1;
+    const STATUS_NOT_PUBLISHED = 2;
+
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
         return 'contacts';
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'value' => function(){
+                    return date('Y-m-d H:i:s');
+                }
+            ],
+        ];
     }
 
     /**
@@ -35,6 +54,7 @@ class Contacts extends \yii\db\ActiveRecord
     {
         return [
             [['latitude', 'longitude'], 'number'],
+            [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['address', 'email', 'phone', 'link', 'work_day'], 'string', 'max' => 255],
         ];
@@ -56,6 +76,26 @@ class Contacts extends \yii\db\ActiveRecord
             'longitude'     => Yii::t('backend', 'Longitude'),
             'created_at'    => Yii::t('backend', 'Created At'),
             'updated_at'    => Yii::t('backend', 'Updated At'),
+            'status'        => Yii::t('backend', 'Status'),
+        ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatusLabel()
+    {
+        return ArrayHelper::getValue(static::getStatuses(), $this->status);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
+            self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
         ];
     }
 }

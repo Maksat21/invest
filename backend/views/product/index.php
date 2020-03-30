@@ -2,22 +2,22 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\Product;
+use common\widgets\Panel;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ProductSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Products';
+$this->title = Yii::t('backend', 'Products');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php Panel::begin([
+        'title' => $this->title,
+        'buttonsTemplate' => '{create}'
+    ])?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -27,16 +27,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'content',
-            'status',
-            'slug',
-            //'meta_title',
-            //'meta_description',
-            //'meta_keywords',
-            //'created_at',
-            //'updated_at',
+            'content:ntext',
+            [
+                'attribute' => 'status',
+                'format' => 'html',
+                'value' => function (Product $model) {
+                    if ($model->status === $model::STATUS_PUBLISHED) {
+                        $class = 'label-success';
+                    } else if ($model->status === $model::STATUS_NOT_PUBLISHED) {
+                        $class = 'label-warning';
+                    }
+                    return Html::tag('span', $model->getStatusLabel(), ['class' => 'label ' . $class]);
+                },
+                'filter' => Product::getStatuses()
+            ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+
+            ['class' => '\common\components\grid\ActionColumn',
+                'template' => '{update}{delete}'],
         ],
     ]); ?>
+
+    <?php Panel::end() ?>
 </div>

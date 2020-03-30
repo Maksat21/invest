@@ -18,7 +18,7 @@ class MaterialsSearch extends Materials
     {
         return [
             [['id', 'type', 'status'], 'integer'],
-            [['title', 'description', 'created_at', 'updated_at'], 'safe'],
+            [['title', 'description', 'meta_title', 'meta_description', 'meta_keywords', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class MaterialsSearch extends Materials
      */
     public function search($params)
     {
-        $query = Materials::find();
+        $query = Materials::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
@@ -66,7 +66,10 @@ class MaterialsSearch extends Materials
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'description', $this->description]);
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'meta_title', $this->meta_title])
+            ->andFilterWhere(['like', 'meta_description', $this->meta_description])
+            ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords]);
 
         return $dataProvider;
     }

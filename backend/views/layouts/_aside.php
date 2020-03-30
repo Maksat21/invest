@@ -73,6 +73,12 @@ use common\widgets\Sidebar;
                         'icon' => 'fa-link',
                         'void' => true,
                     ],
+                    [
+                        'label' => 'Изображения',
+                        'url' => ['/images/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
 
                     /*[
                         'label' => Yii::t('app', 'Matching'),

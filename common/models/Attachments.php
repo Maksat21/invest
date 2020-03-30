@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "attachments".
@@ -25,6 +26,7 @@ class Attachments extends \yii\db\ActiveRecord
     const TYPE_PRODUCT = 2;
     const TYPE_MANAGEMENT = 3;
     const TYPE_GALLERY = 4;
+    const TYPE_CERTIFICATE = 5;
 
 
     /**
@@ -98,5 +100,35 @@ class Attachments extends \yii\db\ActiveRecord
     public function getManagement()
     {
         return $this->hasOne(Management::className(), ['id' => 'model_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getImages()
+    {
+        return $this->hasOne(Images::className(), ['id' => 'model_id']);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeLabel()
+    {
+        return ArrayHelper::getValue(static::getType(), $this->type);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getType()
+    {
+        return [
+            self::TYPE_NEWS     => Yii::t('backend', 'News'),
+            self::TYPE_PRODUCT => Yii::t('backend', 'Product'),
+            self::TYPE_MANAGEMENT => Yii::t('backend', 'Management'),
+            self::TYPE_GALLERY => Yii::t('backend', 'Gallery'),
+            self::TYPE_CERTIFICATE => Yii::t('backend', 'Certificate'),
+        ];
     }
 }

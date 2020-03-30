@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Contacts;
 use backend\models\ContactsSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ContactsController implements the CRUD actions for Contacts model.
  */
-class ContactsController extends Controller
+class ContactsController extends BaseController
 {
     /**
      * {@inheritdoc}
