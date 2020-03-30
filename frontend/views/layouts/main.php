@@ -23,7 +23,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="home page-template page-template-page-templates page-template-home-1 page-template-page-templateshome-1-php page page-id-405 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-405">
+<body class="page-template page-template-page-templates page-template-home-green page-template-page-templateshome-green-php page page-id-554 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-554">
 <?php $this->beginBody() ?>
 
 <div class="page-wrapper">
