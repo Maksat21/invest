@@ -68,7 +68,8 @@ class Product extends \yii\db\ActiveRecord
         return [
             [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['name', 'content', 'slug', 'meta_title', 'meta_description', 'meta_keywords'], 'string', 'max' => 255],
+            [['name', 'slug', 'meta_title', 'meta_description', 'meta_keywords'], 'string', 'max' => 255],
+            [['content'], 'string'],
             [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
