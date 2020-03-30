@@ -7,6 +7,7 @@ use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\HomeAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 HomeAsset::register($this);
 ?>
@@ -28,19 +29,6 @@ HomeAsset::register($this);
 </div>
 <div class="page-wrapper">
     <div class="header-top home-three">
-        <div class="top-info">
-            <div class="container">
-                <div class="pull-left left-text">
-                    <p>Welcome to our <span>Industrio!</span></p>
-                </div>
-                <div class="pull-right social">
-                    <a href="index.html@post_type=product&amp;paged=1.html#" class="fab fa-facebook-f"></a>
-                    <a href="index.html@post_type=product&amp;paged=1.html#" class="fab fa-twitter"></a>
-                    <a href="index.html@post_type=product&amp;paged=1.html#" class="fab fa-google-plus-g"></a>
-                    <a href="index.html@post_type=product&amp;paged=1.html#" class="fab fa-linkedin-in"></a>
-                </div>
-            </div>
-        </div>
         <div class="container">
             <div class="logo pull-left">
                 <a href="index.html"> <img src="img/talas-invest-logo.png" alt="Awesome Image"> </a>
@@ -78,17 +66,17 @@ HomeAsset::register($this);
                         <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children nav-item menu-item-277"><a title="<?= Yii::t('common','Home'); ?>" href="#"><?= Yii::t('common','Home'); ?></a>
                         </li>
                         <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="#"><?= Yii::t('common','About Us'); ?></a></li>
-                        <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="#"><?= Yii::t('common','Products'); ?></a>
+                        <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                         </li>
-                        <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-item current_page_item nav-item menu-item-379 dropdown submenu active"><a title="<?= Yii::t('common','News'); ?>" href="#"><?= Yii::t('common','News'); ?></a>
+                        <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-item current_page_item nav-item menu-item-379 dropdown submenu active"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
                         </li>
                         <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu"><a title="<?= Yii::t('common','Articles'); ?>" href="#"><?= Yii::t('common','Articles'); ?></a>
                             <ul role="menu" class="sub-menu">
-                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="#"><?= Yii::t('common','Ecology'); ?></a></li>
-                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="#"><?= Yii::t('common','Personnel Policy'); ?></a></li>
+                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="<?= Yii::t('common','Purchase'); ?>" href="#"><?= Yii::t('common','Purchase'); ?></a>
+                        <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="<?= Yii::t('common','Purchase'); ?>" href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a>
                         </li>
                         <li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-541"><a title="<?= Yii::t('common','Contact US'); ?>" href="#"><?= Yii::t('common','Contact Us'); ?></a></li>
                     </ul>

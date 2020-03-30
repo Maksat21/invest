@@ -44203,7 +44203,7 @@ a:active {
 }
 
 .sec-pad {
-    padding: 130px 0
+    padding: 60px 0
 }
 
 .p0 {
@@ -62070,4 +62070,32 @@ body {
 }
 .single-blog-style-two .img-box img {
     width: 100%;
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    width: 100%;
+}
+caption {
+    padding: 10px;
+    color: white;
+    background: #00963F;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
+}
+td {
+    padding: 10px;
+}
+tr:nth-child(odd) {
+    background: white;
+}
+tr:nth-child(even) {
+    background: #dadada;
 }
