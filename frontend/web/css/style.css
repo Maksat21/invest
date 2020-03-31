@@ -47865,7 +47865,6 @@ footer.site-footer .bottom-footer p {
 
 .contact-info-style-one .contact-infos {
     padding: 21px 0;
-    padding-left: 70px
 }
 
 .contact-info-style-one .contact-infos .single-contact-infos {
@@ -47874,7 +47873,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .contact-info-style-one .contact-infos .single-contact-infos+.single-contact-infos {
-    margin-left: 65px
+    margin-left: 20px
 }
 
 .contact-info-style-one .contact-infos .single-contact-infos .icon-box,
@@ -62138,4 +62137,7 @@ tr:nth-child(even) {
 }
 .contact-form-address .col-md-12 {
     padding-bottom: 20px;
+}
+.team-style-two {
+    margin-top: 30px;
 }
