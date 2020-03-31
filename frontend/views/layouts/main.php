@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -42,23 +43,22 @@ AppAsset::register($this);
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
-                        <a href="http://shtheme.net/demosd/industrio/"><img src="http://shtheme.net/demosd/industrio/wp-content/uploads/2018/12/logo2-1.png" alt="Awesome Image" /></a>
-                        <h3>About us</h3> Many of our SELC registered employees are requested as main preferred temporary staff when a service.</div>
+                        <a href="<?= Url::to('/site')?>"><img src="http://shtheme.net/demosd/industrio/wp-content/uploads/2018/12/logo2-1.png" alt="Awesome Image" /></a>
+                        <h3><?= Yii::t('common','About Us'); ?></h3> <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.</div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="footer-widget links-widget">
                         <div class="textwidget">
                             <div class="title">
-                                <h3>Links</h3></div>
+                                <h3><?= Yii::t('common','Navigation'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="http://shtheme.com/demosd/industrio1/?page_id=157">About Us</a></li>
-                                <li><a href="index.html@page_id=229.html">Services</a></li>
-                                <li><a href="http://shtheme.com/demosd/industrio1/?page_id=243">Project</a></li>
-                                <li><a href="index.html#">Pages</a></li>
-                                <li><a href="index.html@page_id=24.html">Blog</a></li>
-                                <li><a href="http://shtheme.com/demosd/industrio1/?page_id=175">Contact</a></li>
+                                <li><a href="<?= Url::to('/site')?>"><?= Yii::t('common','Home'); ?></a></li>
+                                <li><a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                                <li><a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a></li>
+                                <li><a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a></li>
+                                <li><a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a></li>
+                                <li><a href="<?= Url::to('/contacts')?>"><?= Yii::t('common','Contact Us'); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -67,14 +67,14 @@ AppAsset::register($this);
                     <div class="footer-widget services-widget">
                         <div class="textwidget">
                             <div class="title">
-                                <h3>Services</h3></div>
+                                <h3><?= Yii::t('common','Articles & Links'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="index.html#">Engineering</a></li>
-                                <li><a href="index.html#">Petrolium &amp; Gas</a></li>
-                                <li><a href="index.html#">Power &amp; Engergy</a></li>
-                                <li><a href="index.html#">Mechanical Engineering</a></li>
-                                <li><a href="index.html#">Agricultural Processing</a></li>
+                                <li><a href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li><a href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
+                                <li><a href="<?= Url::to('/certificates')?>"><?= Yii::t('common','Certificates'); ?></a></li>
+                                <li><a href="<?= Url::to('/gallery')?>"><?= Yii::t('common','Gallery'); ?></a></li>
+                                <li><a href="<?= Url::to('/vacancies')?>"><?= Yii::t('common','Vacancies'); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,29 +82,7 @@ AppAsset::register($this);
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="footer-widget subscribe-widget">
                         <div class="textwidget">
-                            <h3>Subscribe Today</h3>
-                            <p>Many of our SELC registered employees are requested as main</p>
-                            <div role="form" class="wpcf7" id="wpcf7-f239-o2" lang="en-US" dir="ltr">
-                                <div class="screen-reader-response"></div>
-                                <form action="index.html#wpcf7-f239-o2" method="post" class="wpcf7-form rqa-form contact-form" novalidate="novalidate">
-                                    <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="239" />
-                                        <br />
-                                        <input type="hidden" name="_wpcf7_version" value="5.0.2" />
-                                        <br />
-                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                        <br />
-                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f239-o2" />
-                                        <br />
-                                        <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                    </div>
-                                    <div class="subscribe-form"> <span class="wpcf7-form-control-wrap email"><input type="text" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span>
-                                        <br />
-                                        <input type="submit" value="Subscribe" class="wpcf7-form-control wpcf7-submit hvr-sweep-to-right" />
-                                    </div>
-                                    <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                </form>
-                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8228.767543196858!2d70.52497526368435!3d43.18203385788403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a7fb5ff295a70d%3A0xa6b77d07f91a656d!2sTOO%20%22Talas%20Investment%20Compony%22!5e0!3m2!1sru!2skz!4v1585548904816!5m2!1sru!2skz" width="370" height="235" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -114,10 +92,10 @@ AppAsset::register($this);
     <div class="bottom-footer">
         <div class="container">
             <div class="left-text pull-left">
-                <p> © Copyright Industrio 2019. All right reserved.</p>
+                <p> © Talas Investment Company 2019. <?= Yii::t('common','All Right Reserved'); ?>.</p>
             </div>
             <div class="right-text pull-right">
-                <p> Created by Shtheme</p>
+                <p> Created by SmartIdeaGroup</p>
             </div>
         </div>
     </div>

@@ -39,7 +39,7 @@ HomeAsset::register($this);
                 </div>
                 <div class="collapse navbar-collapse main-navigation mainmenu " id="main-nav-bar">
                     <ul class="nav navbar-nav navigation-box  ">
-                        <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children nav-item menu-item-277"><a title="<?= Yii::t('common','Home'); ?>" href="#"><?= Yii::t('common','Home'); ?></a>
+                        <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children nav-item menu-item-277"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
                         </li>
                         <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="#"><?= Yii::t('common','About Us'); ?></a></li>
                         <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>

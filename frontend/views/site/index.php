@@ -1,6 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
+use frontend\widgets\ManagementWidget;
+use yii\helpers\Url;
 
 $this->title = 'My Yii Application';
 ?>
@@ -52,49 +54,25 @@ $this->title = 'My Yii Application';
                 </div>
                 <div class="collapse navbar-collapse main-navigation mainmenu " id="main-nav-bar">
                     <ul class="nav navbar-nav navigation-box  ">
-                        <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children nav-item menu-item-277 dropdown submenu active active"><a title="Home" href="index.html">Home</a>
+                        <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children nav-item menu-item-277 dropdown submenu active active"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
+                        </li>
+                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title==<?= Yii::t('common','About Us'); ?> href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                        <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
+                        </li>
+                        <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-379 dropdown submenu"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
+                        </li>
+                        <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu"><a title="<?= Yii::t('common','Articles'); ?>" href="#"><?= Yii::t('common','Articles'); ?></a>
                             <ul role="menu" class="sub-menu">
-                                <li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-405 current_page_item nav-item menu-item-543 active"><a title="Home Page One" href="index.html">Home Page One</a></li>
-                                <li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-545"><a title="Home Page Two" href="index.html@page_id=433.html">Home Page Two</a></li>
-                                <li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-544"><a title="Home Page Three" href="index.html@page_id=458.html">Home Page Three</a></li>
+                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="About Us" href="index.html@page_id=491.html">About Us</a></li>
-                        <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="Services" href="index.html@page_id=229.html">Services</a>
-                            <ul role="menu" class="sub-menu">
-                                <li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-283"><a title="Chemical Research" href="index.html@service=chemical-research.html">Chemical Research</a></li>
-                                <li id="menu-item-284" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-284"><a title="Fuel &amp; Gas Management" href="index.html@service=fuel-gas-management.html">Fuel &#038; Gas Management</a></li>
-                                <li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-285"><a title="Eco &amp; Bio Power" href="index.html@service=eco-bio-power.html">Eco &#038; Bio Power</a></li>
-                                <li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-286"><a title="Mechanical Engineering" href="index.html@service=mechanical-engineering.html">Mechanical Engineering</a></li>
-                                <li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-287"><a title="Petroleum Refinery" href="index.html@service=petroleum-refinery.html">Petroleum Refinery</a></li>
-                                <li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-288"><a title="Power &amp; Energy Sector" href="index.html@service=power-energy-sector.html">Power &#038; Energy Sector</a></li>
-                            </ul>
+                        <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="<?= Yii::t('common','Purchase'); ?>" href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a>
                         </li>
-                        <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-379 dropdown submenu"><a title="Shop" href="index.html@post_type=product.html">Shop</a>
-                            <ul role="menu" class="sub-menu">
-                                <li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-product nav-item menu-item-380"><a title="Product Details" href="index.html@product=mechanical-tool-6.html">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu"><a title="Pages" href="index.html#">Pages</a>
-                            <ul role="menu" class="sub-menu">
-                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="Error 404" href="http://shtheme.com/demosd/industrio1/?page_id=123123">Error 404</a></li>
-                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="Coming Soon" href="index.html@page_id=547.html">Coming Soon</a></li>
-                                <li id="menu-item-295" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-295"><a title="Project Details" href="index.html@project=mechanical-works-5.html">Project Details</a></li>
-                                <li id="menu-item-377" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-377"><a title="Shop" href="index.html@post_type=product.html">Shop</a></li>
-                                <li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-542"><a title="Projects" href="index.html@page_id=505.html">Projects</a></li>
-                                <li id="menu-item-378" class="menu-item menu-item-type-post_type menu-item-object-product nav-item menu-item-378"><a title="Product Details" href="index.html@product=mechanical-tool-6.html">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="Blog" href="index.html@page_id=24.html">Blog</a>
-                            <ul role="menu" class="sub-menu">
-                                <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-299"><a title="Blog Classic" href="index.html@page_id=24.html">Blog Classic</a></li>
-                                <li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-300"><a title="Blog Details" href="index.html@p=26.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-541"><a title="Contact Us" href="index.html@page_id=524.html">Contact Us</a></li>
+                        <li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-541"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/contacts')?>"><?= Yii::t('common','Contact Us'); ?></a></li>
                     </ul>
                 </div>
-                <div class="right-side-box"> <a href="http://shtheme.com/demosd/industrio1/?page_id=175" class="rqa-btn"><span class="inner">Get a Quote <i class="fa fa-caret-right"></i></span></a></div>
+                <div class="right-side-box"> <a href="http://shtheme.com/demosd/industrio1/?page_id=175" class="rqa-btn"><span class="inner"><?= Yii::t('common','Apply '); ?><i class="fa fa-caret-right"></i></span></a></div>
             </div>
         </nav>
     </header>
@@ -801,7 +779,7 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                     </section>
-                    <?=\frontend\widgets\ManagementWidget::widget()?>
+                    <?=ManagementWidget::widget()?>
                     <section class="elementor-element elementor-section" data-id="f017610" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">

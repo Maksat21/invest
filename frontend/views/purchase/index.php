@@ -1,6 +1,8 @@
 <?php
 
 /* @var $purchase common\models\Purchase */
+use yii\helpers\Url;
+
 $this->title = Yii::t('common', 'Purchase');
 $this->registerMetaTag(['name' => 'title', 'content' => Yii::t('common', 'Purchase')]);
 $this->registerMetaTag(['name' => 'description', 'content' => $purchase[1]['meta_description']]);
@@ -12,7 +14,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $purchase[1]['meta_ke
     <div class="container">
         <h3><?= Yii::t('common','Purchase'); ?></h3>
         <ul class="breadcumb">
-            <li><a href="index.html"><?= Yii::t('common','Home'); ?></a></li>
+            <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
             <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
             <li><span><?= Yii::t('common','Products'); ?></span></li>
         </ul>

@@ -1,7 +1,7 @@
 <?php
 
 /* @var $model common\models\Contacts */
-
+use yii\helpers\Url;
 
 $this->title = Yii::t('common', 'Contacts');
 ?>
@@ -21,7 +21,7 @@ $this->title = Yii::t('common', 'Contacts');
                                                     <div class="container">
                                                         <h3><?= Yii::t('common','Contact Us'); ?></h3>
                                                         <ul class="breadcumb">
-                                                            <li><a href="#"><?= Yii::t('common','Home'); ?></a></li>
+                                                            <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
                                                             <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                                                             <li><span><?= Yii::t('common','Contact Us'); ?></span></li>
                                                         </ul>

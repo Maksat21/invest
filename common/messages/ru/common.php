@@ -10,7 +10,7 @@ return [
 
    'Home' => 'Главная',
    'About Us' => 'О компании',
-   'Products' => 'Продукты',
+   'Products' => 'Продукция',
    'News' => 'Новости',
    'Articles' => 'Статьи',
    'Purchase' => 'Закупки',

@@ -16,7 +16,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $product[1]['meta_key
         <div class="container">
             <h3><?= Yii::t('common','Products'); ?></h3>
             <ul class="breadcumb">
-                <li><a href="index.html"><?= Yii::t('common','Home'); ?></a></li>
+                <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
                 <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                 <li><span><?= Yii::t('common','Products'); ?></span></li>
             </ul>

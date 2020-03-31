@@ -5,6 +5,7 @@
 use frontend\controllers\NewsController;
 use common\models\News;
 use common\models\Attachments;
+use yii\helpers\Url;
 
 $this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
 $this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
@@ -17,7 +18,7 @@ $this->title = $model['title'];
         <div class="container">
             <h3><?= Yii::t('common','News'); ?></h3>
             <ul class="breadcumb">
-                <li><a href="#"> <?= Yii::t('common','Home'); ?> </a></li>
+                <li><a href="<?= Url::to('/')?>"> <?= Yii::t('common','Home'); ?> </a></li>
                 <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                 <li><span><?= Yii::t('common','News'); ?></span></li>
             </ul>
