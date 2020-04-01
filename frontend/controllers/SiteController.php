@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\Materials;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -140,7 +141,13 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $this->layout = '@frontend/views/layouts/home';
+
+        $model = Materials::findOne(['status' => Materials::STATUS_PUBLISHED, 'type'=> Materials::TYPE_ABOUT]);
+
+        return $this->render('about', [
+            'model' => $model,
+        ]);
     }
 
     /**

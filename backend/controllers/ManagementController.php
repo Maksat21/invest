@@ -131,32 +131,4 @@ class ManagementController extends BaseController
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-    public function actionDeleteImage()
-    {
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        $image = new ImageForm();
-        $image->scenario = ImageForm::SCENARIO_DELETE_IMAGE;
-        if ($image->load(Yii::$app->request->post(), '') && $image->validate()) {
-            $attachment = Attachments::findOne($image->image_id);
-            if (!empty($attachment) && $attachment->delete()) {
-                return ['status' => '200'];
-            } else {
-                throw new ConflictHttpException('Error responsive server');
-            }
-        } else {
-            throw new NotFoundHttpException('This is page not found');
-        }
-    }
-
-    public function actionSetMainImage()
-    {
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        $image = new ImageForm();
-        $image->scenario = ImageForm::SCENARIO_SET_MAIN_IMAGE;
-        if ($image->load(Yii::$app->request->post(), '') && $image->setMainImage()) {
-            return ['status' => '200'];
-        } else {
-            throw new NotFoundHttpException('This is page not found');
-        }
-    }
 }

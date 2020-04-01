@@ -1,16 +1,150 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $model common\models\Materials */
 
-use yii\helpers\Html;
+use yii\helpers\Url;
+use frontend\widgets\ManagementWidget;
+$this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
+$this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => $model['meta_keywords']]);
 
-$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = Yii::t('common','About Us');
 ?>
-<div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the About page. You may modify the following file to customize its content:</p>
+    <div data-elementor-type="post" data-elementor-id="491" class="elementor elementor-491" data-elementor-settings="[]">
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <section class="elementor-element elementor-element-0fa301d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0fa301d" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-d8e4ecf elementor-column elementor-col-100 elementor-top-column" data-id="d8e4ecf" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-86388ea elementor-align-left elementor-widget elementor-widget-bdevs-banner" data-id="86388ea" data-element_type="widget" data-widget_type="bdevs-banner.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
+                                                    <div class="container">
+                                                        <h3><?= Yii::t('common','About Us'); ?></h3>
+                                                        <ul class="breadcumb">
+                                                            <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
+                                                            <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
+                                                            <li><span><?= Yii::t('common','About Us'); ?></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-element elementor-element-b7763c7 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b7763c7" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-8a97db1 elementor-column elementor-col-100 elementor-top-column" data-id="8a97db1" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-fe36718 elementor-align-left elementor-widget elementor-widget-bdevs-about" data-id="fe36718" data-element_type="widget" data-widget_type="bdevs-about.default">
+                                            <div class="elementor-widget-container">
+                                                <section class="about-style-three">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="about-img-box"> <img src="wp-content/uploads/2019/01/about-3-1.png" alt="Awesome Image" />
+                                                                    <div class="content"> <span>Our Story</span>
+                                                                        <h3>Something About <br /> Us</h3></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                <?php if($model): ?>
+                                                                <div class="about-content">
+                                                                    <h3><?=$model->title?></h3>
+                                                                    <p><?=$model->description?></p>
+                                                                </div>
+                                                                <?php endif;?>
+                                                            </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-element elementor-element-e732938 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e732938" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-952e7f6 elementor-column elementor-col-100 elementor-top-column" data-id="952e7f6" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-8eb6f5f elementor-align-left elementor-widget elementor-widget-bdevs-features" data-id="8eb6f5f" data-element_type="widget" data-widget_type="bdevs-features.default">
+                                            <div class="elementor-widget-container">
+                                                <section class="features-style-two">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="fa fa-industry" aria-hidden="true"></i>
+                                                                        <h3>СОБСТВЕННОЕ <br> ПРОИЗВОДСТВО <br>В КАЗАХСТАНЕ</h3>
+                                                                        <p></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="industrio-icon-drop-of-liquid"></i>
+                                                                        <h3>ОПТИМАЛЬНАЯ <br>ТАРА ДЛЯ <br>ПЕРЕВОЗКИ</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                                                        <h3>ИНДИВИДУАЛЬНАЯ <br>ЦЕНОВАЯ <br>ПОЛИТИКА</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="fa fa-shield" aria-hidden="true"></i>
+                                                                        <h3>КОНСУЛЬТАЦИИ <br>ПО ТЕХНИКЕ <br>БЕЗОПАСНОСТИ</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="fa fa-users" aria-hidden="true"></i>
+                                                                        <h3>ВЫСОКО- <br>КВАЛИФИЦИРОВАННЫЙ <br>ПЕРСОНАЛ</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                    <div class="inner"> <i class="fa fa-truck"></i>
+                                                                        <h3>ДОСТАВКА <br>ВО ВСЕ РЕГИОНЫ<br> КАЗАХСТАНА</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?=ManagementWidget::widget()?>
+            </div>
+        </div>
+    </div>
 
-    <code><?= __FILE__ ?></code>
-</div>
+
+
