@@ -48576,6 +48576,14 @@ footer.site-footer .bottom-footer p {
     top: 166px;
 }
 
+.gallery .single-portfolio-style-two .img-box .overlay .box .content a.img-popup {
+    color: #fe5a0e;
+    font-size: 50px;
+    position: absolute;
+    right: 110px;
+    top: 76px;
+}
+
 .portfolio-style-two .single-portfolio-style-two:hover .img-box .overlay {
     opacity: 1
 }

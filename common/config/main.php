@@ -6,6 +6,7 @@ return [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'language' => 'ru',
+    'name' => 'Talas Investment Company',
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

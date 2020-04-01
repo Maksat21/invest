@@ -15,14 +15,14 @@ use common\models\Images;
 <?php if($gallery): ?>
 
 
-         <section class="portfolio-style-two sec-pad">
+         <section class="portfolio-style-two gallery sec-pad">
              <div class="container">
                  <div class="text-center">
-                     <h2></h2>
+                     <h2><?= Yii::t('common','Gallery'); ?></h2>
                  </div>
                  <div class="gallery-filter">
                      <ul class="post-filter masonary text-center">
-                         <li class="filter active" data-filter=".masonary-item"><span><i class="industrio-icon-layers"></i>All Cases</span></li>
+                         <li class="filter active" data-filter=".masonary-item"><span><i class="industrio-icon-layers"></i><?= Yii::t('common','All Images'); ?></span></li>
     <?php foreach ($gallery as $item): ?>
                          <li class="filter " data-filter=".<?=$item->id?>"><span><i class="industrio-icon-drop-of-liquid"></i><?=$item->name?></span></li>
     <?php endforeach;?>

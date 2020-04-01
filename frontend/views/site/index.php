@@ -4,7 +4,7 @@
 use frontend\widgets\ManagementWidget;
 use yii\helpers\Url;
 
-$this->title = 'My Yii Application';
+$this->title = Yii::$app->name;
 ?>
 
 
