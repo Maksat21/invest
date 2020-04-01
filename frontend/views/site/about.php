@@ -76,6 +76,7 @@ $this->title = Yii::t('common','About Us');
                         </div>
                     </div>
                 </section>
+                <?=\frontend\widgets\CertificatesWidget::widget()?>
                 <section class="elementor-element elementor-element-e732938 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e732938" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -86,6 +87,9 @@ $this->title = Yii::t('common','About Us');
                                             <div class="elementor-widget-container">
                                                 <section class="features-style-two">
                                                     <div class="container">
+                                                        <div class="text-center">
+                                                            <h2>Наши преимущества</h2>
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-md-4 col-sm-6 col-xs-12">
                                                                 <div class="single-features-style-two hvr-bounce-to-bottom">

@@ -48527,15 +48527,19 @@ footer.site-footer .bottom-footer p {
 
 .portfolio-style-two .single-portfolio-style-two .img-box .overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    text-align: center;
-    background: #262626;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
     opacity: 0;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease
+    transition: all .4s ease-out;
+
 }
 
 .portfolio-style-two .single-portfolio-style-two .img-box .overlay .box {
@@ -48566,10 +48570,10 @@ footer.site-footer .bottom-footer p {
 
 .portfolio-style-two .single-portfolio-style-two .img-box .overlay .box .content a.img-popup {
     color: #fe5a0e;
-    font-size: 15px;
+    font-size: 50px;
     position: absolute;
-    top: 20px;
-    right: 20px
+    right: 110px;
+    top: 166px;
 }
 
 .portfolio-style-two .single-portfolio-style-two:hover .img-box .overlay {
@@ -62141,4 +62145,10 @@ tr:nth-child(even) {
 }
 .team-style-two {
     margin-top: 30px;
+}
+.portfolio-style-two .text-center {
+    padding-bottom: 70px;
+}
+.features-style-two .text-center {
+    padding-bottom: 70px;
 }
