@@ -62146,9 +62146,20 @@ tr:nth-child(even) {
 .team-style-two {
     margin-top: 30px;
 }
-.portfolio-style-two .text-center {
+.portfolio-style-two .text-center h2 {
     padding-bottom: 70px;
+    margin: 0;
+    color: #262626;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: 'Poppins';
+
 }
-.features-style-two .text-center {
+.features-style-two .text-center h2 {
     padding-bottom: 70px;
+    margin: 0;
+    color: #262626;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: 'Poppins';
 }

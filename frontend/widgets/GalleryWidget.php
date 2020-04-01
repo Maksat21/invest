@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: maksat
  * Date: 01.04.20
- * Time: 17:03
+ * Time: 18:14
  */
 
 namespace frontend\widgets;
@@ -12,14 +12,17 @@ use common\models\Images;
 use common\models\Attachments;
 use yii\base\Widget;
 
-class CertificatesWidget extends Widget
+class GalleryWidget extends Widget
 {
     public function run()
     {
-        $certificates = Images::findOne(['status' => Images::STATUS_PUBLISHED, 'model_type' => Images::TYPE_CERTIFICATE]);
+        $gallery = Images::find()
+            ->andWhere(['status' => Images::STATUS_PUBLISHED])
+            ->andWhere(['model_type' => Images::TYPE_GALLERY])
+            ->all();
 
-        return $this->render('certificates', [
-            'certificates' => $certificates,
+        return $this->render('gallery', [
+            'gallery' => $gallery,
         ]);
 
     }
@@ -27,9 +30,10 @@ class CertificatesWidget extends Widget
     public function getImage($itemID) {
         $image = Attachments::find()
             ->andWhere(['model_id' => $itemID])
-            ->andWhere(['type' => Attachments::TYPE_CERTIFICATE])
+            ->andWhere(['type' => Attachments::TYPE_GALLERY])
             ->asArray()
             ->all();
         return $image;
     }
+
 }

@@ -5,6 +5,8 @@
 
 use yii\helpers\Url;
 use frontend\widgets\ManagementWidget;
+use frontend\widgets\CertificatesWidget;
+
 $this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
 $this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $model['meta_keywords']]);
@@ -76,7 +78,7 @@ $this->title = Yii::t('common','About Us');
                         </div>
                     </div>
                 </section>
-                <?=\frontend\widgets\CertificatesWidget::widget()?>
+                <?=CertificatesWidget::widget()?>
                 <section class="elementor-element elementor-element-e732938 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e732938" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
