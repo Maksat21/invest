@@ -42,5 +42,17 @@ return [
                 ],
             ],
         ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@common/mail',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'ssl://smtp.yandex.ru',
+                'username' => 'robot@pillikan.kz',
+                'password' => 'Ea0mod9f',
+                'port' => '465',
+            ],
+        ],
     ],
 ];

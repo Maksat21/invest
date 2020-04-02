@@ -34,7 +34,7 @@ class ImageForm extends Model
     {
         $attachment = Attachments::findOne(['id' => $this->main_image_id, 'model_id' => $this->model_id, 'type' => $this->model_type]);
         if ($attachment) {
-            Attachments::updateAll(['is_main' => Attachments::NOT_MAIN], ['model_id' => $this->model_id]);
+            Attachments::updateAll(['is_main' => Attachments::NOT_MAIN], ['and', ['model_id' => $this->model_id  ], ['type' => $this->model_type] ]);
             $attachment->is_main = Attachments::MAIN;
             if ($attachment->save()) {
                 return true;
