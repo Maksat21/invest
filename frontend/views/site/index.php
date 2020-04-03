@@ -20,10 +20,6 @@ $this->title = Yii::$app->name;
 
 </head>
 
-<div class="preloader">
-    <div class="spinner"></div>
-</div>
-
     <div class="header-top home-one clearfix">
         <div class="container">
             <div class="logo pull-left">

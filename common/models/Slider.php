@@ -106,7 +106,7 @@ class Slider extends \yii\db\ActiveRecord
      */
     public function getPath()
     {
-        return Yii::$app->params['staticDomain'] . 'slider/';
+        return Yii::$app->params['staticDomain'] . '/slider/';
     }
 
     /**
