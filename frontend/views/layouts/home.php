@@ -26,9 +26,7 @@ HomeAsset::register($this);
 </head>
 <body class="home page-template page-template-page-templates page-template-home-1 page-template-page-templateshome-1-php page page-id-405 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-405">
 <?php $this->beginBody() ?>
-<div class="preloader">
-    <div class="spinner"></div>
-</div>
+
 <div class="page-wrapper">
 <?=HeaderWidget::widget()?>
     <header class="header header-home-three">
