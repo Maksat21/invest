@@ -47059,7 +47059,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .testimonials-style-three {
-    padding-top: 225px;
+    padding-top: 110px;
     padding-bottom: 110px;
     background: #000 url(//shtheme.com/demosd/industrio1/wp-content/themes/industrio/css/../img/testi-bg.jpg) center center no-repeat fixed;
     background-size: cover;
@@ -47096,12 +47096,11 @@ footer.site-footer .bottom-footer p {
 }
 
 .testimonials-style-three .single-testimonials-style-three .img-box {
-    width: 102px
+    width: 30%;
 }
 
 .testimonials-style-three .single-testimonials-style-three .img-box>img {
     width: 100%;
-    border-radius: 50%;
     margin-top: 4px
 }
 
@@ -47130,20 +47129,12 @@ footer.site-footer .bottom-footer p {
     color: #fe5a0e
 }
 
-.testimonials-style-three .single-testimonials-style-three .text-box:after {
-    content: '';
-    width: 48px;
-    height: 39px;
-    background: transparent url(//shtheme.com/demosd/industrio1/wp-content/themes/industrio/css/../img/testi-quote-1-1.png) 0 0 no-repeat;
-    position: absolute;
-    bottom: 0;
-    left: 100px
-}
+
 
 .testimonials-style-three .single-testimonials-style-three .text-box:before {
     content: '';
     width: 2px;
-    height: 107px;
+    height: 321px;
     background: #fff;
     position: absolute;
     top: 4px;
@@ -62188,3 +62179,99 @@ tr:nth-child(even) {
     -webkit-transform: rotate(90deg); transform: rotate(90deg)
 }
 
+.table-contact table {
+    overflow:hidden;
+    border:1px solid #d3d3d3;
+    background:#fefefe;
+    width:100%;
+    margin:5% auto 0;
+    -moz-border-radius:5px; /* FF1+ */
+    -webkit-border-radius:5px; /* Saf3-4 */
+    border-radius:5px;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.table-contact th, td {
+    text-align:center;
+}
+
+.table-contact th {
+    text-shadow: 1px 1px 1px #fff;
+    background:#e8eaeb;
+}
+
+.table-contact td {
+    border-top:1px solid #e0e0e0;
+    border-right:1px solid #e0e0e0;
+}
+
+.table-contact tr.odd-row td {
+    background:#f6f6f6;
+}
+
+.table-contact td.first, th.first {
+    text-align:left
+}
+
+.table-contact td.last {
+    border-right:none;
+}
+
+.table-contact td {
+    background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+    background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+.table-contact tr.odd-row td {
+    background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+    background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+}
+
+.table-contact th {
+    background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+    background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+}
+
+.table-contact tr:first-child th.first {
+    -moz-border-radius-topleft:5px;
+    -webkit-border-top-left-radius:5px; /* Saf3-4 */
+}
+
+.table-contact tr:first-child th.last {
+    -moz-border-radius-topright:5px;
+    -webkit-border-top-right-radius:5px; /* Saf3-4 */
+}
+
+.table-contact tr:last-child td.first {
+    -moz-border-radius-bottomleft:5px;
+    -webkit-border-bottom-left-radius:5px; /* Saf3-4 */
+}
+
+.table-contact tr:last-child td.last {
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-right-radius:5px; /* Saf3-4 */
+}
+.elementor {
+    margin-top: -80px !important;
+}
+.item .single-features-style-two {
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    min-height: 198px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f6f6f6;;
+}
+.text-box .product-name {
+    color: #fe5a0e;
+}
+.text-box .product-apply {
+    margin-top: 15px;
+    text-align: center;
+}

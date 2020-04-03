@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 use frontend\widgets\ManagementWidget;
+use frontend\widgets\GalleryWidget;
+use frontend\widgets\ProductWidget;
 use yii\helpers\Url;
 
 $this->title = Yii::$app->name;
@@ -80,257 +82,57 @@ $this->title = Yii::$app->name;
         <div data-elementor-type="post" data-elementor-id="405" class="elementor elementor-405" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <section class="elementor-element elementor-section-stretched elementor-section" data-id="cd12f2b" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                    <section class="elementor-element elementor-element-c788b26 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c788b26" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
-                                <div class="elementor-element elementor-column elementor-col-100" data-id="0f2eee6" data-element_type="column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-align-left elementor-widget" data-id="780e557" data-element_type="widget" data-widget_type="bdevs-slider.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="main-slider">
-                                                        <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
-                                                            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
-                                                                <ul>
-                                                                    <li class="slide-1" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="wp-content/uploads/2019/01/banner-3-1.png">
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-90','-80','-100','-80']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;text-align: center;">
-                                                                            <h2>НАША СТРАТЕГИЯ</h2></div>
-                                                                        <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['50','40','25','15']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: center;"> <a href="index.html#" class="theme-btn btn-style-one hvr-sweep-to-right">Learn more <i class="fa fa-arrow-right"></i></a></div>
-                                                                    </li>
-                                                                    <li class="slide-2" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="wp-content/uploads/2019/01/banner-3-2.png">
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-90','-80','-100','-80']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;text-align: center;">
-                                                                            <h2>НАША СТРАТЕГИЯ</h2></div>
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','500','500','400']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['20','40','15','15']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: center;">
-                                                                            <div class="text white-text"> Развивая производство – поднимаем экономику</div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="slide-3" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical"> <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="img/zavod-talas-2.jpg">
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['650','750','700','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-100','-80','-100','-80']" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
-                                                                            <h2>НАША МИССИЯ</h2></div>
-                                                                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','500','500','400']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['20','40','15','15']" data-x="['right','right','right','right']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
-                                                                            <div class="text white-text"> Ответственный подход – сохраняет экологию</div>
-                                                                        </div>
-                                                                        <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['550','600','650','420']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['115','130','100','85']" data-x="['left','left','left','left']" data-y="['top','top','top','top']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap; text-align: right;">
-                                                                            <img src="img/talas-worker.png" alt=""></div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-element elementor-section" data-id="f5f9f02" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-column elementor-col-100" data-id="e4b44c1" data-element_type="column">
+                                <div class="elementor-element elementor-element-7087790 elementor-column elementor-col-100 elementor-top-column" data-id="7087790" data-element_type="column">
                                     <div class="elementor-column-wrap  elementor-element-populated">
                                         <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-align-left elementor-widget" data-id="6a6778f" data-element_type="widget" data-widget_type="bdevs-service.default">
+                                            <div class="elementor-element elementor-element-bd24821 elementor-align-left elementor-widget elementor-widget-bdevs-slider" data-id="bd24821" data-element_type="widget" data-widget_type="bdevs-slider.default">
                                                 <div class="elementor-widget-container">
-                                                    <section class="service-style-two">
-                                                        <div class="container">
-                                                            <div class="service-carousel-style-two owl-carousel owl-theme">
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-6.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-tower"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Power &#038; Energy Sector</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-tower"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Power &#038; Energy Sector</h3>
-                                                                                        <p> Power &#038; Energy Sector Manufacturing industry became a key sector...</p> <a href="index.html@service=power-energy-sector.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
+                                                    <div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-home-one slider-home-three" data-ride="carousel">
+                                                        <div class="carousel-inner" role="listbox">
+                                                            <div class="item active slide-1" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-2.png);background-position: center center;">
+                                                                <div class="carousel-caption">
+                                                                    <div class="container">
+                                                                        <div class="box valign-middle">
+                                                                            <div class="content text-center">
+                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-5.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-drop-of-liquid"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Petroleum Refinery</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-drop-of-liquid"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Petroleum Refinery</h3>
-                                                                                        <p> Petroleum Refinery Manufacturing industry became a key sector of production...</p> <a href="index.html@service=petroleum-refinery.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
+                                                            </div>
+                                                            <div class="item slide-2" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-1.png);background-position: center center;">
+                                                                <div class="carousel-caption">
+                                                                    <div class="container">
+                                                                        <div class="box valign-middle">
+                                                                            <div class="content text-center">
+                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2>
+                                                                                <p data-animation="animated fadeInDown">We are the best guarenteed company to serve you. We are dedicated to help you any time.</p> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-4.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-industry"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Mechanical Engineering</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-industry"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Mechanical Engineering</h3>
-                                                                                        <p> Mechanical Engineering Manufacturing industry became a key sector of production...</p> <a href="index.html@service=mechanical-engineering.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-3-1.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-atomic"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Eco &#038; Bio Power</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-atomic"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Eco &#038; Bio Power</h3>
-                                                                                        <p> Eco &#038; Bio Power Manufacturing industry became a key sector...</p> <a href="index.html@service=eco-bio-power.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-1-1.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-gas-station-1"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Fuel &#038; Gas Management</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-gas-station-1"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Fuel &#038; Gas Management</h3>
-                                                                                        <p> Fuel &#038; Gas Management Manufacturing industry became a key sector...</p> <a href="index.html@service=fuel-gas-management.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-service-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/service-3-2-2.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="overlay">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-flasks"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Chemical Research</h3></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="hover">
-                                                                            <div class="box">
-                                                                                <div class="content">
-                                                                                    <div class="icon-box"> <i class="industrio-icon-flasks"></i></div>
-                                                                                    <div class="text-box">
-                                                                                        <h3>Chemical Research</h3>
-                                                                                        <p> Chemical Research Manufacturing industry became a key sector of production...</p> <a href="index.html@service=chemical-research.html" class="more"> Learn More <i class="fa fa-angle-right"></i></a></div>
-                                                                                </div>
-                                                                            </div>
+                                                            </div>
+                                                            <div class="item slide-3" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-3.png);background-position: center center;">
+                                                                <div class="carousel-caption">
+                                                                    <div class="container">
+                                                                        <div class="box valign-middle">
+                                                                            <div class="content text-right">
+                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2>
+                                                                                <p data-animation="animated fadeInDown">We are the best guarenteed company to serve you. We are dedicated to help you any time.</p> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-element elementor-section" data-id="c350ff6" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-6e448c1 elementor-column elementor-col-100 elementor-top-column" data-id="6e448c1" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-239f7d1 elementor-align-left elementor-widget elementor-widget-bdevs-about" data-id="239f7d1" data-element_type="widget" data-widget_type="bdevs-about.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="about-style-one sec-pad pb0">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-md-7">
-                                                                    <div class="about-content">
-                                                                        <h3>Welcome to <span>Industrio Company</span></h3>
-                                                                        <p>Manufacturing industry became a key sector of production and labour in
-                                                                            <br /> European and North American countries during the Industrial Revolution,
-                                                                            <br /> upsetting previous mercantile and feudal economies.</p>
-                                                                        <div class="row">
-                                                                            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                                                                                <ul class="list-items">
-                                                                                    <li><i class="industrio-icon-next"></i> Our Work Growth</li>
-                                                                                    <li><i class="industrio-icon-next"></i> 1500 Employed</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                                                                                <ul class="list-items">
-                                                                                    <li><i class="industrio-icon-next"></i> Our Employee Growth</li>
-                                                                                    <li><i class="industrio-icon-next"></i> Service Management</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div> <a href="index.html#" class="about-btn hvr-sweep-to-right">Learn about the services</a></div>
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <div class="about-img-box"> <img src="wp-content/uploads/2018/12/about-1-1.png" alt="Awesome Image" />
-                                                                        <div class="video-box"> <img src="wp-content/uploads/2018/12/about-1-2.png" alt="Awesome Image" /> <a href="http://www.youtube.com/watch?v=ZRkdyjJ_MdM" class="video-popup"><i class="industrio-icon-play-button"></i></a></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
+                                                        <a class="left carousel-control" href="index.html@page_id=458.html#minimal-bootstrap-carousel" role="button" data-slide="prev"> <i class="fas fa-angle-left"></i> <span class="sr-only">Previous</span> </a>
+                                                        <a class="right carousel-control" href="index.html@page_id=458.html#minimal-bootstrap-carousel" role="button" data-slide="next"> <i class="fas fa-angle-right"></i> <span class="sr-only">Next</span> </a>
+                                                        <ul class="carousel-indicators list-inline custom-navigation">
+                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="0" class="active"></li>
+                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="1"></li>
+                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="2"></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -352,108 +154,55 @@ $this->title = Yii::$app->name;
                                                             <div class="service-carousel-one owl-carousel owl-theme">
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-tower"></i>
-                                                                                <h3>Собственное производство в Казахстане</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Power &#038; Energy Sector</h3>
-                                                                                        <p> Power &#038; Energy Sector Manufacturing industry became a key sector...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="fa fa-industry" aria-hidden="true"></i>
+                                                                                <h3>СОБСТВЕННОЕ <br> ПРОИЗВОДСТВО <br>В КАЗАХСТАНЕ</h3>
+                                                                                <p></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-drop-of-liquid"></i>
-                                                                                <h3>Petroleum Refinery</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Petroleum Refinery</h3>
-                                                                                        <p> Petroleum Refinery Manufacturing industry became a key sector of production...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="industrio-icon-drop-of-liquid"></i>
+                                                                                <h3>ОПТИМАЛЬНАЯ <br>ТАРА ДЛЯ <br>ПЕРЕВОЗКИ</h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-industry"></i>
-                                                                                <h3>Mechanical Engineering</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Mechanical Engineering</h3>
-                                                                                        <p> Mechanical Engineering Manufacturing industry became a key sector of production...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                                                                <h3>ИНДИВИДУАЛЬНАЯ <br>ЦЕНОВАЯ <br>ПОЛИТИКА</h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-atomic"></i>
-                                                                                <h3>Eco &#038; Bio Power</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Eco &#038; Bio Power</h3>
-                                                                                        <p> Eco &#038; Bio Power Manufacturing industry became a key sector...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="fa fa-shield" aria-hidden="true"></i>
+                                                                                <h3>КОНСУЛЬТАЦИИ <br>ПО ТЕХНИКЕ <br>БЕЗОПАСНОСТИ</h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-gas-station-1"></i>
-                                                                                <h3>Fuel &#038; Gas Management</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Fuel &#038; Gas Management</h3>
-                                                                                        <p> Fuel &#038; Gas Management Manufacturing industry became a key sector...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="fa fa-users" aria-hidden="true"></i>
+                                                                                <h3>ВЫСОКО- <br>КВАЛИФИЦИРОВАННЫЙ <br>ПЕРСОНАЛ</h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="single-service-style-one flip-hover">
-                                                                        <div class="front">
-                                                                            <div class="inner-content"> <i class="industrio-icon-flasks"></i>
-                                                                                <h3>Chemical Research</h3></div>
-                                                                        </div>
-                                                                        <div class="back">
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content">
-                                                                                        <h3>Chemical Research</h3>
-                                                                                        <p> Chemical Research Manufacturing industry became a key sector of production...</p>
-                                                                                    </div>
-                                                                                </div>
+                                                                        <div class="single-features-style-two hvr-bounce-to-bottom">
+                                                                            <div class="inner"> <i class="fa fa-truck"></i>
+                                                                                <h3>ДОСТАВКА <br>ВО ВСЕ РЕГИОНЫ<br> КАЗАХСТАНА</h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -469,395 +218,9 @@ $this->title = Yii::$app->name;
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-section" data-id="fbfa03d" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-174b3d7 elementor-column elementor-col-100 elementor-top-column" data-id="174b3d7" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-9d0f48e elementor-align-left elementor-widget elementor-widget-bdevs-project" data-id="9d0f48e" data-element_type="widget" data-widget_type="bdevs-project.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="portfolio-style-two sec-pad">
-                                                        <div class="container">
-                                                            <div class="sec-title text-center">
-                                                                <h3>Projects for <span>inspirations</span></h3>
-                                                                <p>You will find yourself working in a true partnership that results in an incredible
-                                                                    <br /> experience, and an end product that is the best.</p>
-                                                            </div>
-                                                            <div class="gallery-filter">
-                                                                <ul class="post-filter masonary text-center">
-                                                                    <li class="filter active" data-filter=".masonary-item"><span><i class="industrio-icon-layers"></i>All Cases</span></li>
-                                                                    <li class="filter " data-filter=".agriculture"><span><i class="industrio-icon-drop-of-liquid"></i>Agriculture</span></li>
-                                                                    <li class="filter " data-filter=".chemical"><span><i class="industrio-icon-drop-of-liquid"></i>Chemical</span></li>
-                                                                    <li class="filter " data-filter=".construction"><span><i class="industrio-icon-drop-of-liquid"></i>Construction</span></li>
-                                                                    <li class="filter " data-filter=".industrial"><span><i class="industrio-icon-drop-of-liquid"></i>Industrial</span></li>
-                                                                    <li class="filter " data-filter=".oil-gas"><span><i class="industrio-icon-drop-of-liquid"></i>Oil &amp; Gas</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="row masonary-layout filter-layout" data-filter-class="filter">
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item agriculture chemical  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/6.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=santiago-bernabeu.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/6.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item industrial oil-gas  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/9.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/9.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item construction industrial  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/5.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-2.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/5.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item chemical oil-gas  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/11.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-3.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/11.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item agriculture construction industrial  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/10.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-4.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/10.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item construction oil-gas  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/7.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-5.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/7.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item agriculture  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/8.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-6.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/8.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item chemical  ">
-                                                                    <div class="single-portfolio-style-two">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2019/01/4.png" alt="Awesome Image" />
-                                                                            <div class="overlay">
-                                                                                <div class="box">
-                                                                                    <div class="content"> <span></span> <a href="index.html@project=mechanical-works-7.html"><h3>Mechanical Works</h3></a>
-                                                                                        <a href="wp-content/uploads/2019/01/4.png" class="img-popup industrio-icon-next"></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-element elementor-section" data-id="73b5a0f" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-7e4c8d8 elementor-column elementor-col-100 elementor-top-column" data-id="7e4c8d8" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-306dae7 elementor-align-left elementor-widget elementor-widget-bdevs-testimonial" data-id="306dae7" data-element_type="widget" data-widget_type="bdevs-testimonial.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="testimonials-style-two dark-bg sec-pad">
-                                                        <div class="container">
-                                                            <div class="sec-title light">
-                                                                <h3>Clients say <span>about us</span></h3></div>
-                                                            <div class="testimonials-style-two-carousel owl-theme owl-carousel">
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-1.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Laure Spinello</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-2.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Juan Horii</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-2.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Juan Horii</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-2.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Juan Horii</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-1.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Laure Spinello</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="single-testimonial-style-two">
-                                                                        <div class="inner">
-                                                                            <p><i class="fas fa-quote-left"></i> Very professional Quisq ue lorem tortor fringilla sed,vestibulum id, elei
-                                                                                <br />fend justo bibendum sapien massa
-                                                                                <br />ac turpis faucibus. <i class="fas fa-quote-right"></i></p>
-                                                                            <div class="client-info-box">
-                                                                                <div class="img-box"> <img src="wp-content/uploads/2018/12/testi-1-3.jpg" alt="Awesome Image" /></div>
-                                                                                <div class="text-box">
-                                                                                    <h3>Reyes Slotemaker</h3>
-                                                                                    <p>Founder, Arch Industry</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-element elementor-section" data-id="3b1618d" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-e6925bc elementor-column elementor-col-100 elementor-top-column" data-id="e6925bc" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-26694ff elementor-align-left elementor-widget elementor-widget-bdevs-features" data-id="26694ff" data-element_type="widget" data-widget_type="bdevs-features.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="feature-style-one">
-                                                        <div class="container">
-                                                            <div class="clearfix">
-                                                                <div class="col-md-4">
-                                                                    <div class="single-feature-style-one">
-                                                                        <div class="icon-box"> <i class="industrio-icon-innovation"></i></div>
-                                                                        <div class="text-box">
-                                                                            <h3>Creative Ideas</h3>
-                                                                            <p>Sed quia non numquam eius modi tempora incidunt ut labore.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="single-feature-style-one light">
-                                                                        <div class="icon-box"> <i class="industrio-icon-secure-shield"></i></div>
-                                                                        <div class="text-box">
-                                                                            <h3>Super Safety</h3>
-                                                                            <p>Sed quia non numquam eius modi tempora incidunt ut labore.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="single-feature-style-one light">
-                                                                        <div class="icon-box"> <i class="industrio-icon-support"></i></div>
-                                                                        <div class="text-box">
-                                                                            <h3>24/7 Support</h3>
-                                                                            <p>Sed quia non numquam eius modi tempora incidunt ut labore.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <?=ProductWidget::widget()?>
+                    <?=GalleryWidget::widget()?>
                     <?=ManagementWidget::widget()?>
-                    <section class="elementor-element elementor-section" data-id="f017610" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-f61a351 elementor-column elementor-col-100 elementor-top-column" data-id="f61a351" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-450dc08 elementor-align-left elementor-widget elementor-widget-bdevs-faq" data-id="450dc08" data-element_type="widget" data-widget_type="bdevs-faq.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="faq-rqa-section faq-style-one sec-pad pb0">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12 pull-left">
-                                                                    <div class="sec-title">
-                                                                        <h3>Learn more from <span>our FAQ</span></h3>
-                                                                        <p>You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.</p>
-                                                                    </div>
-                                                                    <div class="accrodion-grp" data-grp-name="faq-accrodion">
-                                                                        <div class="accrodion active">
-                                                                            <div class="accrodion-title">
-                                                                                <h4>How to process the funtion for consulting?</h4></div>
-                                                                            <div class="accrodion-content">
-                                                                                <div class="inner">
-                                                                                    <p>Many of our SELC registered employees are requested as main preferred Guilds were associations of artisans and Merchant that oversaw the main production and distribution of a particular good.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="accrodion ">
-                                                                            <div class="accrodion-title">
-                                                                                <h4>Where should I incorporate my business?</h4></div>
-                                                                            <div class="accrodion-content">
-                                                                                <div class="inner">
-                                                                                    <p>Many of our SELC registered employees are requested as main preferred Guilds were associations of artisans and Merchant that oversaw the main production and distribution of a particular good.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="accrodion ">
-                                                                            <div class="accrodion-title">
-                                                                                <h4>How much should I capitalize with at the beginning?</h4></div>
-                                                                            <div class="accrodion-content">
-                                                                                <div class="inner">
-                                                                                    <p>Many of our SELC registered employees are requested as main preferred Guilds were associations of artisans and Merchant that oversaw the main production and distribution of a particular good.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> <a href="index.html#" class="more-info">Get more informations <i class="fa fa-arrow-right"></i></a></div>
-                                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right">
-                                                                    <div class="rqa-box">
-                                                                        <div role="form" class="wpcf7" id="wpcf7-f5-p405-o1" lang="en-US" dir="ltr">
-                                                                            <div class="screen-reader-response"></div>
-                                                                            <form action="index.html#wpcf7-f5-p405-o1" method="post" class="wpcf7-form rqa-form contact-form" novalidate="novalidate">
-                                                                                <div style="display: none;">
-                                                                                    <input type="hidden" name="_wpcf7" value="5" />
-                                                                                    <input type="hidden" name="_wpcf7_version" value="5.0.2" />
-                                                                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                                                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p405-o1" />
-                                                                                    <input type="hidden" name="_wpcf7_container_post" value="405" />
-                                                                                </div>
-                                                                                <h3>Request a <span>Quote</span></h3>
-                                                                                <p>Fill all information details to consult with us to get sevices from us</p>
-                                                                                <div class="rqa-form"> <span class="wpcf7-form-control-wrap name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span><span class="wpcf7-form-control-wrap email"><input type="text" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Email" /></span> <span class="wpcf7-form-control-wrap phone"><input type="text" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Telephone" /></span> <span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Write some text..."></textarea></span>
-                                                                                    <input type="submit" value="Get a quote" class="wpcf7-form-control wpcf7-submit hvr-sweep-to-right" />
-                                                                                </div>
-                                                                                <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     <section class="elementor-element elementor-section" data-id="cee29c9" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
@@ -900,35 +263,7 @@ $this->title = Yii::$app->name;
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-element elementor-section" data-id="318bdd3" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-cb99a6c elementor-column elementor-col-100 elementor-top-column" data-id="cb99a6c" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-e32a263 elementor-align-center elementor-widget elementor-widget-bdevs-brand" data-id="e32a263" data-element_type="widget" data-widget_type="bdevs-brand.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="brand-carousel-area">
-                                                        <div class="container">
-                                                            <div class="brand-carousel owl-carousel owl-theme">
-                                                                <div class="item"> <i class="brands-icon-codecanyon"></i></div>
-                                                                <div class="item"> <i class="brands-icon-envato"></i></div>
-                                                                <div class="item"> <i class="brands-icon-graphicriver"></i></div>
-                                                                <div class="item"> <i class="brands-icon-photodune"></i></div>
-                                                                <div class="item"> <i class="brands-icon-themeforest"></i></div>
-                                                                <div class="item"> <i class="brands-icon-videohive"></i></div>
-                                                                <div class="item"> <i class="brands-icon-audiojungle"></i></div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
                     <section class="elementor-element elementor-section" data-id="de1863e" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">

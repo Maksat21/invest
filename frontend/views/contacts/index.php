@@ -90,26 +90,61 @@ $this->title = Yii::t('common', 'Contacts');
                                                                 </div>
                                                                 <?php endif;?>
                                                             </div>
-                                                            <div class="col-md-6">
-                                                                <div role="form" class="wpcf7" id="wpcf7-f180-p524-o1" lang="en-US" dir="ltr">
-                                                                    <div class="screen-reader-response"></div>
-                                                                    <form action="" method="post" class="wpcf7-form rqa-form contact-form" novalidate="novalidate">
-                                                                        <div style="display: none;">
-                                                                            <input type="hidden" name="_wpcf7" value="180" />
-                                                                            <input type="hidden" name="_wpcf7_version" value="5.0.2" />
-                                                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f180-p524-o1" />
-                                                                            <input type="hidden" name="_wpcf7_container_post" value="524" />
-                                                                        </div>
-                                                                        <div class="contact-form">
-                                                                            <h3>Send Mail</h3>
-                                                                            <p><span class="wpcf7-form-control-wrap name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your name.." /></span><span class="wpcf7-form-control-wrap email"><input type="text" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your email address.." /></span><span class="wpcf7-form-control-wrap subject"><input type="text" name="subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Location.." /></span><span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Write..."></textarea></span>
-                                                                                <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit hvr-sweep-to-right" />
-                                                                            </p>
-                                                                        </div>
-                                                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                                                    </form>
-                                                                </div>
+                                                            <div class="col-md-6 table-contact">
+                                                                <table cellspacing="0">
+                                                                    <tr>
+                                                                        <th>Отдел</th>
+                                                                        <th>Внутренний номер</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Приемная</td>
+                                                                        <td>102</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Бухгалтерия</td>
+                                                                        <td>163</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Финансово-экономический отдел</td>
+                                                                        <td>199</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Юридический отдел</td>
+                                                                        <td>136</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Отдел кадров</td>
+                                                                        <td>150</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Отдел энергетики</td>
+                                                                        <td>141</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>ІТ - отдел</td>
+                                                                        <td>184</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Отдел материально-технического снабжения и сбыта</td>
+                                                                        <td>168</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Производственно-технический отдел</td>
+                                                                        <td>148</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Отдел по технике безопасности</td>
+                                                                        <td>139</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Ремонтно-механическая служба</td>
+                                                                        <td>142</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Транспортный цех</td>
+                                                                        <td>151</td>
+                                                                    </tr>
+                                                                </table>
                                                             </div>
                                                         </div>
                                                     </div>
