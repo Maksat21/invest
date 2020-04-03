@@ -6,6 +6,7 @@ use frontend\widgets\GalleryWidget;
 use frontend\widgets\ProductWidget;
 use frontend\widgets\NewsWidget;
 use frontend\widgets\ContactsWidget;
+use frontend\widgets\SliderWidget;
 use yii\helpers\Url;
 
 $this->title = Yii::$app->name;
@@ -84,7 +85,7 @@ $this->title = Yii::$app->name;
         <div data-elementor-type="post" data-elementor-id="405" class="elementor elementor-405" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <?=\frontend\widgets\SliderWidget::widget()?>
+                    <?=SliderWidget::widget()?>
                     <section class="elementor-element elementor-section" data-id="fd7ba09" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
