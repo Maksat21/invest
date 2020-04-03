@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Images;
+use common\models\Slider;
 
 /**
- * ImagesSearch represents the model behind the search form of `common\models\Images`.
+ * SliderSearch represents the model behind the search form of `common\models\Slider`.
  */
-class ImagesSearch extends Images
+class SliderSearch extends Slider
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class ImagesSearch extends Images
     public function rules()
     {
         return [
-            [['id', 'model_type', 'status'], 'integer'],
-            [['name'], 'safe'],
+            [['id', 'status'], 'integer'],
+            [['name', 'content', 'image', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class ImagesSearch extends Images
      */
     public function search($params)
     {
-        $query = Images::find()->orderBy(['id' => SORT_DESC]);
+        $query = Slider::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
@@ -59,11 +59,14 @@ class ImagesSearch extends Images
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'model_type' => $this->model_type,
             'status' => $this->status,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

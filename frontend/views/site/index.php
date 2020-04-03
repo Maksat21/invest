@@ -5,6 +5,7 @@ use frontend\widgets\ManagementWidget;
 use frontend\widgets\GalleryWidget;
 use frontend\widgets\ProductWidget;
 use frontend\widgets\NewsWidget;
+use frontend\widgets\ContactsWidget;
 use yii\helpers\Url;
 
 $this->title = Yii::$app->name;
@@ -59,7 +60,7 @@ $this->title = Yii::$app->name;
                     <ul class="nav navbar-nav navigation-box  ">
                         <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children nav-item menu-item-277 dropdown submenu active active"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
                         </li>
-                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title==<?= Yii::t('common','About Us'); ?> href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title==<?= Yii::t('common','About Us'); ?> href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                         <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                         </li>
                         <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-379 dropdown submenu"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
@@ -83,65 +84,7 @@ $this->title = Yii::$app->name;
         <div data-elementor-type="post" data-elementor-id="405" class="elementor elementor-405" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <section class="elementor-element elementor-element-c788b26 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c788b26" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-7087790 elementor-column elementor-col-100 elementor-top-column" data-id="7087790" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-bd24821 elementor-align-left elementor-widget elementor-widget-bdevs-slider" data-id="bd24821" data-element_type="widget" data-widget_type="bdevs-slider.default">
-                                                <div class="elementor-widget-container">
-                                                    <div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-home-one slider-home-three" data-ride="carousel">
-                                                        <div class="carousel-inner" role="listbox">
-                                                            <div class="item active slide-1" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-2.png);background-position: center center;">
-                                                                <div class="carousel-caption">
-                                                                    <div class="container">
-                                                                        <div class="box valign-middle">
-                                                                            <div class="content text-center">
-                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item slide-2" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-1.png);background-position: center center;">
-                                                                <div class="carousel-caption">
-                                                                    <div class="container">
-                                                                        <div class="box valign-middle">
-                                                                            <div class="content text-center">
-                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2>
-                                                                                <p data-animation="animated fadeInDown">We are the best guarenteed company to serve you. We are dedicated to help you any time.</p> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item slide-3" style="background-image: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/banner-3-3.png);background-position: center center;">
-                                                                <div class="carousel-caption">
-                                                                    <div class="container">
-                                                                        <div class="box valign-middle">
-                                                                            <div class="content text-right">
-                                                                                <h2 data-animation="animated fadeInUp">We will provide the best <span>Industrial</span> service</h2>
-                                                                                <p data-animation="animated fadeInDown">We are the best guarenteed company to serve you. We are dedicated to help you any time.</p> <a href="index.html@page_id=458.html#" class="banner-btn hvr-sweep-to-right" data-animation="animated fadeInDown">Learn more <i class="fa fa-arrow-right"></i></a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <a class="left carousel-control" href="index.html@page_id=458.html#minimal-bootstrap-carousel" role="button" data-slide="prev"> <i class="fas fa-angle-left"></i> <span class="sr-only">Previous</span> </a>
-                                                        <a class="right carousel-control" href="index.html@page_id=458.html#minimal-bootstrap-carousel" role="button" data-slide="next"> <i class="fas fa-angle-right"></i> <span class="sr-only">Next</span> </a>
-                                                        <ul class="carousel-indicators list-inline custom-navigation">
-                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="1"></li>
-                                                            <li data-target="#minimal-bootstrap-carousel" data-slide-to="2"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <?=\frontend\widgets\SliderWidget::widget()?>
                     <section class="elementor-element elementor-section" data-id="fd7ba09" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
@@ -223,38 +166,7 @@ $this->title = Yii::$app->name;
                     <?=GalleryWidget::widget()?>
                     <?=ManagementWidget::widget()?>
                     <?=NewsWidget::widget()?>
-
-                    <section class="elementor-element elementor-section" data-id="de1863e" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-413be5d elementor-column elementor-col-100 elementor-top-column" data-id="413be5d" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-96b06e1 elementor-align-left elementor-widget elementor-widget-bdevs-award" data-id="96b06e1" data-element_type="widget" data-widget_type="bdevs-award.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="award-winning">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-md-7">
-                                                                    <div class="title">
-                                                                        <h3>Winning <span>awards</span></h3>
-                                                                        <p>You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <div class="img-box clearfix"> <img src="wp-content/uploads/2019/01/certificate-1-1.jpg" alt="Awesome Image" class="pull-left" /> <img src="wp-content/uploads/2019/01/certificate-1-2.jpg" alt="Awesome Image" class="pull-right" /></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <?=ContactsWidget::widget()?>
                 </div>
             </div>
         </div>

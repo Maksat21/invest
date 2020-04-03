@@ -41,7 +41,7 @@ HomeAsset::register($this);
                     <ul class="nav navbar-nav navigation-box  ">
                         <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children nav-item menu-item-277"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
                         </li>
-                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="#"><?= Yii::t('common','About Us'); ?></a></li>
+                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                         <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                         </li>
                         <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-item current_page_item nav-item menu-item-379 dropdown submenu active"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
@@ -76,7 +76,7 @@ HomeAsset::register($this);
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
-                        <a href="<?= Url::to('/site')?>"><img src="http://shtheme.net/demosd/industrio/wp-content/uploads/2018/12/logo2-1.png" alt="Awesome Image" /></a>
+                        <a href="<?= Url::to('/site')?>"><img src="<?= Url::to('/site')?>" alt="Awesome Image" /></a>
                         <h3><?= Yii::t('common','About Us'); ?></h3> <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.</div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">
@@ -87,7 +87,7 @@ HomeAsset::register($this);
                             <p></p>
                             <ul class="links-list">
                                 <li><a href="<?= Url::to('/site')?>"><?= Yii::t('common','Home'); ?></a></li>
-                                <li><a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                                <li><a href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                                 <li><a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a></li>
                                 <li><a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a></li>
                                 <li><a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a></li>

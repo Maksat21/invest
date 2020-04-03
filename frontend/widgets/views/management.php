@@ -24,7 +24,7 @@ use common\models\Management;
                                 <section class="team-style-two pt0 sec-pad">
                                     <div class="container">
                                         <div class="sec-title text-center">
-                                            <h3><span>Руководство</span>компании</h3>
+                                            <h3><span>Руководство </span>компании</h3>
                                         </div>
                                         <div class="team-style-two-carousel owl-carousel owl-theme">
                                             <?php foreach ($management as $item): ?>

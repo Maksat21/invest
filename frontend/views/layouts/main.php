@@ -54,7 +54,7 @@ AppAsset::register($this);
                             <p></p>
                             <ul class="links-list">
                                 <li><a href="<?= Url::to('/site')?>"><?= Yii::t('common','Home'); ?></a></li>
-                                <li><a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                                <li><a href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                                 <li><a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a></li>
                                 <li><a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a></li>
                                 <li><a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a></li>
