@@ -17,6 +17,8 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use common\widgets\Alert;
 use yii\bootstrap\Modal;
+use yii\helpers\ArrayHelper;
+use common\models\Product;
 
 $this->title = Yii::t('common', 'Apply');
 ?>
@@ -24,7 +26,6 @@ $this->title = Yii::t('common', 'Apply');
 <?php
 
 Modal::begin([
-    'header' => '<h2>Оставить заявку!</h2>',
     'toggleButton' => [
         'label' => '<p>Оставить заявку</p>',
         'tag' => 'button',
@@ -42,21 +43,21 @@ Modal::begin([
     <p><?= Yii::t('common','Fill in the following fields to send a request'); ?></p>
     <?php $form = ActiveForm::begin(['id' => 'feedback-form']); ?>
 
-    <?= $form->field($model, 'company_name')->label(false)->textInput() ?>
+    <?= $form->field($model, 'company_name')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Company Name')]) ?>
 
-    <?= $form->field($model, 'product_id')->label(false)->textInput() ?>
+    <?= $form->field($model, 'product_id')->label(false)->dropDownList(ArrayHelper::map(Product::find()->where(['status'=> Product::STATUS_PUBLISHED])->asArray()->all(), 'id', 'name')) ?>
 
-    <?= $form->field($model, 'quantity')->label(false)->textInput() ?>
+    <?= $form->field($model, 'quantity')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Quantity')]) ?>
 
-    <?= $form->field($model, 'barrel')->label(false)->textInput() ?>
+    <?= $form->field($model, 'barrel')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Barrel')]) ?>
 
-    <?= $form->field($model, 'delivery')->label(false)->textInput() ?>
+    <?= $form->field($model, 'delivery')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Delivery')]) ?>
 
     <?= $form->field($model, 'full_name')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Name').' *']) ?>
 
-    <?= $form->field($model, 'email')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate email').' *']) ?>
+    <?= $form->field($model, 'email')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Email').' *']) ?>
 
-    <?= $form->field($model, 'phone_number')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate phone').' *']) ?>
+    <?= $form->field($model, 'phone_number')->label(false)->textInput(['placeholder' => Yii::t('common','Indicate Phone').' *']) ?>
 
     <p style="color: #646e73">* - <?= Yii::t('common','Required fields'); ?></p>
     <div class="form-group">
