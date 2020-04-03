@@ -4,6 +4,7 @@
 use frontend\widgets\ManagementWidget;
 use frontend\widgets\GalleryWidget;
 use frontend\widgets\ProductWidget;
+use frontend\widgets\NewsWidget;
 use yii\helpers\Url;
 
 $this->title = Yii::$app->name;
@@ -221,48 +222,7 @@ $this->title = Yii::$app->name;
                     <?=ProductWidget::widget()?>
                     <?=GalleryWidget::widget()?>
                     <?=ManagementWidget::widget()?>
-                    <section class="elementor-element elementor-section" data-id="cee29c9" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-element elementor-element-819b227 elementor-column elementor-col-100 elementor-top-column" data-id="819b227" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-0dd5c08 elementor-align-left elementor-widget elementor-widget-bdevs-blog" data-id="0dd5c08" data-element_type="widget" data-widget_type="bdevs-blog.default">
-                                                <div class="elementor-widget-container">
-                                                    <section class="blog-style-one sec-pad pb0">
-                                                        <div class="container">
-                                                            <div class="sec-title">
-                                                                <h3>Latest <span>Blog</span></h3></div>
-                                                            <div class="row">
-                                                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="single-blog-style-one">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2018/12/blog-1-1.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="meta-info"> <a href="index.html#">February 24, 2018</a> <a href="index.html@cat=7.html" title="business" class="letter-spacing-033 small-text highlight category">business </a>,<a href="index.html@cat=9.html" title="technology" class="letter-spacing-033 small-text highlight category">technology </a></div> <a href="index.html@p=9.html"><h3>Loft Office With Vintage Decor For Working</h3></a>
-                                                                        <p> It’s no secret that the digital industry is booming. From exciting startups to global brands, colo mpanies are reaching out to digital agencie, responding to the new possibilitie available....</p> <a href="index.html@p=9.html" class="read-more"> Read More <i class="fa fa-angle-double-right"></i></a></div>
-                                                                </div>
-                                                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="single-blog-style-one">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2018/05/blog-1-2-1.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="meta-info"> <a href="index.html#">May 24, 2018</a> <a href="index.html@cat=7.html" title="business" class="letter-spacing-033 small-text highlight category">business </a>,<a href="index.html@cat=8.html" title="consulting" class="letter-spacing-033 small-text highlight category">consulting </a>,<a href="index.html@cat=6.html" title="fashion" class="letter-spacing-033 small-text highlight category">fashion </a></div> <a href="index.html@p=14.html"><h3>Australia’s provider of industry-based research</h3></a>
-                                                                        <p> It’s no secret that the digital industry is booming. From exciting startups to global brands, colo mpanies are reaching out to digital agencie, responding to the new possibilitie available....</p> <a href="index.html@p=14.html" class="read-more"> Read More <i class="fa fa-angle-double-right"></i></a></div>
-                                                                </div>
-                                                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="single-blog-style-one">
-                                                                        <div class="img-box"> <img src="wp-content/uploads/2018/12/blog-1-1.jpg" alt="Awesome Image" /></div>
-                                                                        <div class="meta-info"> <a href="index.html#">January 24, 2018</a> <a href="index.html@cat=6.html" title="fashion" class="letter-spacing-033 small-text highlight category">fashion </a>,<a href="index.html@cat=9.html" title="technology" class="letter-spacing-033 small-text highlight category">technology </a></div> <a href="index.html@p=17.html"><h3>U.S. fund managers trim bank stocks on profit worries</h3></a>
-                                                                        <p> It’s no secret that the digital industry is booming. From exciting startups to global brands, colo mpanies are reaching out to digital agencie, responding to the new possibilitie available....</p> <a href="index.html@p=17.html" class="read-more"> Read More <i class="fa fa-angle-double-right"></i></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <?=NewsWidget::widget()?>
 
                     <section class="elementor-element elementor-section" data-id="de1863e" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
