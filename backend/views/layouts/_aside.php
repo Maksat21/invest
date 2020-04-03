@@ -26,6 +26,12 @@ use common\widgets\Sidebar;
                         'void' => true,
                     ],
                     [
+                        'label' => 'Слайдер',
+                        'url' => ['/slider/index'],
+                        'icon' => 'fa-link',
+                        'void' => true,
+                    ],
+                    [
                         'label' => 'Новости',
                         'url' => ['/news/index'],
                         'icon' => 'fa-link',

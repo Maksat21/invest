@@ -50,11 +50,16 @@ class NewsController extends BaseController
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($slug)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
+        $model = News::getNewsBySlug($slug);
+        if (!$model) {
+            return $this->goBack();
+        }
+        return $this->render('view',[
+            'model' => $model,
         ]);
+
     }
 
 
@@ -78,6 +83,7 @@ class NewsController extends BaseController
         $image = Attachments::find()
             ->andWhere(['model_id' => $itemID])
             ->andWhere(['is_main' => $isMain])
+            ->andWhere(['type' => Attachments::TYPE_NEWS])
             ->asArray()
             ->all();
         return $image;

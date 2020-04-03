@@ -40,7 +40,7 @@ class ImagesSearch extends Images
      */
     public function search($params)
     {
-        $query = Images::find();
+        $query = Images::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 

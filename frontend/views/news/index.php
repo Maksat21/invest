@@ -6,6 +6,8 @@ use frontend\controllers\NewsController;
 use yii\widgets\LinkPager;
 
 /* @var $news common\models\News */
+/* @var $item common\models\News[] */
+
 $this->title = Yii::t('common', 'News');
 
 ?>
@@ -15,7 +17,7 @@ $this->title = Yii::t('common', 'News');
             <div class="container">
                 <h3><?= Yii::t('common','News'); ?></h3>
                 <ul class="breadcumb">
-                    <li><a href="index.html"><?= Yii::t('common','Home'); ?></a></li>
+                    <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
                     <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                     <li><span><?= Yii::t('common','News'); ?></span></li>
                 </ul>
@@ -35,9 +37,9 @@ $this->title = Yii::t('common', 'News');
                             <?php else:?>
                                 <div class="img-box"> <img src="<?= \common\models\News::getPath().'default.png'?>" alt="Awesome Image"></div>
                             <?php endif;?>
-                            <div class="text-box"> <a href="index.html@p=26.html"><h3><?=$item->title?></h3></a>
+                            <div class="text-box"> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>"><h3><?=$item->title?></h3></a>
                                 <div class="meta-info"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDatetime($item->created_at)?> </div>
-                                <p> <?=$item->getTeaser()?></p> <a href="<?=Url::to(['news/view', 'id' => $item->id]) ?>" class="more hvr-sweep-to-right"><?= Yii::t('common','Learn more'); ?></a></div>
+                                <p> <?=$item->getTeaser()?></p> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>" class="more hvr-sweep-to-right"><?= Yii::t('common','Learn More'); ?></a></div>
                         </div>
                         <?php endforeach; ?>
 <!--                        <div class="blog-post-pagination">-->
@@ -67,4 +69,5 @@ $this->title = Yii::t('common', 'News');
                 </div>
             </div>
         </section>
+
 

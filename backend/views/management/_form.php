@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\widgets\Panel;
+use common\models\Attachments;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Management */
@@ -26,6 +27,7 @@ use common\widgets\Panel;
         <div class="col-md-4">
             <?= $form->field($model, 'post')->textInput(['maxlength' => true]) ?>
         </div>
+
     </div>
 
     <?php if (!$model->isNewRecord): ?>
@@ -46,7 +48,7 @@ use common\widgets\Panel;
                             <?php if ($attachment->is_main): ?>
                                 <span class="btn btn-success">Главное</span>
                             <?php else: ?>
-                                <span class="btn btn-danger set-main-image" data-model_id="<?= $model->id ?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
+                                <span class="btn btn-danger set-main-image" data-model_id="<?= $model->id ?>" data-model_type="<?=Attachments::TYPE_MANAGEMENT?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
                             <?php endif; ?>
                         </td>
                         <td>

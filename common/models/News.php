@@ -159,4 +159,17 @@ class News extends \yii\db\ActiveRecord
 
         return $result;
     }
+
+    public function getTeaserHome()
+    {
+
+        $result = strlen($this->description) >= 100 ? mb_substr(strip_tags($this->description),0,201).'...' : $this->description;
+
+        return $result;
+    }
+
+    public function getNewsBySlug($slug = null)
+    {
+        return $slug ? self::find()->where(['slug' => $slug])->one() : false;
+    }
 }

@@ -4,7 +4,13 @@
 
 use frontend\controllers\NewsController;
 use common\models\News;
+use common\models\Attachments;
+use yii\helpers\Url;
 
+$this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
+$this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => $model['meta_keywords']]);
+$this->title = $model['title'];
 ?>
 
 
@@ -12,7 +18,7 @@ use common\models\News;
         <div class="container">
             <h3><?= Yii::t('common','News'); ?></h3>
             <ul class="breadcumb">
-                <li><a href="index.html"> <?= Yii::t('common','Home'); ?> </a></li>
+                <li><a href="<?= Url::to('/')?>"> <?= Yii::t('common','Home'); ?> </a></li>
                 <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                 <li><span><?= Yii::t('common','News'); ?></span></li>
             </ul>
@@ -24,11 +30,11 @@ use common\models\News;
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="single-blog-style-two">
-                        <?php $itemList = NewsController::getImage($model->id); ?>
+                        <?php $itemList = NewsController::getImage($model->id, Attachments::MAIN); ?>
                         <?php foreach ($itemList as $images):?>
                             <div class="img-box"> <img src="<?= News::getPath().$images['path']?>" alt="Awesome Image"></div>
                         <?php endforeach;?>
-                        <div class="text-box"> <a href="index.html@p=14.html"><h3><?=$model->title?></h3></a>
+                        <div class="text-box"> <h3><?=$model->title?></h3>
                             <div class="meta-info"><i class="fa fa-calendar"></i><?= Yii::$app->formatter->asDatetime($model->created_at)?></div>
                             <?=$model->description?>
                         </div>
