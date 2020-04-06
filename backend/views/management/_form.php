@@ -29,6 +29,12 @@ use common\models\Attachments;
         </div>
 
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
+
 
     <?php if (!$model->isNewRecord): ?>
 

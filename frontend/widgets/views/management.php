@@ -38,9 +38,7 @@ use common\models\Management;
                                                     <?php endif;?>
                                                         <div class="social">
                                                             <div class="inner">
-                                                                <a href="#" class="fab fa-facebook-f"></a>
-                                                                <a href="#" class="fab fa-twitter"></a>
-                                                                <a href="#" class="fab fa-instagram"></a>
+                                                                <a href="mailto:<?=$item->email?>" class="fa fa-envelope"></a>
                                                             </div>
                                                         </div>
                                                     </div>
