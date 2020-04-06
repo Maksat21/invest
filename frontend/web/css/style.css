@@ -45225,7 +45225,7 @@ body.active-preloader-ovh {
 }
 
 #minimal-bootstrap-carousel .carousel-control:hover {
-    background: #fe5a0e
+    background: #47973e;
 }
 
 @media (max-width:667px) {
@@ -47165,8 +47165,8 @@ footer.site-footer .bottom-footer p {
 }
 
 .testimonials-style-three-carousel .owl-nav [class*=owl-]:hover {
-    border-color: #fe5a0e;
-    background: #fe5a0e
+    border-color: #428439;
+    background: #47973e;
 }
 
 .testimonials-style-three-carousel .owl-nav [class*=owl-next] {
@@ -47794,7 +47794,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .single-features-style-two:before {
-    background: #fd5912
+    background: #47973e;
 }
 
 .single-features-style-two:hover h3,
@@ -48779,7 +48779,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .service-carousel-one .owl-nav [class*=owl-]:hover {
-    background: #fe5a0e
+    background: #47973e;
 }
 
 .service-carousel-one .owl-nav .owl-prev {
