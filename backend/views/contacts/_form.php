@@ -40,6 +40,9 @@ use common\widgets\Panel;
         <div class="col-md-4">
             <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
         </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
+        </div>
     </div>
 
     <div class="form-group">
