@@ -23,7 +23,7 @@ use common\models\Images;
                 <?php $itemList = CertificatesWidget::getImage($certificates->id); ?>
                 <?php foreach ($itemList as $images):?>
                     <div class="col-md-3 col-sm-6 col-xs-12 ">
-                        <div class="single-portfolio-style-two">
+                        <div class="single-portfolio-style-two certificates">
                             <div class="img-box">
                                 <img src="<?= Images::getPath().$images['path']?>" alt="<?=$certificates->name?>" />
                                 <div class="overlay">

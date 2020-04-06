@@ -47,5 +47,6 @@ return [
    'Required fields' => 'Обязательные поля',
    'Send Request' => 'Отправить заявку',
    'Page' => 'Страница',
+   'Career Politics' => 'Кадровая политика',
    '' => '',
 ];

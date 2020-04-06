@@ -36,9 +36,9 @@ use yii\helpers\Url;
                                                     <div class="single-blog-style-one">
                                                         <?php $itemList = NewsWidget::getImage($item->id,Attachments::MAIN);
                                                         if($itemList):?>
-                                                         <div class="img-box"> <img src="<?= News::getPath().$itemList[0]['path']?>" alt="Awesome Image" /></div>
+                                                         <div class="img-box"> <img src="<?= News::getPath().$itemList[0]['path']?>" alt="<?=$item->title?>" /></div>
                                                     <?php else:?>
-                                                        <div class="img-box"> <img src="<?= News::getPath().'default.png'?>" alt="Awesome Image" /></div>
+                                                        <div class="img-box"> <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->title?>" /></div>
                                                     <?php endif;?>
                                                         <div class="meta-info"> <a href="#"><?= Yii::$app->formatter->asDatetime($item->created_at)?></a>
                                                         </div> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>"><h3><?=$item->title?></h3></a>

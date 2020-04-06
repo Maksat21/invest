@@ -62284,6 +62284,9 @@ tr:nth-child(even) {
 .single-portfolio-style-two .img-box img {
     height: 200px;
 }
+.certificates .img-box img {
+    height: auto;
+}
 .carousel-caption h2, .carousel-caption p {
     background-color: #47973e;
 }

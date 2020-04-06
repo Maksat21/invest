@@ -32,9 +32,9 @@ use common\models\Management;
                                                 <div class="single-team-style-two">
                                                     <?php $itemList = ManagementWidget::getImage($item->id,Attachments::MAIN);
                                                     if($itemList):?>
-                                                        <div class="img-box"> <img src="<?= Management::getPath().$itemList[0]['path']?>?>" alt="Awesome Image" />
+                                                        <div class="img-box"> <img src="<?= Management::getPath().$itemList[0]['path']?>?>" alt="<?=$item->full_name?>" />
                                                     <?php else:?>
-                                                        <div class="img-box"> <img src="<?= Management::getPath().'default.png'?>?>" alt="Awesome Image" />
+                                                        <div class="img-box"> <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>?>" alt="<?=$item->full_name?>" />
                                                     <?php endif;?>
                                                         <div class="social">
                                                             <div class="inner">

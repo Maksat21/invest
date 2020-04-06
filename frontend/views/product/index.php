@@ -32,9 +32,9 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $product[1]['meta_key
                         <span class="wdt_img shadow_effect effect-apollo mbot25">
                             <?php $itemList = ProductController::getImage($item->id,Attachments::MAIN);
                             if($itemList):?>
-                                <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="" class="img-responsive">
+                                <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="<?=$item->name?>" class="img-responsive">
                             <?php else:?>
-                                <img src="<?= \common\models\Product::getPath().'default.png'?>" alt="" class="img-responsive">
+                                <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->name?>" class="img-responsive">
                             <?php endif;?>
                         </span>
                         <div class="prd_title">
