@@ -31,7 +31,7 @@ return [
    'Articles & Links' => 'Статьи и ссылки',
    'All Right Reserved' => 'Все права защищены',
    'Schedule' => 'График работы',
-   'Call Us On' => 'Позваните нам',
+   'Call Us On' => 'Наши  контакты',
    'Email Us' => 'Наша почта',
    'Learn More' => 'Подробнее',
    'All Images' => 'Все картинки',
@@ -46,5 +46,6 @@ return [
    'Indicate Phone' => 'Укажите номер телефона',
    'Required fields' => 'Обязательные поля',
    'Send Request' => 'Отправить заявку',
+   'Page' => 'Страница',
    '' => '',
 ];

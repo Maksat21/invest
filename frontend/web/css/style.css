@@ -5654,7 +5654,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .pagination {
     display: inline-block;
     padding-left: 0;
-    margin: 20px 0;
+    margin: 32px 0;
     border-radius: 4px
 }
 
@@ -5707,7 +5707,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #337ab7;
+    background-color: #47973f;
     border-color: #337ab7
 }
 
@@ -45225,7 +45225,7 @@ body.active-preloader-ovh {
 }
 
 #minimal-bootstrap-carousel .carousel-control:hover {
-    background: #fe5a0e
+    background: #47973e;
 }
 
 @media (max-width:667px) {
@@ -47165,8 +47165,8 @@ footer.site-footer .bottom-footer p {
 }
 
 .testimonials-style-three-carousel .owl-nav [class*=owl-]:hover {
-    border-color: #fe5a0e;
-    background: #fe5a0e
+    border-color: #428439;
+    background: #47973e;
 }
 
 .testimonials-style-three-carousel .owl-nav [class*=owl-next] {
@@ -47559,7 +47559,7 @@ footer.site-footer .bottom-footer p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(254, 90, 14, .75);
+    background: rgb(71, 151, 62);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -47794,7 +47794,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .single-features-style-two:before {
-    background: #fd5912
+    background: #47973e;
 }
 
 .single-features-style-two:hover h3,
@@ -48779,7 +48779,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .service-carousel-one .owl-nav [class*=owl-]:hover {
-    background: #fe5a0e
+    background: #47973e;
 }
 
 .service-carousel-one .owl-nav .owl-prev {
@@ -51301,7 +51301,7 @@ ul.wp-tag-cloud li a:hover {
 .blog-post-pagination ul li a {
     margin-left: 5px;
     color: #262626!important;
-    background-color: transparent!important;
+    /*background-color: transparent!important;*/
     border: 2px solid #CCCBCB!important;
     margin-right: 5px
 }
@@ -51315,9 +51315,9 @@ ul.wp-tag-cloud li a:hover {
 }
 
 .blog-post-pagination ul li a:hover {
-    border-color: #888888!important;
+    border-color: #47973f!important;
     color: #fff!important;
-    background: #888888!important
+    background: #47973f!important
 }
 
 .blog-post-pagination ul li span.current {
@@ -57806,7 +57806,7 @@ a.title_product:hover {
 }
 
 .elementor img {
-    height: auto;
+    height: 200px;
     max-width: 100%;
     border: none;
     -webkit-border-radius: 0;
@@ -62274,4 +62274,10 @@ tr:nth-child(even) {
 .text-box .product-apply {
     margin-top: 15px;
     text-align: center;
+}
+.tt-pagination label {
+    position: absolute;
+}
+.pagination .disabled {
+    display: none;
 }

@@ -23,7 +23,7 @@ $this->title = Yii::$app->name;
     <div class="header-top home-one clearfix">
         <div class="container">
             <div class="logo pull-left">
-                <a href="index.html"> <img src="img/talas-invest-logo.png" alt="Awesome Image"> </a>
+                <a href="<?= Url::to('/')?>"> <img src="img/talas-invest-logo.png" alt="Talas Investment Company"> </a>
             </div>
             <div class="header-right-info pull-right">
                 <div class="single-header-right-info">

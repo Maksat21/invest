@@ -29,7 +29,7 @@ use common\widgets\Panel;
             <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'fax_number')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
 
@@ -37,7 +37,9 @@ use common\widgets\Panel;
         <div class="col-md-4">
             <?= $form->field($model, 'work_day')->textInput(['maxlength' => true]) ?>
         </div>
-
+        <div class="col-md-4">
+            <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
+        </div>
     </div>
 
     <div class="form-group">

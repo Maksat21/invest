@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'full_name',
             'content',
             'post',
+            'email',
             [
                 'attribute' => 'status',
                 'label' => 'Статус',

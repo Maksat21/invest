@@ -7,12 +7,16 @@
  */
 
 /* @var $header common\models\Contacts */
+
+
+use yii\helpers\Url;
+
 ?>
 
 <div class="header-top home-three">
     <div class="container">
         <div class="logo pull-left">
-            <a href=""> <img src="img/talas-invest-logo.png" alt="Awesome Image"> </a>
+            <a href="<?= Url::to('/')?>"> <img src="<?=Yii::getAlias('@imgPath');?>/logo-bk.png" alt="Talas Investment Company"> </a>
         </div>
         <?php if($header): ?>
         <div class="header-right-info pull-right">

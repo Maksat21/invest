@@ -74,7 +74,7 @@ HomeAsset::register($this);
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
-                        <a href="<?= Url::to('/site')?>"><img src="<?= Url::to('/site')?>" alt="Awesome Image" /></a>
+                        <a href="<?= Url::to('/')?>"><img src="<?=Yii::getAlias('@imgPath');?>/logo-bk.png" alt="Talas Investment Company" /></a>
                         <h3><?= Yii::t('common','About Us'); ?></h3> <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.</div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">

@@ -21,6 +21,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $created_at Дата создания
  * @property string $updated_at Дата обновления
  * @property int $status Статус
+ * @property string $fax_number Номер факса
  */
 class Contacts extends \yii\db\ActiveRecord
 {
@@ -56,7 +57,7 @@ class Contacts extends \yii\db\ActiveRecord
             [['latitude', 'longitude'], 'number'],
             [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['address', 'email', 'phone', 'link', 'work_day'], 'string', 'max' => 255],
+            [['address', 'email', 'phone', 'link', 'work_day', 'fax_number'], 'string', 'max' => 255],
         ];
     }
 
@@ -77,6 +78,7 @@ class Contacts extends \yii\db\ActiveRecord
             'created_at'    => Yii::t('backend', 'Created At'),
             'updated_at'    => Yii::t('backend', 'Updated At'),
             'status'        => Yii::t('backend', 'Status'),
+            'fax_number'    => Yii::t('backend', 'Fax Number'),
         ];
     }
 

@@ -84,7 +84,7 @@ $this->title = Yii::t('common', 'Contacts');
                                                                         <div class="col-md-12">
                                                                             <i class="fa fa-fax"></i>
                                                                             <strong><?= Yii::t('common','Fax'); ?></strong><br>
-                                                                            <a href="callto:800-2345-6789">+7 (7264) 45 02 59</a>
+                                                                            <a href="<?=$model->fax_number?>"><?=$model->fax_number?></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>

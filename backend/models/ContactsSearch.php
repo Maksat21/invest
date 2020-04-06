@@ -70,6 +70,7 @@ class ContactsSearch extends Contacts
         $query->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'phone', $this->fax_number])
             ->andFilterWhere(['like', 'link', $this->link])
             ->andFilterWhere(['like', 'work_day', $this->work_day]);
 
