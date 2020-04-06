@@ -45,6 +45,7 @@ use common\models\Management;
                                                     <div class="text-box">
                                                         <h3><?=$item->full_name?></h3>
                                                         <p><?=$item->post?></p>
+                                                        <span><?=$item->content?></span>
                                                     </div>
                                                 </div>
                                             </div>

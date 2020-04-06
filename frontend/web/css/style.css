@@ -47579,7 +47579,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .single-team-style-two .img-box .social a {
-    font-size: 16px;
+    font-size: 30px;
     color: #fff
 }
 
@@ -47774,7 +47774,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .single-features-style-two h3 {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 27px;
     color: #252525;
     font-family: 'Poppins';
@@ -57806,7 +57806,7 @@ a.title_product:hover {
 }
 
 .elementor img {
-    height: 200px;
+    height: auto;
     max-width: 100%;
     border: none;
     -webkit-border-radius: 0;
@@ -62280,4 +62280,10 @@ tr:nth-child(even) {
 }
 .pagination .disabled {
     display: none;
+}
+.single-portfolio-style-two .img-box img {
+    height: 200px;
+}
+.carousel-caption h2, .carousel-caption p {
+    background-color: #47973e;
 }
