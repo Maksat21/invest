@@ -57806,7 +57806,7 @@ a.title_product:hover {
 }
 
 .elementor img {
-    height: auto;
+    height: 200px;
     max-width: 100%;
     border: none;
     -webkit-border-radius: 0;
