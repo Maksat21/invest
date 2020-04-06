@@ -41,7 +41,7 @@ return [
    'Update Material: ' => 'Обновить статью: ',
    'Contacts' => 'Контакты',
    'Create Contact' => 'Создать контакт',
-   'Update Contacts' => 'Обновить контакт',
+   'Update Contacts: ' => 'Обновить контакт',
    'Managements' => 'Руководство',
    'Create Management' => 'Добавить руководство',
    'Update Management: ' => 'Обновить руководство: ',
@@ -68,5 +68,11 @@ return [
    'Career' => 'Кадровая политика',
    'Published' => 'Опубликовано',
    'Not Published' => 'Не опубликовано',
+   'Sliders' => 'Слайдер',
+   'Create Slider' => 'Создать слайдер',
+   'Update Slider: ' => 'Обновить слайдер: ',
+   'Link' => 'Ссылка',
+   'Phone' => 'Номер',
+   'Work Day' => 'График работы',
 
 ];

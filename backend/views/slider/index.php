@@ -9,7 +9,7 @@ use common\widgets\Panel;
 /* @var $searchModel backend\models\SliderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sliders';
+$this->title = Yii::t('backend', 'Sliders');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="slider-index">

@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\Product;
 use common\widgets\Panel;
+use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ProductSearch */
@@ -27,7 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'content:ntext',
+            [
+                'attribute' => 'content',
+                'value' => function (Product $model) {
+                    return StringHelper::truncate($model->content, 100);
+                }
+            ],
             [
                 'attribute' => 'status',
                 'format' => 'html',

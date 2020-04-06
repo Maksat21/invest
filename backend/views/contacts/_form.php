@@ -37,16 +37,11 @@ use common\widgets\Panel;
         <div class="col-md-4">
             <?= $form->field($model, 'work_day')->textInput(['maxlength' => true]) ?>
         </div>
-        <div class="col-md-4">
-            <?= $form->field($model, 'latitude')->textInput(['maxlength' => true]) ?>
-        </div>
-        <div class="col-md-4">
-            <?= $form->field($model, 'longitude')->textInput(['maxlength' => true]) ?>
-        </div>
+
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('backend', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
