@@ -6,6 +6,6 @@ return [
     'robotEmail' => 'robot@pillikan.kz',
     'robotName' => 'Pillikan',
 
-    'NewsPaginationLimit' => 2,
+    'NewsPaginationLimit' => 4,
     'ProductPaginationLimit' => 2,
 ];
