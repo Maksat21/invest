@@ -44277,12 +44277,12 @@ a:active {
 }
 
 .sec-title span {
-    color: #fe5a0e;
+    color: #47973f;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-style: italic;
     background: -webkit-gradient(linear, left top, right top, from(#f80503), to(#ff7d09));
-    background: linear-gradient(to right, #f80503 0%, #ff7d09 100%);
+    background: linear-gradient(to right,#33ea29 0%,#44b73e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
@@ -44313,8 +44313,8 @@ a:active {
     width: 50px;
     height: 50px;
     text-align: center;
-    background: rgba(254, 90, 14, .75);
-    color: #262626;
+    background: rgb(71, 151, 62);
+    color: #47973f;
     font-size: 17px;
     line-height: 50px;
     border-radius: 50%;
@@ -44447,7 +44447,7 @@ body.active-preloader-ovh {
 .header-navigation .container .right-side-box a.rqa-btn {
     display: inline-block;
     vertical-align: middle;
-    background: #fe5a0e;
+    background: #47973f;
     color: #fff;
     font-size: 16px;
     font-family: 'Poppins';
@@ -44481,7 +44481,7 @@ body.active-preloader-ovh {
     height: 100%;
     -webkit-transform: skewX(-15deg);
     transform: skewX(-15deg);
-    background: #fe5a0e;
+    background: #47973f;
     display: block;
     z-index: -1;
     -webkit-transition: all .4s ease;
@@ -44533,7 +44533,7 @@ body.active-preloader-ovh {
     content: '';
     width: 100%;
     height: 3px;
-    background: #fe5a0e;
+    background: #47973f;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -44569,7 +44569,7 @@ body.active-preloader-ovh {
     font-family: 'Font Awesome 5 Free';
     font-size: 12px;
     margin-left: 5px;
-    color: #fe5a0e
+    color: #47973f
 }
 
 .header-navigation ul.navigation-box>li>a:only-child:after {
@@ -44627,7 +44627,7 @@ body.active-preloader-ovh {
 }
 
 .header-navigation ul.navigation-box>li>.sub-menu li:hover>a {
-    background: #fe5a0e;
+    background: #47973f;
     color: #fff;
     position: relative
 }
@@ -44761,7 +44761,7 @@ body.active-preloader-ovh {
 }
 
 .header-top .single-header-right-info .text-box p {
-    color: #fe5a0e;
+    color: #47973f;
     letter-spacing: .01em;
     font-family: 'Rubik';
     font-size: 14px
@@ -44982,7 +44982,7 @@ body.active-preloader-ovh {
 
 .header.header-home-three .header-navigation .container .right-side-box a.rqa-btn {
     padding: 18px 69px;
-    border-bottom: 3px solid #fe5a0e
+    border-bottom: 3px solid #47973f;
 }
 
 .header.header-home-three .header-navigation .container .right-side-box a.rqa-btn:after {
@@ -46241,7 +46241,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .blog-style-one .single-blog-style-one a.read-more {
-    color: #fe5a0e;
+    color: #47973f;
     font-family: 'Poppins';
     font-weight: 600;
     -webkit-transition: all .3s ease;
@@ -46443,7 +46443,7 @@ footer.site-footer .bottom-footer p {
     line-height: 54px;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
-    background: #fe5a0e;
+    background: #47973f;
     margin-top: 25px
 }
 
@@ -47810,7 +47810,7 @@ footer.site-footer .bottom-footer p {
 
 .contact-info-style-one {
     background: #262626;
-    border-bottom: 3px solid #fe5a0e;
+    border-bottom: 3px solid #47973f;
     padding: 50px 0
 }
 
@@ -47832,7 +47832,7 @@ footer.site-footer .bottom-footer p {
     font-weight: 700;
     font-style: italic;
     background: -webkit-gradient(linear, left top, right top, from(#f80503), to(#ff7d09));
-    background: linear-gradient(to right, #f80503 0%, #ff7d09 100%);
+    background: linear-gradient(to right,#33ea29 0%,#44b73e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
@@ -47895,7 +47895,7 @@ footer.site-footer .bottom-footer p {
 .contact-info-style-one .contact-infos .single-contact-infos .text-box h3 {
     font-size: 28px;
     font-family: 'Poppins';
-    color: #fe5a0e;
+    color: #47973f;
     font-weight: 600
 }
 
@@ -48141,14 +48141,14 @@ footer.site-footer .bottom-footer p {
 
 .inner-banner ul.breadcumb a,
 .inner-banner ul.breadcumb span {
-    color: #fe5a0e;
+    color: #47973f;
     font-size: 18px
 }
 
 .inner-banner ul.breadcumb span.sep {
     margin-left: 10px;
     margin-right: 10px;
-    color: #fe5a0e
+    color: #47973f;
 }
 
 .inner-banner ul.breadcumb span {
@@ -48481,7 +48481,7 @@ footer.site-footer .bottom-footer p {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #fe5a0e;
+    background: #47973f;
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all .4s ease;
@@ -48496,7 +48496,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .portfolio-style-two .gallery-filter ul li.active span {
-    color: #fe5a0e
+    color: #47973f
 }
 
 .portfolio-style-two .gallery-filter ul li.active span:after {
@@ -48560,7 +48560,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .portfolio-style-two .single-portfolio-style-two .img-box .overlay .box .content a.img-popup {
-    color: #fe5a0e;
+    color: #47973f;
     font-size: 50px;
     position: absolute;
     right: 110px;
@@ -48568,7 +48568,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .gallery .single-portfolio-style-two .img-box .overlay .box .content a.img-popup {
-    color: #fe5a0e;
+    color: #47973f;
     font-size: 50px;
     position: absolute;
     right: 110px;
@@ -49688,7 +49688,7 @@ footer.site-footer .bottom-footer p {
     position: absolute;
     top: 20px;
     left: 0;
-    background: #fd5912;
+    background: #47973f;
     width: 100%;
     max-width: 263px;
     min-height: 245px;
@@ -62110,11 +62110,11 @@ tr:nth-child(even) {
     height: 55px;
     line-height: 55px;
     text-align: center;
-    color: #98d648;
+    color: #47973f;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 2px solid #98d648;
+    border: 2px solid #47973f;
     font-size: 26px;
 }
 .contact-form-address {
@@ -62269,7 +62269,7 @@ tr:nth-child(even) {
     background: #f6f6f6;;
 }
 .text-box .product-name {
-    color: #fe5a0e;
+    color: #47973f;
 }
 .text-box .product-apply {
     margin-top: 15px;
