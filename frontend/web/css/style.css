@@ -5654,7 +5654,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .pagination {
     display: inline-block;
     padding-left: 0;
-    margin: 20px 0;
+    margin: 32px 0;
     border-radius: 4px
 }
 
@@ -5707,7 +5707,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #337ab7;
+    background-color: #47973f;
     border-color: #337ab7
 }
 
@@ -51301,7 +51301,7 @@ ul.wp-tag-cloud li a:hover {
 .blog-post-pagination ul li a {
     margin-left: 5px;
     color: #262626!important;
-    background-color: transparent!important;
+    /*background-color: transparent!important;*/
     border: 2px solid #CCCBCB!important;
     margin-right: 5px
 }
@@ -51315,9 +51315,9 @@ ul.wp-tag-cloud li a:hover {
 }
 
 .blog-post-pagination ul li a:hover {
-    border-color: #888888!important;
+    border-color: #47973f!important;
     color: #fff!important;
-    background: #888888!important
+    background: #47973f!important
 }
 
 .blog-post-pagination ul li span.current {
@@ -62274,4 +62274,10 @@ tr:nth-child(even) {
 .text-box .product-apply {
     margin-top: 15px;
     text-align: center;
+}
+.tt-pagination label {
+    position: absolute;
+}
+.pagination .disabled {
+    display: none;
 }
