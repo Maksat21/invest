@@ -13,7 +13,7 @@ $this->title = Yii::t('common', 'News');
 ?>
 
 
-        <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
+<div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
             <div class="container">
                 <h3><?= Yii::t('common','News'); ?></h3>
                 <ul class="breadcumb">
@@ -42,13 +42,6 @@ $this->title = Yii::t('common', 'News');
                                 <p> <?=$item->getTeaser()?></p> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>" class="more hvr-sweep-to-right"><?= Yii::t('common','Learn More'); ?></a></div>
                         </div>
                         <?php endforeach; ?>
-<!--                        <div class="blog-post-pagination">-->
-<!--                            <ul class="pagination">-->
-<!--                                <li><span aria-current='page' class='page-numbers current'>1</span></li>-->
-<!--                                <li><a class='page-numbers' href='index.html@page_id=24&amp;paged=2.html'>2</a></li>-->
-<!--                                <li><a class="next page-numbers" href="index.html@page_id=24&amp;paged=2.html"><i class = "fa fa-angle-right"></i></a></li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
                         <div class="blog-post-pagination">
                             <div class="tt-pagination">
                                 <label>

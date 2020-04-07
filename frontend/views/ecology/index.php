@@ -10,7 +10,7 @@ $this->title = $model['title'];
 ?>
 
 
-    <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
+<div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
         <div class="container">
             <h3><?= Yii::t('common','Ecology'); ?></h3>
             <ul class="breadcumb">

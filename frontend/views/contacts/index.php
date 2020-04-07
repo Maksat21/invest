@@ -17,7 +17,7 @@ $this->title = Yii::t('common', 'Contacts');
                                     <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-9a28fdd elementor-align-left elementor-widget elementor-widget-bdevs-banner" data-id="9a28fdd" data-element_type="widget" data-widget_type="bdevs-banner.default">
                                             <div class="elementor-widget-container">
-                                                <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
+                                                <div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
                                                     <div class="container">
                                                         <h3><?= Yii::t('common','Contact Us'); ?></h3>
                                                         <ul class="breadcumb">
