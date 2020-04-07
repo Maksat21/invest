@@ -4,9 +4,6 @@
 use yii\helpers\Url;
 
 $this->title = Yii::t('common', 'Purchase');
-$this->registerMetaTag(['name' => 'title', 'content' => Yii::t('common', 'Purchase')]);
-$this->registerMetaTag(['name' => 'description', 'content' => $purchase[1]['meta_description']]);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $purchase[1]['meta_keywords']]);
 
 ?>
 

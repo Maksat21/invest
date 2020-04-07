@@ -11,11 +11,15 @@ use frontend\models\forms\FeedbackForm;
  */
 class SiteController extends BaseController
 {
+
     /**
      * {@inheritdoc}
      */
     public function actions()
     {
+        \Yii::$app->view->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['meta_description']]);
+        \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['meta_keywords']]);
+
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',

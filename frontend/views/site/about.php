@@ -7,10 +7,6 @@ use yii\helpers\Url;
 use frontend\widgets\ManagementWidget;
 use frontend\widgets\CertificatesWidget;
 
-$this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
-$this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $model['meta_keywords']]);
-
 $this->title = Yii::t('common','About Us');
 ?>
 
