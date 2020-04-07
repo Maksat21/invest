@@ -50,13 +50,7 @@ $this->title = Yii::t('common','About Us');
                                                 <section class="about-style-three">
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="about-img-box"> <img src="wp-content/uploads/2019/01/about-3-1.png" alt="Awesome Image" />
-                                                                    <div class="content"> <span>Our Story</span>
-                                                                        <h3>Something About <br /> Us</h3></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="col-md-12 col-sm-12 col-xs-12">
                                                                 <?php if($model): ?>
                                                                 <div class="about-content">
                                                                     <h3><?=$model->title?></h3>
