@@ -48,5 +48,7 @@ return [
    'Send Request' => 'Отправить заявку',
    'Page' => 'Страница',
    'Career Politics' => 'Кадровая политика',
+   'Thank you for contacting us.' => 'Благодарим вас за обращение к нам.',
+   'An error occurred while sending the message.' => 'При отправке сообщения произошла ошибка.',
    '' => '',
 ];

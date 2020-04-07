@@ -42,7 +42,7 @@ use common\models\Product;
                                                         <div class="product-name"><h2><?=$item->name?></h2></div>
                                                         <p><?=$item->content?></p>
                                                         <div class="product-apply">
-                                                            <p><a href="#myModal" class="btn btn-success" data-toggle="modal">Оставить заявку</a></p>
+                                                            <p><a href="#modal" class="btn btn-success" data-toggle="modal" data-target="#w0">Оставить заявку</a></p>
                                                         </div>
                                                     </div>
                                                 </div>

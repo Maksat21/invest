@@ -10,6 +10,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use yii\helpers\Url;
+use frontend\widgets\ApplyWidget;
 
 AppAsset::register($this);
 ?>
@@ -26,12 +27,10 @@ AppAsset::register($this);
 </head>
 <body class="page-template page-template-page-templates page-template-home-3 page-template-page-templateshome-3-php page page-id-458 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-458">
 <?php $this->beginBody() ?>
-
+<?=ApplyWidget::widget()?>
 <div class="page-wrapper">
 
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+
         <?= Alert::widget() ?>
         <?= $content ?>
 

@@ -160,4 +160,4 @@ $this->title = Yii::t('common', 'Contacts');
             </div>
         </div>
     </div>
-<?=\frontend\widgets\ApplyWidget::widget()?>
+

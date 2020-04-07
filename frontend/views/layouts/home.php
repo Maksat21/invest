@@ -10,6 +10,7 @@ use common\widgets\Alert;
 use yii\helpers\Url;
 use frontend\widgets\ContactsWidget;
 use frontend\widgets\HeaderWidget;
+use frontend\widgets\ApplyWidget;
 
 HomeAsset::register($this);
 ?>
@@ -26,7 +27,7 @@ HomeAsset::register($this);
 </head>
 <body class="home page-template page-template-page-templates page-template-home-1 page-template-page-templateshome-1-php page page-id-405 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-405">
 <?php $this->beginBody() ?>
-
+<?=ApplyWidget::widget()?>
 <div class="page-wrapper">
 <?=HeaderWidget::widget()?>
     <header class="header header-home-three">
@@ -55,16 +56,15 @@ HomeAsset::register($this);
                         <li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-541"><a title="<?= Yii::t('common','Contact US'); ?>" href="<?= Url::to('/contacts')?>"><?= Yii::t('common','Contact Us'); ?></a></li>
                     </ul>
                 </div>
-                <div class="right-side-box"> <a href="#" class="rqa-btn"><span class="inner"><?= Yii::t('common','Apply '); ?><i class="fa fa-caret-right"></i></span></a></div>
+                <div class="right-side-box"> <a href="#modal" data-toggle="modal" data-target="#w0" class="rqa-btn"><span class="inner"><?= Yii::t('common','Apply '); ?><i class="fa fa-caret-right"></i></span></a></div>
             </div>
         </nav>
     </header>
 
-    <?= Breadcrumbs::widget([
-        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-    ]) ?>
     <?= Alert::widget() ?>
+
     <?= $content ?>
+
     <?=ContactsWidget::widget()?>
 </div>
 

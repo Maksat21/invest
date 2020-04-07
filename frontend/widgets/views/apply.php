@@ -38,7 +38,7 @@ Modal::begin([
 
 <div class="">
 
-    <?= Alert::widget() ?>
+
     <h1><?= Yii::t('common','Apply'); ?></h1>
     <p><?= Yii::t('common','Fill in the following fields to send a request'); ?></p>
     <?php $form = ActiveForm::begin(['id' => 'feedback-form']); ?>
@@ -61,7 +61,7 @@ Modal::begin([
 
     <p style="color: #646e73">* - <?= Yii::t('common','Required fields'); ?></p>
     <div class="form-group">
-        <?= Html::submitButton( Yii::t('common','Send Request'), ['class' => 'btn btn-danger btn-block', 'name' => 'contact-button']) ?>
+        <?= Html::submitButton( Yii::t('common','Send Request'), ['class' => 'btn btn-success btn-block', 'name' => 'contact-button']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

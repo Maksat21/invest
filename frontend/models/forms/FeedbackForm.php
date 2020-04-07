@@ -34,6 +34,8 @@ class FeedbackForm extends Model
             [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number'], 'string'],
             [['full_name', 'email', 'phone_number'], 'required', 'message' => 'Введите "{attribute}".' ],
             [['product_id', 'quantity', 'status'], 'integer'],
+            ['email', 'email'],
+
         ];
     }
 
@@ -76,7 +78,7 @@ class FeedbackForm extends Model
         $request->full_name = $this->full_name;
         $request->email = $this->email;
         $request->phone_number = $this->phone_number;
-        $request->status = Feedback::STATUS_PUBLISHED;
+        $request->status = Feedback::STATUS_NOT_REVIEWED;
 
         if($request->validate() && $request->save()){
             $this->sendMail($request);
