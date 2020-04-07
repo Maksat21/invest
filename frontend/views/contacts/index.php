@@ -6,18 +6,35 @@ use yii\helpers\Url;
 $this->title = Yii::t('common', 'Contacts');
 ?>
 
-
-<div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
-    <div class="container">
-        <h3><?= Yii::t('common','Contact Us'); ?></h3>
-        <ul class="breadcumb">
-            <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
-            <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
-            <li><span><?= Yii::t('common','Contact Us'); ?></span></li>
-        </ul>
-    </div>
-</div>
-
+<div data-elementor-type="post" data-elementor-id="524" class="elementor elementor-524" data-elementor-settings="[]">
+    <div class="elementor-inner">
+        <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-89e3b39 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="89e3b39" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                        <div class="elementor-element elementor-element-fde1ca6 elementor-column elementor-col-100 elementor-top-column" data-id="fde1ca6" data-element_type="column">
+                            <div class="elementor-column-wrap  elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                    <div class="elementor-element elementor-element-9a28fdd elementor-align-left elementor-widget elementor-widget-bdevs-banner" data-id="9a28fdd" data-element_type="widget" data-widget_type="bdevs-banner.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
+                                                <div class="container">
+                                                    <h3><?= Yii::t('common','Contact Us'); ?></h3>
+                                                    <ul class="breadcumb">
+                                                        <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
+                                                        <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
+                                                        <li><span><?= Yii::t('common','Contact Us'); ?></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="elementor-element elementor-element-8ea323a elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8ea323a" data-element_type="section">
                 <div class="elementor-container elementor-column-gap-default">
                     <div class="elementor-row">
@@ -71,8 +88,8 @@ $this->title = Yii::t('common', 'Contacts');
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <?php endif;?>
-                                                            </div>
+                                                            <?php endif;?>
+                                                        </div>
                                                         <div class="col-md-6 table-contact">
                                                             <table cellspacing="0">
                                                                 <tr>
@@ -140,3 +157,6 @@ $this->title = Yii::t('common', 'Contacts');
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+</div>
