@@ -10,7 +10,7 @@ use frontend\widgets\CertificatesWidget;
 $this->title = Yii::t('common','About Us');
 ?>
 
-    <div data-elementor-type="post" data-elementor-id="491" class="elementor elementor-491" data-elementor-settings="[]">
+
         <div class="elementor-inner">
             <div class="elementor-section-wrap">
                 <section class="elementor-element elementor-element-0fa301d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0fa301d" data-element_type="section">
