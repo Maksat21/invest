@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use common\widgets\Panel;
 use common\models\Feedback;
+use common\models\TaredType;
+use common\models\Product;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\FeedbackSearch */
@@ -28,9 +30,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'company_name',
-            'product_id',
+            [
+                'attribute' => 'product_id',
+                'value' => function ($model) {
+                    return Product::findOne(['id' => $model->product_id])->name;
+                },
+            ],
             'quantity',
-            'barrel',
+            [
+                'attribute' => 'barrel',
+                'value' => function ($model) {
+                    return TaredType::findOne(['id' => $model->barrel])->name;
+                },
+            ],
             [
                 'attribute' => 'status',
                 'format' => 'html',

@@ -13,7 +13,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $company_name Наименование компании
  * @property int $product_id Описание
  * @property int $quantity Количество
- * @property string $barrel Емкость
+ * @property int $barrel Емкость
  * @property string $delivery Доставка
  * @property string $full_name ФИО
  * @property string $email Email
@@ -53,10 +53,10 @@ class Feedback extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_id', 'quantity'], 'integer'],
+            [['product_id', 'quantity', 'barrel'], 'integer'],
             [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number'], 'string', 'max' => 255],
+            [['company_name', 'delivery', 'full_name', 'email', 'phone_number'], 'string', 'max' => 255],
         ];
     }
 
