@@ -56,7 +56,7 @@ use dosamigos\tinymce\TinyMce;
         </div>
 
         <div class="form-group">
-            <?= Html::submitButton(Yii::t(Yii::t('backend','Save'), 'Save'), ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton(Yii::t('backend', 'Save'), ['class' => 'btn btn-success']) ?>
         </div>
         <?php ActiveForm::end(); ?>
 

@@ -54,7 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => Images::getStatuses()
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => '\common\components\grid\ActionColumn',
+                'template' => '{update}{delete}'],
         ],
     ]); ?>
     <?php Panel::end() ?>

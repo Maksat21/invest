@@ -18,6 +18,7 @@ use yii\helpers\ArrayHelper;
  * @property string $updated_at Дата обновления
  * @property int $status Статус
  * @property  $imageFiles
+ * @property string $email Email
  */
 class Management extends \yii\db\ActiveRecord
 {
@@ -54,7 +55,7 @@ class Management extends \yii\db\ActiveRecord
         return [
             [['created_at', 'updated_at'], 'safe'],
             [['status'], 'integer'],
-            [['full_name', 'content', 'post'], 'string', 'max' => 255],
+            [['full_name', 'content', 'post', 'email'], 'string', 'max' => 255],
             [['imageFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
@@ -72,6 +73,7 @@ class Management extends \yii\db\ActiveRecord
             'created_at'    => Yii::t('backend', 'Created At'),
             'updated_at'    => Yii::t('backend', 'Updated At'),
             'status'        => Yii::t('backend', 'Status'),
+            'email'        => Yii::t('backend', 'Email'),
         ];
     }
 

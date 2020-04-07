@@ -66,6 +66,7 @@ class ManagementSearch extends Management
 
         $query->andFilterWhere(['like', 'full_name', $this->full_name])
             ->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'post', $this->post]);
 
         return $dataProvider;

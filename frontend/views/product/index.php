@@ -7,17 +7,16 @@ use yii\widgets\LinkPager;
 
 /* @var $product common\models\Product */
 $this->title = Yii::t('common', 'Products');
-
+$this->registerMetaTag(['name' => 'title', 'content' => Yii::t('common', 'Products')]);
+$this->registerMetaTag(['name' => 'description', 'content' => $product[1]['meta_description']]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => $product[1]['meta_keywords']]);
 ?>
-
-
-
 
     <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
         <div class="container">
             <h3><?= Yii::t('common','Products'); ?></h3>
             <ul class="breadcumb">
-                <li><a href="index.html"><?= Yii::t('common','Home'); ?></a></li>
+                <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
                 <li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
                 <li><span><?= Yii::t('common','Products'); ?></span></li>
             </ul>
@@ -33,13 +32,9 @@ $this->title = Yii::t('common', 'Products');
                         <span class="wdt_img shadow_effect effect-apollo mbot25">
                             <?php $itemList = ProductController::getImage($item->id,Attachments::MAIN);
                             if($itemList):?>
-                            <a href="index.html@product=mechanical-tool.html">
-                                <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="" class="img-responsive">
-                            </a>
+                                <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="<?=$item->name?>" class="img-responsive">
                             <?php else:?>
-                                <a href="index.html@product=mechanical-tool.html">
-                                <img src="<?= \common\models\Product::getPath().'default.png'?>" alt="" class="img-responsive">
-                                </a>
+                                <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->name?>" class="img-responsive">
                             <?php endif;?>
                         </span>
                         <div class="prd_title">

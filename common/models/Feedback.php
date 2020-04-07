@@ -24,8 +24,8 @@ use yii\behaviors\TimestampBehavior;
  */
 class Feedback extends \yii\db\ActiveRecord
 {
-    const STATUS_PUBLISHED     = 1;
-    const STATUS_NOT_PUBLISHED = 2;
+    const STATUS_NOT_REVIEWED   = 1;
+    const STATUS_REVIEWED       = 2;
 
     /**
      * {@inheritdoc}
@@ -95,8 +95,8 @@ class Feedback extends \yii\db\ActiveRecord
     public static function getStatuses()
     {
         return [
-            self::STATUS_PUBLISHED     => Yii::t('backend', 'Published'),
-            self::STATUS_NOT_PUBLISHED => Yii::t('backend', 'Not Published'),
+            self::STATUS_NOT_REVIEWED     => Yii::t('backend', 'Not Reviewed'),
+            self::STATUS_REVIEWED => Yii::t('backend', 'Reviewed'),
         ];
     }
 }

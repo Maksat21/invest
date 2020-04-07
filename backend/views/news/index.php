@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\News;
 use common\widgets\Panel;
+use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\NewsSearch */
@@ -27,7 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'description:ntext',
+            [
+                'attribute' => 'description',
+                'value' => function (News $model) {
+                    return StringHelper::truncate($model->description, 100);
+                    }
+            ],
             [
                 'attribute' => 'status',
                 'format' => 'html',

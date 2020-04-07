@@ -9,7 +9,7 @@ $(document).ready(function () {
         data['image_id'] = image_id;
 
         $.ajax({
-            url: '/news/delete-image',
+            url: '/images/delete-image',
             type: 'POST',
             data: data,
             error: function (error) {
@@ -25,15 +25,17 @@ $(document).ready(function () {
         var parent_tr = $(this).closest('tr');
         var main_image_id = $(this).attr('data-main_image_id');
         var model_id = $(this).attr('data-model_id');
+        var model_type = $(this).attr('data-model_type');
         var param = $('meta[name=csrf-param]').attr("content");
         var token = $('meta[name=csrf-token]').attr("content");
         var data = {};
         data[param] = token;
         data['main_image_id'] = main_image_id;
         data['model_id'] = model_id;
+        data['model_type'] = model_type;
 
         $.ajax({
-            url: '/news/set-main-image',
+            url: '/images/set-main-image',
             type: 'POST',
             data: data,
             error: function (error) {

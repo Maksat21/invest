@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\widgets\Panel;
 use dosamigos\tinymce\TinyMce;
+use common\models\Attachments;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Product */
@@ -60,7 +61,7 @@ use dosamigos\tinymce\TinyMce;
                                             <?php if ($attachment->is_main): ?>
                                                 <span class="btn btn-success">Главное</span>
                                             <?php else: ?>
-                                                <span class="btn btn-danger set-main-image" data-model_id="<?= $model->id ?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
+                                                <span class="btn btn-danger set-main-image" data-model_id="<?= $model->id ?>" data-model_type="<?=Attachments::TYPE_PRODUCT?>" data-main_image_id="<?= $attachment->id ?>">Сделать главным</span>
                                             <?php endif; ?>
                                         </td>
                                         <td>
@@ -90,7 +91,7 @@ use dosamigos\tinymce\TinyMce;
         </div>
 
         <div class="form-group">
-            <?= Html::submitButton(Yii::t(Yii::t('backend','Save'), 'Save'), ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton(Yii::t('backend', 'Save'), ['class' => 'btn btn-success']) ?>
         </div>
         <?php ActiveForm::end(); ?>
 

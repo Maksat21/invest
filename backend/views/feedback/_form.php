@@ -19,41 +19,45 @@ use common\widgets\Panel;
 
     <div class="row">
         <div class="col-md-4">
-            <?= $form->field($model, 'company_name')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'company_name')->textInput(['maxlength' => true, 'disabled' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'product_id')->textInput() ?>
+            <?= $form->field($model, 'product_id')->textInput(['disabled' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'quantity')->textInput() ?>
+            <?= $form->field($model, 'quantity')->textInput(['disabled' => true]) ?>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <?= $form->field($model, 'barrel')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'barrel')->textInput(['maxlength' => true, 'disabled' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'delivery')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'delivery')->textInput(['maxlength' => true, 'disabled' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'full_name')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'full_name')->textInput(['maxlength' => true, 'disabled' => true]) ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true, 'disabled' => true]) ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'phone_number')->textInput(['maxlength' => true, 'disabled' => true]) ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'created_at')->textInput(['disabled' => true]) ?>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-        </div>
-        <div class="col-md-6">
-            <?= $form->field($model, 'phone_number')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
         </div>
     </div>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('backend', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -77,6 +77,7 @@ class ProductController extends BaseController
         $image = Attachments::find()
             ->andWhere(['model_id' => $itemID])
             ->andWhere(['is_main' => $isMain])
+            ->andWhere(['type' => Attachments::TYPE_PRODUCT])
             ->asArray()
             ->all();
         return $image;
