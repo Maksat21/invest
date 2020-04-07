@@ -38,7 +38,7 @@ use vova07\fileapi\Widget as FileAPI;
             ]) ?>
         </div>
         <div class="col-md-6">
-            <?= $form->field($model, 'status')->dropDownList(Slider::getStatuses())?>
+            <?= $form->field($model, 'status')->dropDownList($model->getStatuses())?>
         </div>
     </div>
 

@@ -123,10 +123,10 @@ HomeAsset::register($this);
     <div class="bottom-footer">
         <div class="container">
             <div class="left-text pull-left">
-                <p> © Talas Investment Company 2019. <?= Yii::t('common','All Right Reserved'); ?>.</p>
+                <p> © <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?>. <?= Yii::t('common','All Right Reserved'); ?>.</p>
             </div>
             <div class="right-text pull-right">
-                <p> Created by SmartIdeaGroup</p>
+                <a href="https://www.smartideagroup.kz/" target="_blank"><p> Created by SmartIdeaGroup</p></a>
             </div>
         </div>
     </div>

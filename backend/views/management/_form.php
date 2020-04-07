@@ -33,6 +33,9 @@ use common\models\Attachments;
         <div class="col-md-4">
             <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
         </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
+        </div>
     </div>
 
 

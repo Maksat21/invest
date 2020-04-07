@@ -90,7 +90,7 @@ class FeedbackForm extends Model
     {
         return Yii::$app->mailer->compose(['html' => 'RequisitionTheme-html'], ['model' => $request])
             ->setFrom([Yii::$app->params['robotEmail'] => Yii::$app->params['robotName']])
-            ->setTo(['xmax_gar@mail.ru'])
+            ->setTo('xmax_gar@mail.ru')
             ->setSubject(Yii::t('common', 'Форма заявки #{id}', ['id' => $request->id]))
             ->send();
     }

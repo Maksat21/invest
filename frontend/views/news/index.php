@@ -33,9 +33,9 @@ $this->title = Yii::t('common', 'News');
                         <div class="single-blog-style-two">
                             <?php $itemList = NewsController::getImage($item->id,Attachments::MAIN);
                             if($itemList):?>
-                                <div class="img-box"> <img src="<?= \common\models\News::getPath().$itemList[0]['path']?>" alt="Awesome Image"></div>
+                                <div class="img-box"> <img src="<?= \common\models\News::getPath().$itemList[0]['path']?>" alt="<?=$item->title?>"></div>
                             <?php else:?>
-                                <div class="img-box"> <img src="<?= \common\models\News::getPath().'default.png'?>" alt="Awesome Image"></div>
+                                <div class="img-box"> <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->title?>"></div>
                             <?php endif;?>
                             <div class="text-box"> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>"><h3><?=$item->title?></h3></a>
                                 <div class="meta-info"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDatetime($item->created_at)?> </div>

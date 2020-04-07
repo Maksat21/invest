@@ -24,7 +24,7 @@ use common\models\Product;
                         <div class="elementor-widget-wrap">
                             <div class="elementor-element elementor-element-b1bc733 elementor-align-left elementor-widget elementor-widget-bdevs-testimonial" data-id="b1bc733" data-element_type="widget" data-widget_type="bdevs-testimonial.default">
                                 <div class="elementor-widget-container">
-                                    <section class="testimonials-style-three" style="background: #000 url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2019/01/testi-bg.jpg) center center no-repeat fixed;">
+                                    <section class="testimonials-style-three" style="background: #000 url(<?=Yii::getAlias('@imgPath');?>/bg-product.jpg) center center no-repeat fixed;">
                                         <div class="container">
                                             <div class="sec-title light">
                                                 <h3>НАША <span>ПРОДУКЦИЯ</span></h3></div>
@@ -33,9 +33,9 @@ use common\models\Product;
                                                 <div class="single-testimonials-style-three">
                                                     <?php $itemList = ProductWidget::getImage($item->id,Attachments::MAIN);
                                                     if($itemList):?>
-                                                         <div class="img-box"> <img src="<?= Product::getPath().$itemList[0]['path']?>" alt="Awesome Image" /></div>
+                                                         <div class="img-box"> <img src="<?= Product::getPath().$itemList[0]['path']?>" alt="<?=$item->name?>" /></div>
                                                     <?php else:?>
-                                                        <div class="img-box"> <img src="<?= Product::getPath().'default.png'?>" alt="Awesome Image" /></div>
+                                                        <div class="img-box"> <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->name?>" /></div>
                                                     <?php endif;?>
 
                                                     <div class="text-box">

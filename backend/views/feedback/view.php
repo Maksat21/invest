@@ -38,10 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'html',
                 'value' => function (Feedback $model) {
                     $class = null;
-                    if ($model->status === $model::STATUS_PUBLISHED) {
-                        $class = 'label-success';
-                    } else if ($model->status === $model::STATUS_NOT_PUBLISHED) {
+                    if ($model->status === $model::STATUS_NOT_REVIEWED) {
                         $class = 'label-warning';
+                    } else if ($model->status === $model::STATUS_REVIEWED) {
+                        $class = 'label-success';
                     }
                     return Html::tag('span', $model->getStatusLabel(), ['class' => 'label ' . $class]);
                 },

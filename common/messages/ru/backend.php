@@ -75,5 +75,7 @@ return [
    'Phone' => 'Номер',
    'Work Day' => 'График работы',
    'Fax Number' => 'Номер факса',
+   'Not Reviewed' => 'Не рассмотрено',
+   'Reviewed' => 'Рассмотрено',
 
 ];
