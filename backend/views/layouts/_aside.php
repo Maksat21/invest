@@ -63,9 +63,20 @@ use common\widgets\Sidebar;
                     ],
                     [
                         'label' => 'Продукция',
-                        'url' => ['/product/index'],
-                        'icon' => 'fa-link',
-                        'void' => true,
+                        'icon' => 'fa-link aria-hidden="true"',
+                        'url' => '',
+                        'items' => [
+                            [
+                                'label' => 'Продукция',
+                                'url' => ['/product/index'],
+                                'icon' => 'none',
+                            ],
+                            [
+                                'label' => 'Виды тарирования',
+                                'url' => ['/tared-type/index'],
+                                'icon' => 'none',
+                            ],
+                        ]
                     ],
                     [
                         'label' => 'Закупки',

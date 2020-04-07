@@ -77,5 +77,8 @@ return [
    'Fax Number' => 'Номер факса',
    'Not Reviewed' => 'Не рассмотрено',
    'Reviewed' => 'Рассмотрено',
+   'Tared Types' => 'Виды тарирования',
+   'Create Tared Type' => 'Создать вид',
+   'Update Tared Type: ' => 'Обновить вид',
 
 ];

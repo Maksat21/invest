@@ -7,14 +7,10 @@ use yii\helpers\Url;
 use frontend\widgets\ManagementWidget;
 use frontend\widgets\CertificatesWidget;
 
-$this->registerMetaTag(['name' => 'title', 'content' => $model['meta_title']]);
-$this->registerMetaTag(['name' => 'description', 'content' => $model['meta_description']]);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $model['meta_keywords']]);
-
 $this->title = Yii::t('common','About Us');
 ?>
 
-    <div data-elementor-type="post" data-elementor-id="491" class="elementor elementor-491" data-elementor-settings="[]">
+
         <div class="elementor-inner">
             <div class="elementor-section-wrap">
                 <section class="elementor-element elementor-element-0fa301d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0fa301d" data-element_type="section">
@@ -25,7 +21,7 @@ $this->title = Yii::t('common','About Us');
                                     <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-86388ea elementor-align-left elementor-widget elementor-widget-bdevs-banner" data-id="86388ea" data-element_type="widget" data-widget_type="bdevs-banner.default">
                                             <div class="elementor-widget-container">
-                                                <div class="inner-banner" style="background: url(http://shtheme.com/demosd/industrio1/wp-content/uploads/2018/12/inner-banner-1-1.jpg) center center no-repeat;">
+                                                <div class="inner-banner" style="background: url(<?=Yii::getAlias('@imgPath');?>/t-1.png) repeat fixed 0 0px, rgba(0, 0, 0, 0) url(<?=Yii::getAlias('@imgPath');?>/bg.jpg) no-repeat fixed 0 0 / 100% auto;">
                                                     <div class="container">
                                                         <h3><?= Yii::t('common','About Us'); ?></h3>
                                                         <ul class="breadcumb">
@@ -54,13 +50,7 @@ $this->title = Yii::t('common','About Us');
                                                 <section class="about-style-three">
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="about-img-box"> <img src="wp-content/uploads/2019/01/about-3-1.png" alt="Awesome Image" />
-                                                                    <div class="content"> <span>Our Story</span>
-                                                                        <h3>Something About <br /> Us</h3></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="col-md-12 col-sm-12 col-xs-12">
                                                                 <?php if($model): ?>
                                                                 <div class="about-content">
                                                                     <h3><?=$model->title?></h3>
