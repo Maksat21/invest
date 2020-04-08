@@ -23,7 +23,7 @@ use yii\helpers\Url;
             <div class="single-header-right-info">
                 <div class="icon-box"> <i class="industrio-icon-phone-call"></i></div>
                 <div class="text-box">
-                    <p><?= Yii::t('common','Schedule'); ?> 9:00 - 18:00</p>
+                    <p><?= Yii::t('common','Contact Phone Us'); ?> 9:00 - 18:00</p>
                     <h3><?=$header->phone?></h3></div>
             </div>
             <div class="single-header-right-info">
