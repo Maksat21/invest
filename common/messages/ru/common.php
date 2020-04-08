@@ -30,7 +30,7 @@ return [
    'Navigation' => 'Навигация',
    'Articles & Links' => 'Статьи и ссылки',
    'All Right Reserved' => 'Все права защищены',
-   'Schedule' => 'График работы',
+   'Schedule' => 'Наш контактный телефон',
    'Call Us On' => 'Наши  контакты',
    'Email Us' => 'Наша почта',
    'Learn More' => 'Подробнее',
