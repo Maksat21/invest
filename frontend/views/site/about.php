@@ -140,7 +140,7 @@ $this->title = Yii::t('common','About Us');
                 <?=ManagementWidget::widget()?>
             </div>
         </div>
-    </div>
+
 
 
 
