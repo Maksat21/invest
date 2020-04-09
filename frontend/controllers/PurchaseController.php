@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use common\models\Purchase;
+use Yii;
 
 /**
  * PurchaseController implements the CRUD actions for News model.

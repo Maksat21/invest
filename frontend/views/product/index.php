@@ -26,25 +26,28 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $product[1]['meta_key
         <div class="container">
             <div class="row">
                 <?php if ($product):?>
-                <div class="col-md-12">
-                    <?php foreach ($product as $item): ?>
-                    <div class="prd_list text-center enitre_mouse post-368 product type-product status-publish has-post-thumbnail product_cat-garden-mechinary product_cat-garden-tool product_tag-awards product_tag-industry product_tag-mechanical product_tag-repair first instock shipping-taxable purchasable product-type-simple">
-                        <span class="wdt_img shadow_effect effect-apollo mbot25">
-                            <?php $itemList = ProductController::getImage($item->id,Attachments::MAIN);
-                            if($itemList):?>
-                                <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="<?=$item->name?>" class="img-responsive">
-                            <?php else:?>
-                                <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->name?>" class="img-responsive">
-                            <?php endif;?>
-                        </span>
-                        <div class="prd_title">
-                            <?=$item->name?>
-                        </div>
-                         <span class="prd_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span><?=$item->content?></span>
-                            </span>
+                    <div class="col-md-12">
+                        <?php foreach ($product as $item): ?>
+                        <article class="product-modern text-center text-sm-left">
+                            <div class="unit unit-spacing-0 flex-column flex-sm-row">
+                                <div class="unit-left"><a class="product-modern-figure">
+                                        <?php $itemList = ProductController::getImage($item->id,Attachments::MAIN);
+                                        if($itemList):?>
+                                        <img src="<?= \common\models\Product::getPath().$itemList[0]['path']?>" alt="<?=$item->name?>" width="328" height="330"/></a>
+                                        <?php else:?>
+                                            <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->name?>" width="328" height="330"/></a>
+                                        <?php endif;?>
+                                </div>
+                                <div class="unit-body">
+                                    <div class="product-modern-body">
+                                        <h4 class="product-modern-title"><?=$item->name?></h4>
+                                        <p class="product-modern-text"><?=$item->content?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <?php endforeach; ?>
                     </div>
-                    <?php endforeach; ?>
-                </div>
                 <?php endif;?>
             </div>
         </div>

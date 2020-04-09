@@ -28,20 +28,19 @@ $this->title = Yii::t('common', 'News');
             <div class="container">
                 <div class="row">
                     <?php if ($news):?>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <?php foreach ($news as $item): ?>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="single-blog-style-two">
                             <?php $itemList = NewsController::getImage($item->id,Attachments::MAIN);
                             if($itemList):?>
-                                <div class="img-box"> <img src="<?= \common\models\News::getPath().$itemList[0]['path']?>" alt="<?=$item->title?>"></div>
+                                <div class="img-box" style="background-image: url('<?= \common\models\News::getPath().$itemList[0]['path']?>');height: 350px;background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;"></div>
                             <?php else:?>
-                                <div class="img-box"> <img src="<?= Yii::getAlias('@imgPath').'/default.png'?>" alt="<?=$item->title?>"></div>
+                                <div class="img-box" style="background-image: url('<?= Yii::getAlias('@imgPath').'/default.png'?>');height: 350px;background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;"></div>
                             <?php endif;?>
                             <div class="text-box"> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>"><h3><?=$item->title?></h3></a>
                                 <div class="meta-info"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDatetime($item->created_at)?> </div>
                                 <p> <?=$item->getTeaser()?></p> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>" class="more hvr-sweep-to-right"><?= Yii::t('common','Learn More'); ?></a></div>
                         </div>
-                        <?php endforeach; ?>
                         <div class="blog-post-pagination">
                             <div class="tt-pagination">
                                 <label>
@@ -58,6 +57,7 @@ $this->title = Yii::t('common', 'News');
                             </div>
                         </div>
                     </div>
+                        <?php endforeach; ?>
                     <?php endif;?>
                 </div>
             </div>
