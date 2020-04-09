@@ -29,13 +29,13 @@ $this->title = Yii::$app->name;
                 <div class="single-header-right-info">
                     <div class="icon-box"> <i class="industrio-icon-phone-call"></i></div>
                     <div class="text-box">
-                        <p>Позвоните нам 9:00 - 18:00</p>
+                        <p><?= Yii::t('common','Contact Phone Us'); ?></p>
                         <h3>+7 (7264) 47 91 22</h3></div>
                 </div>
                 <div class="single-header-right-info">
                     <div class="icon-box"> <i class="industrio-icon-clock"></i></div>
                     <div class="text-box">
-                        <p>Понедельник и Пятница</p>
+                        <p>С понедельника по пятницу</p>
                         <h3>9:00 - 18:00</h3></div>
                 </div>
                 <div class="single-header-right-info">
@@ -57,15 +57,15 @@ $this->title = Yii::$app->name;
                     <ul class="nav navbar-nav navigation-box  ">
                         <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children nav-item menu-item-277 dropdown submenu active active"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
                         </li>
-                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title==<?= Yii::t('common','About Us'); ?> href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title==<?= Yii::t('common','About Us'); ?> href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                         <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                         </li>
                         <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-379 dropdown submenu"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
                         </li>
                         <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu"><a title="<?= Yii::t('common','Articles'); ?>" href="#"><?= Yii::t('common','Articles'); ?></a>
                             <ul role="menu" class="sub-menu">
-                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
-                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
+                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                             </ul>
                         </li>
                         <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="<?= Yii::t('common','Purchase'); ?>" href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a>

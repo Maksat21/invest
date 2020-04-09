@@ -40,15 +40,15 @@ HomeAsset::register($this);
                     <ul class="nav navbar-nav navigation-box  ">
                         <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children nav-item menu-item-277"><a title="<?= Yii::t('common','Home'); ?>" href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a>
                         </li>
-                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                        <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-540"><a title="<?= Yii::t('common','About Us'); ?>" href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                         <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-282 dropdown submenu"><a title="<?= Yii::t('common','Products'); ?>" href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                         </li>
                         <li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-item current_page_item nav-item menu-item-379 dropdown submenu active"><a title="<?= Yii::t('common','News'); ?>" href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
                         </li>
                         <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu"><a title="<?= Yii::t('common','Articles'); ?>" href="#"><?= Yii::t('common','Articles'); ?></a>
                             <ul role="menu" class="sub-menu">
-                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
-                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
+                                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="<?= Yii::t('common','Ecology'); ?>" href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-553"><a title="<?= Yii::t('common','Personnel Policy'); ?>" href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                             </ul>
                         </li>
                         <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu"><a title="<?= Yii::t('common','Purchase'); ?>" href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a>
@@ -75,7 +75,10 @@ HomeAsset::register($this);
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
                         <a href="<?= Url::to('/')?>"><img src="<?=Yii::getAlias('@imgPath');?>/logo-bk.png" alt="Talas Investment Company" /></a>
-                        <h3><?= Yii::t('common','About Us'); ?></h3> <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.</div>
+                        <div class="footer-text">
+                            <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="footer-widget links-widget">
@@ -84,8 +87,8 @@ HomeAsset::register($this);
                                 <h3><?= Yii::t('common','Navigation'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="<?= Url::to('/site')?>"><?= Yii::t('common','Home'); ?></a></li>
-                                <li><a href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                                <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
+                                <li><a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                                 <li><a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a></li>
                                 <li><a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a></li>
                                 <li><a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a></li>
@@ -101,8 +104,8 @@ HomeAsset::register($this);
                                 <h3><?= Yii::t('common','Articles & Links'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
-                                <li><a href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
+                                <li><a href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li><a href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                                 <li><a href="<?= Url::to('/gallery')?>"><?= Yii::t('common','Gallery'); ?></a></li>
                                 <li><a href="<?= Url::to('/vacancies')?>"><?= Yii::t('common','Vacancies'); ?></a></li>
                             </ul>
@@ -142,7 +145,7 @@ HomeAsset::register($this);
                 <li class="current">
                     <a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?>
                 </li>
-                <li> <a href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a> </li>
+                <li> <a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a> </li>
                 <li>
                     <a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
                 </li>
@@ -152,8 +155,8 @@ HomeAsset::register($this);
                 <li>
                     <a href="#"><?= Yii::t('common','Articles'); ?> <span class="subnav-toggler fa fa-caret-down"></span></a>
                     <ul class="sub-menu">
-                        <li> <a href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a> </li>
-                        <li> <a href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a> </li>
+                        <li> <a href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a> </li>
+                        <li> <a href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a> </li>
                     </ul>
                 </li>
                 <li>

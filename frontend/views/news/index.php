@@ -41,6 +41,9 @@ $this->title = Yii::t('common', 'News');
                                 <div class="meta-info"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDatetime($item->created_at)?> </div>
                                 <p> <?=$item->getTeaser()?></p> <a href="<?= Url::to(['news/view', 'slug' => $item->slug]); ?>" class="more hvr-sweep-to-right"><?= Yii::t('common','Learn More'); ?></a></div>
                         </div>
+                    </div>
+                        <?php endforeach; ?>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="blog-post-pagination">
                             <div class="tt-pagination">
                                 <label>
@@ -57,7 +60,6 @@ $this->title = Yii::t('common', 'News');
                             </div>
                         </div>
                     </div>
-                        <?php endforeach; ?>
                     <?php endif;?>
                 </div>
             </div>
