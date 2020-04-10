@@ -10,6 +10,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use yii\helpers\Url;
+use frontend\widgets\ApplyWidget;
 
 AppAsset::register($this);
 ?>
@@ -26,12 +27,10 @@ AppAsset::register($this);
 </head>
 <body class="page-template page-template-page-templates page-template-home-3 page-template-page-templateshome-3-php page page-id-458 wpb-js-composer js-comp-ver-5.4.7 vc_responsive elementor-default elementor-page elementor-page-458">
 <?php $this->beginBody() ?>
-
+<?=ApplyWidget::widget()?>
 <div class="page-wrapper">
 
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+
         <?= Alert::widget() ?>
         <?= $content ?>
 
@@ -44,7 +43,10 @@ AppAsset::register($this);
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
                         <a href="<?= Url::to('/')?>"><img src="img/logo-bk.png" alt="Talas Investment Company" /></a>
-                        <h3><?= Yii::t('common','About Us'); ?></h3> <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.</div>
+                        <div class="footer-text">
+                            <b>Миссия Компании</b> - удовлетворение потребностей отечественных и зарубежных золотодобывающих компаний в продукте.
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="footer-widget links-widget">
@@ -53,8 +55,8 @@ AppAsset::register($this);
                                 <h3><?= Yii::t('common','Navigation'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="<?= Url::to('/site')?>"><?= Yii::t('common','Home'); ?></a></li>
-                                <li><a href="<?= Url::to('/site/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
+                                <li><a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?></a></li>
+                                <li><a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a></li>
                                 <li><a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a></li>
                                 <li><a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a></li>
                                 <li><a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a></li>
@@ -70,9 +72,8 @@ AppAsset::register($this);
                                 <h3><?= Yii::t('common','Articles & Links'); ?></h3></div>
                             <p></p>
                             <ul class="links-list">
-                                <li><a href="<?= Url::to('/ecology')?>"><?= Yii::t('common','Ecology'); ?></a></li>
-                                <li><a href="<?= Url::to('/career-politics')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
-                                <li><a href="<?= Url::to('/certificates')?>"><?= Yii::t('common','Certificates'); ?></a></li>
+                                <li><a href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a></li>
+                                <li><a href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a></li>
                                 <li><a href="<?= Url::to('/gallery')?>"><?= Yii::t('common','Gallery'); ?></a></li>
                                 <li><a href="<?= Url::to('/vacancies')?>"><?= Yii::t('common','Vacancies'); ?></a></li>
                             </ul>
@@ -101,7 +102,42 @@ AppAsset::register($this);
     </div>
     <div class="scroll-to-top scroll-to-target" data-target="html"><i class="fa fa-angle-up"></i></div>
 </footer>
-
+<section class="hidden-sidebar side-navigation">
+    <a href="#?>" class="close-button side-navigation-close-btn fa fa-times"></a>
+    <div class="sidebar-content">
+        <div class="top-content">
+            <a href="<?= Url::to('/')?>"><img src="<?=Yii::getAlias('@imgPath');?>/talas-invest-logo.png"/></a>
+        </div>
+        <nav class="nav-menu middle-content">
+            <ul class="navigation-box">
+                <li class="current">
+                    <a href="<?= Url::to('/')?>"><?= Yii::t('common','Home'); ?>
+                </li>
+                <li> <a href="<?= Url::to('/about')?>"><?= Yii::t('common','About Us'); ?></a> </li>
+                <li>
+                    <a href="<?= Url::to('/product')?>"><?= Yii::t('common','Products'); ?></a>
+                </li>
+                <li>
+                    <a href="<?= Url::to('/news')?>"><?= Yii::t('common','News'); ?></a>
+                </li>
+                <li>
+                    <a href="#"><?= Yii::t('common','Articles'); ?> <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li> <a href="<?= Url::to('/ekologiya')?>"><?= Yii::t('common','Ecology'); ?></a> </li>
+                        <li> <a href="<?= Url::to('/kadrovaya-politika')?>"><?= Yii::t('common','Personnel Policy'); ?></a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<?= Url::to('/purchase')?>"><?= Yii::t('common','Purchase'); ?></a>
+                </li>
+                <li> <a href="<?= Url::to('/contacts')?>"><?= Yii::t('common','Contacts'); ?></a> </li>
+            </ul>
+        </nav>
+        <div class="bottom-content">
+            <p class="copy-text">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?> <br /> created by <a href="https://www.smartideagroup.kz/" target="_blank"><p>SmartIdeaGroup</p></a></p><!-- /.copy-text -->
+        </div>
+    </div>
+</section>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -34,6 +34,8 @@ class FeedbackForm extends Model
             [['company_name', 'barrel', 'delivery', 'full_name', 'email', 'phone_number'], 'string'],
             [['full_name', 'email', 'phone_number'], 'required', 'message' => 'Введите "{attribute}".' ],
             [['product_id', 'quantity', 'status'], 'integer'],
+            ['email', 'email'],
+
         ];
     }
 
@@ -76,7 +78,7 @@ class FeedbackForm extends Model
         $request->full_name = $this->full_name;
         $request->email = $this->email;
         $request->phone_number = $this->phone_number;
-        $request->status = Feedback::STATUS_PUBLISHED;
+        $request->status = Feedback::STATUS_NOT_REVIEWED;
 
         if($request->validate() && $request->save()){
             $this->sendMail($request);
@@ -90,7 +92,7 @@ class FeedbackForm extends Model
     {
         return Yii::$app->mailer->compose(['html' => 'RequisitionTheme-html'], ['model' => $request])
             ->setFrom([Yii::$app->params['robotEmail'] => Yii::$app->params['robotName']])
-            ->setTo('xmax_gar@mail.ru')
+            ->setTo([$request->email], [Yii::$app->params['supportEmail']])
             ->setSubject(Yii::t('common', 'Форма заявки #{id}', ['id' => $request->id]))
             ->send();
     }

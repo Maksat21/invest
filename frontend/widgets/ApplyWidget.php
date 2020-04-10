@@ -21,6 +21,8 @@ class ApplyWidget extends Widget
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', Yii::t('common', 'Thank you for contacting us.'));
+                Yii::$app->getResponse()->redirect( Yii::$app->request->url )->send();
+                Yii::$app->end();
             } else {
                 Yii::$app->session->setFlash('error', Yii::t('common', 'An error occurred while sending the message.'));
             }

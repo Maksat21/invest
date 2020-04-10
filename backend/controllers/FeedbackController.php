@@ -14,21 +14,6 @@ use yii\filters\VerbFilter;
 class FeedbackController extends BaseController
 {
     /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
-    /**
      * Lists all Feedback models.
      * @return mixed
      */

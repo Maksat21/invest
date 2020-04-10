@@ -3,24 +3,25 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Purchase;
-use backend\models\PurchaseSearch;
+use common\models\TaredType;
+use backend\models\TaredTypeSearch;
+use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PurchaseController implements the CRUD actions for Purchase model.
+ * TaredTypeController implements the CRUD actions for TaredType model.
  */
-class PurchaseController extends BaseController
+class TaredTypeController extends BaseController
 {
 
     /**
-     * Lists all Purchase models.
+     * Lists all TaredType models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PurchaseSearch();
+        $searchModel = new TaredTypeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -30,7 +31,7 @@ class PurchaseController extends BaseController
     }
 
     /**
-     * Displays a single Purchase model.
+     * Displays a single TaredType model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -43,13 +44,13 @@ class PurchaseController extends BaseController
     }
 
     /**
-     * Creates a new Purchase model.
+     * Creates a new TaredType model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Purchase();
+        $model = new TaredType();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -61,7 +62,7 @@ class PurchaseController extends BaseController
     }
 
     /**
-     * Updates an existing Purchase model.
+     * Updates an existing TaredType model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -81,7 +82,7 @@ class PurchaseController extends BaseController
     }
 
     /**
-     * Deletes an existing Purchase model.
+     * Deletes an existing TaredType model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -95,15 +96,15 @@ class PurchaseController extends BaseController
     }
 
     /**
-     * Finds the Purchase model based on its primary key value.
+     * Finds the TaredType model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Purchase the loaded model
+     * @return TaredType the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Purchase::findOne($id)) !== null) {
+        if (($model = TaredType::findOne($id)) !== null) {
             return $model;
         }
 
