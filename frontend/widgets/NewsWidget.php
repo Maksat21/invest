@@ -17,7 +17,7 @@ class NewsWidget extends Widget
 {
     public function run()
     {
-        $news = News::find(['status' => News::STATUS_PUBLISHED])->all();
+        $news = News::find(['status' => News::STATUS_PUBLISHED])->orderBy(['id'=> SORT_DESC])->limit(3)->all();
 
         return $this->render('news', [
             'news' => $news,

@@ -5,6 +5,8 @@ use common\models\Materials;
 use Yii;
 use frontend\models\forms\ContactForm;
 use frontend\models\forms\FeedbackForm;
+use common\models\Images;
+use common\models\Attachments;
 
 /**
  * Site controller
@@ -52,6 +54,33 @@ class SiteController extends BaseController
         return $this->render('about', [
             'model' => $model,
         ]);
+    }
+
+    public function actionGallery()
+    {
+        $this->layout = '@frontend/views/layouts/home';
+
+        \Yii::$app->view->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['meta_description']]);
+        \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['meta_keywords']]);
+
+        $gallery = Images::find()
+            ->andWhere(['status' => Images::STATUS_PUBLISHED])
+            ->andWhere(['model_type' => Images::TYPE_GALLERY])
+            ->all();
+
+        return $this->render('gallery', [
+            'gallery' => $gallery,
+        ]);
+
+    }
+
+    public function getImage($itemID) {
+        $image = Attachments::find()
+            ->andWhere(['model_id' => $itemID])
+            ->andWhere(['type' => Attachments::TYPE_GALLERY])
+            ->asArray()
+            ->all();
+        return $image;
     }
 
 }

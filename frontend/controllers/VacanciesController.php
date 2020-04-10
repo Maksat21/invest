@@ -19,41 +19,16 @@ class VacanciesController extends BaseController
      */
     public function actionIndex()
     {
-        $searchModel = new VacanciesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $this->layout = '@frontend/views/layouts/home';
+
+        \Yii::$app->view->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['meta_description']]);
+        \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['meta_keywords']]);
+
+        $model = Vacancies::find()->orderBy(['id'=> SORT_DESC])->where(['status' => Vacancies::STATUS_PUBLISHED])->all();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'model' => $model
         ]);
     }
 
-    /**
-     * Displays a single Vacancies model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Finds the Vacancies model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Vacancies the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id)
-    {
-        if (($model = Vacancies::findOne($id)) !== null) {
-            return $model;
-        }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
-    }
 }
