@@ -59,5 +59,7 @@ return [
    'An error occurred while sending the message.' => 'При отправке сообщения произошла ошибка.',
    'About' => 'О нас',
    'Application Form' => 'Форма заявки',
+   'Wage' => 'Заработная плата:',
+   'Not Vacancies' => 'К сожалению вакансии нет',
    '' => '',
 ];

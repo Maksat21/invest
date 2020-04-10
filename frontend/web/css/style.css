@@ -48602,7 +48602,7 @@ footer.site-footer .bottom-footer p {
 }
 
 .project-details {
-    padding: 125px 0
+    padding: 40px 0
 }
 
 .project-details .project-details-content {
@@ -48624,9 +48624,9 @@ footer.site-footer .bottom-footer p {
 }
 
 .project-details .project-details-content p {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 27px;
-    color: #878787
+    color: #252525
 }
 
 .project-details .project-details-content .starts i {
@@ -48639,13 +48639,13 @@ footer.site-footer .bottom-footer p {
 }
 
 .project-details .project-details-content ul.meta-info {
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     list-style: none
 }
 
 .project-details .project-details-content ul.meta-info li {
-    color: #878787;
+    color: #000000;
     font-size: 15px
 }
 
@@ -48654,17 +48654,17 @@ footer.site-footer .bottom-footer p {
 }
 
 .project-details .project-details-content ul.meta-info li i {
-    color: #ff5d17;
+    color: #47973e;
     font-size: 12px;
     margin-right: 5px
 }
 
 .project-details .project-details-content ul.meta-info li span {
-    color: #252525;
-    font-size: 15px;
+    color: #797979;
+    font-size: 20px;
     font-family: 'Poppins';
     font-weight: 500;
-    margin-right: 5px
+    margin-right: 20px;
 }
 
 .single-service-style-one {
@@ -62428,4 +62428,8 @@ tr:nth-child(even) {
 }
 .footer-text {
     margin-top: 45px;
+}
+.project-details-content h1 {
+    text-align: center;
+    padding: 50px 0;
 }

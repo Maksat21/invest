@@ -45,6 +45,7 @@ return [
                 '<_a:(login|signup|success|password-success|token-expired|request-password-reset|logout|about|contact|reset-password|request-password-reset|password-reset-mail|)>' => 'site/<_a>',
                 // Other
                 'news' => 'news/index',
+                'gallery' => 'site/gallery',
                 'ekologiya' => 'ecology/index',
                 'kadrovaya-politika' => 'career-politics/index',
                 'news/<slug:[a-zA-Z0-9_-]{1,255}+>' => 'news/view',
